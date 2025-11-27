@@ -3,76 +3,1188 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Section 2 - L'Art du Prompting</title>
+    <title>Section 2 : Maîtriser le Prompt Engineering pour la QA</title>
     <link rel="stylesheet" href="../assets/style.css" />
   </head>
   <body>
     <nav>
-      <div class="container">
-        <div class="nav-title">📚 Formation QA & IA Générative</div>
-        <ul>
-          <li><a href="../../index.html">Accueil</a></li>
-          <li><a href="../../section-1/index.html">Section 1</a></li>
-          <li><a href="#" class="active">Section 2</a></li>
-          <li><a href="../../section-3/index.html">Section 3</a></li>
-          <li><a href="../../section-4/index.html">Section 4</a></li>
-        </ul>
-      </div>
+      <a href="../../index.html">🏠 Accueil</a>
+      <a href="../section-1/index.html">Section 1</a>
+      <a href="../section-2/index.html" class="active">Section 2</a>
+      <a href="../section-3/index.html">Section 3</a>
+      <a href="../section-4/index.html">Section 4</a>
     </nav>
 
     <header>
-      <div class="container">
-        <h1>🎯 L'Art du Prompting</h1>
-        <p class="subtitle">Section 2 - Le NOYAU de la Formation (90 min)</p>
-      </div>
+      <h1>🎯 Section 2 : Maîtriser le Prompt Engineering pour la QA</h1>
+      <p class="subtitle">Durée : 90 minutes</p>
     </header>
 
-    <main>
-      <div class="container">
-        <div class="hero">
-          <h2>Section 2 en Préparation</h2>
-          <p>Cette section est actuellement en développement.</p>
+    <div class="container">
+      <section class="hero">
+        <h2>🎓 Objectifs de cette Section</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>📐 Anatomie</h3>
+            <p>
+              Comprendre les 5 composantes essentielles d'un prompt efficace
+            </p>
+          </div>
+          <div class="card">
+            <h3>🚀 Techniques Avancées</h3>
+            <p>Maîtriser Chain-of-Thought, Few-Shot et Prompt Chaining</p>
+          </div>
+          <div class="card">
+            <h3>🧪 Génération de Tests</h3>
+            <p>
+              Générer des scénarios Gherkin, scripts Cypress et données de test
+            </p>
+          </div>
+          <div class="card">
+            <h3>🔍 Debugging</h3>
+            <p>
+              Analyser les logs, déboguer les tests flaky et évaluer la
+              robustesse
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 2.1 : ANATOMIE D'UN PROMPT EFFICACE -->
+      <section class="mt-xl">
+        <h2>📐 Module 2.1 : Anatomie d'un Prompt Efficace (20 min)</h2>
+
+        <div class="card highlight">
+          <h3>Les 5 Composantes Essentielles</h3>
           <p>
-            🔄 <strong>Contenu à venir :</strong> Les 5 composantes du
-            Prompting, Techniques Avancées, 20+ Exercices pratiques
+            Un prompt de qualité professionnelle se compose de 5 éléments
+            structurants :
           </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Composante</th>
+                <th>Description</th>
+                <th>Exemple</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🔵 <strong>Rôle</strong></td>
+                <td>Définit l'expertise et le contexte professionnel</td>
+                <td>"Tu es un ingénieur QA senior spécialisé en tests E2E"</td>
+              </tr>
+              <tr>
+                <td>🟢 <strong>Tâche</strong></td>
+                <td>L'action précise à réaliser</td>
+                <td>"Génère un test Cypress pour la connexion Redmine"</td>
+              </tr>
+              <tr>
+                <td>🟡 <strong>Contexte</strong></td>
+                <td>Informations techniques nécessaires</td>
+                <td>"TypeScript, Page Object Model, API REST Redmine"</td>
+              </tr>
+              <tr>
+                <td>🔴 <strong>Contraintes</strong></td>
+                <td>Règles et limites à respecter</td>
+                <td>"Utilise uniquement data-test-id, pas de XPath"</td>
+              </tr>
+              <tr>
+                <td>🟣 <strong>Format</strong></td>
+                <td>Structure de sortie attendue</td>
+                <td>"Format JSON avec clés : iban, valide, raison"</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <section class="card highlight mt-lg">
-          <h2>📋 Aperçu du Contenu</h2>
-          <ul>
-            <li>
-              <strong>Module 2.1 :</strong> Anatomie d'un Prompt Efficace (5
-              composantes)
-            </li>
-            <li>
-              <strong>Module 2.2 :</strong> Techniques Avancées (Persona,
-              Few-Shot, Chain-of-Thought)
-            </li>
-            <li>
-              <strong>Module 2.3 :</strong> Prompting pour la Génération de
-              Tests
-            </li>
-            <li>
-              <strong>Module 2.4 :</strong> Prompting pour le Débogage & Analyse
-            </li>
-            <li>
-              <strong>Module 2.5 :</strong> Prompting Avancé (Chaining, RAG)
-            </li>
-          </ul>
-        </section>
+        <!-- 2.1.A : RÔLE/PERSONA -->
+        <div class="card success mt-lg">
+          <h3>A. Rôle/Persona : L'Impact du Contexte Professionnel</h3>
+          <p>
+            Définir le rôle transforme radicalement la qualité et la pertinence
+            de la réponse. Observons la différence :
+          </p>
 
-        <div class="text-center mt-lg">
-          <a href="../../index.html" class="button">← Retour à l'Accueil</a>
+          <div class="grid mt-md">
+            <div class="card warning">
+              <h4>❌ Prompt Basique (Sans Rôle)</h4>
+              <p><em>"Crée un test pour la page de connexion Redmine"</em></p>
+              <ul>
+                <li>Réponse générique</li>
+                <li>Sélecteurs CSS fragiles (#username)</li>
+                <li>Pas de bonnes pratiques</li>
+                <li>Code non idiomatique</li>
+              </ul>
+            </div>
+
+            <div class="card success">
+              <h4>✅ Prompt Structuré (Avec Rôle)</h4>
+              <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                📋 Voir le Prompt Structuré avec les 5 Composantes
+              </button>
+              <div class="collapsible-content">
+                <div
+                  style="
+                    background: #e3f2fd;
+                    border-left: 4px solid #2196f3;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔵 Rôle</h4>
+                  <p>
+                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
+                    automatisation de tests E2E. Tu maîtrises parfaitement
+                    Cypress, TypeScript et le Page Object Model.
+                  </p>
+                </div>
+
+                <div
+                  style="
+                    background: #e8f5e9;
+                    border-left: 4px solid #4caf50;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟢 Tâche</h4>
+                  <p>
+                    Génère une classe Page Object TypeScript complète pour la
+                    page de connexion de l'application Redmine avec toutes les
+                    méthodes d'interaction nécessaires.
+                  </p>
+                </div>
+
+                <div
+                  style="
+                    background: #fff9c4;
+                    border-left: 4px solid #ffeb3b;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟡 Contexte</h4>
+                  <p>
+                    Contexte : Cypress + TypeScript, API Redmine, Page Object
+                    Model.
+                  </p>
+                  <p>
+                    <strong
+                      >Voici le code HTML réel du formulaire de connexion
+                      :</strong
+                    >
+                  </p>
+                  <pre
+                    style="
+                      background: #1e1e1e;
+                      color: #d4d4d4;
+                      padding: 1rem;
+                      border-radius: 4px;
+                      overflow-x: auto;
+                    "
+                  ><code>&lt;form onsubmit="return keepAnchorOnSignIn(this);" action="/login" method="post"&gt;
+  &lt;input type="hidden" name="authenticity_token" value="..." /&gt;
+  &lt;label for="username"&gt;Identifiant&lt;/label&gt;
+  &lt;input type="text" name="username" id="username" tabindex="1" /&gt;
+  &lt;label for="password"&gt;Mot de passe&lt;/label&gt;
+  &lt;input type="password" name="password" id="password" tabindex="2" /&gt;
+  &lt;input type="checkbox" name="autologin" id="autologin" value="1" /&gt; Rester connecté
+  &lt;input type="submit" id="login-submit" value="Connexion" tabindex="5" /&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+
+                <div
+                  style="
+                    background: #ffebee;
+                    border-left: 4px solid #f44336;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔴 Contraintes</h4>
+                  <ul>
+                    <li>
+                      Utilise <strong>UNIQUEMENT</strong> les attributs
+                      <code>id</code> natifs pour les sélecteurs
+                    </li>
+                    <li>
+                      Jamais de XPath, de sélecteurs CSS complexes ou de texte
+                      visible
+                    </li>
+                    <li>Applique le pattern Page Object Model strict</li>
+                    <li>Méthodes chainables (retournent <code>this</code>)</li>
+                    <li>Gestion des erreurs avec messages explicites</li>
+                  </ul>
+                </div>
+
+                <div
+                  style="
+                    background: #f3e5f5;
+                    border-left: 4px solid #9c27b0;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟣 Format</h4>
+                  <p>Code TypeScript complet avec :</p>
+                  <ul>
+                    <li>Classe <code>LoginPage</code> exportée</li>
+                    <li>Sélecteurs privés en haut</li>
+                    <li>
+                      Méthodes publiques : <code>visit()</code>,
+                      <code>fillUsername()</code>, <code>fillPassword()</code>,
+                      <code>submit()</code>
+                    </li>
+                    <li>JSDoc pour chaque méthode</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p class="mt-md"><strong>Résultat :</strong></p>
+              <ul>
+                <li>Code professionnel idiomatique</li>
+                <li>Sélecteurs robustes (id natifs)</li>
+                <li>Architecture POM respectée</li>
+                <li>Documentation JSDoc complète</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        <!-- 2.1.B : TÂCHE -->
+        <div class="card mt-lg">
+          <h3>B. Tâche : La Clarté de l'Intention</h3>
+          <p>
+            Une tâche bien formulée est
+            <strong>spécifique, mesurable et actionnable</strong>. La différence
+            entre une demande vague et une tâche claire :
+          </p>
+
+          <div class="grid mt-md">
+            <div>
+              <h4>❌ Tâches Mal Formulées</h4>
+              <ul class="warning-list">
+                <li>"Fais un truc pour tester la connexion"</li>
+                <li>"Améliore mes tests"</li>
+                <li>"Génère du code de test"</li>
+                <li>"Aide-moi avec Cypress"</li>
+              </ul>
+              <p class="text-muted">
+                <em>Trop vague, pas d'objectif clair, résultat imprévisible</em>
+              </p>
+            </div>
+
+            <div>
+              <h4>✅ Tâches Bien Formulées</h4>
+              <ul class="success-list">
+                <li>
+                  "Génère un test E2E Cypress qui valide le workflow complet de
+                  virement bancaire"
+                </li>
+                <li>
+                  "Crée une factory TypeScript pour générer 20 IBANs français
+                  valides avec checksum correct"
+                </li>
+                <li>
+                  "Écris 5 scénarios Gherkin couvrant les cas limites de
+                  validation de montant (négatif, zéro, >1M€)"
+                </li>
+                <li>
+                  "Analyse ce log de 50 lignes et identifie la cause racine de
+                  l'erreur 500"
+                </li>
+              </ul>
+              <p class="text-success">
+                <em>Spécifique, mesurable, contextualisé</em>
+              </p>
+            </div>
+          </div>
+
+          <div class="card info mt-md">
+            <h4>💡 Formule Gagnante pour une Tâche Claire</h4>
+            <p>
+              <strong
+                >Verbe d'action + Livrable précis + Critères de succès</strong
+              >
+            </p>
+            <ul>
+              <li>
+                <strong>Verbe :</strong> Génère, Crée, Analyse, Identifie,
+                Corrige, Évalue
+              </li>
+              <li>
+                <strong>Livrable :</strong> Type exact (test E2E, scénario
+                Gherkin, factory, classe POM)
+              </li>
+              <li>
+                <strong>Critères :</strong> Nombre, format, contraintes (20
+                IBANs, format JSON, pas de XPath)
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2.1.C : CONTEXTE -->
+        <div class="card mt-lg">
+          <h3>C. Contexte : Le Carburant de la Précision</h3>
+          <p>
+            Le contexte transforme une réponse générique en solution sur-mesure.
+            Plus vous fournissez de contexte technique, meilleure sera la
+            qualité du code généré.
+          </p>
+
+          <h4 class="mt-md">🎯 Types de Contexte à Fournir</h4>
+          <div class="grid mt-md">
+            <div class="card">
+              <h4>🏗️ Architecture</h4>
+              <ul>
+                <li>Framework : Cypress, Playwright, Selenium</li>
+                <li>Langage : TypeScript, JavaScript, Python</li>
+                <li>Pattern : Page Object Model, Screenplay</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>🔧 Configuration</h4>
+              <ul>
+                <li>Fichiers : tsconfig.json, cypress.config.ts</li>
+                <li>Plugins : @testing-library, faker</li>
+                <li>Conventions : naming, structure de dossiers</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>🌐 Application</h4>
+              <ul>
+                <li>Structure HTML réelle (comme vu en 2.1.A)</li>
+                <li>API endpoints et payloads</li>
+                <li>Règles métier (IBAN format, limites montants)</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>📚 Standards</h4>
+              <ul>
+                <li>Guidelines projet (sélecteurs data-test-id)</li>
+                <li>Normes sécurité (PCI DSS, GDPR)</li>
+                <li>Formats attendus (ISO 8601 dates)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card warning mt-md">
+            <h4>⚠️ Erreur Courante : Contexte Implicite</h4>
+            <p>
+              Ne présumez jamais que l'IA connaît votre environnement. Exemple :
+            </p>
+            <ul>
+              <li>
+                ❌ "Génère un test pour le virement" → L'IA ne connaît pas votre
+                structure HTML
+              </li>
+              <li>
+                ✅ "Génère un test pour le virement. Voici le formulaire HTML :
+                &lt;form&gt;...&lt;/form&gt;" → Sélecteurs précis garantis
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2.1.D : CONTRAINTES -->
+        <div class="card mt-lg">
+          <h3>D. Contraintes : Le Garde-Fou de la Qualité</h3>
+          <p>
+            Les contraintes transforment du code fonctionnel en code
+            <strong>maintenable, sécurisé et conforme</strong>. Elles guident
+            l'IA vers les meilleures pratiques de votre équipe.
+          </p>
+
+          <h4 class="mt-md">📋 Catégories de Contraintes Efficaces</h4>
+
+          <div class="card info mt-md">
+            <h4>🎯 Contraintes Techniques</h4>
+            <ul>
+              <li>
+                <strong>Sélecteurs :</strong> "Utilise UNIQUEMENT data-test-id,
+                jamais de XPath ou CSS complexes"
+              </li>
+              <li>
+                <strong>Versioning :</strong> "Compatible TypeScript 5.0+,
+                Cypress 13.x"
+              </li>
+              <li>
+                <strong>Performance :</strong> "Temps d'exécution &lt; 5s, pas
+                de cy.wait() hardcodés"
+              </li>
+              <li>
+                <strong>Dépendances :</strong> "N'utilise que les librairies
+                déjà présentes (faker, dayjs)"
+              </li>
+            </ul>
+          </div>
+
+          <div class="card info mt-md">
+            <h4>🔒 Contraintes Sécurité/Conformité</h4>
+            <ul>
+              <li>
+                <strong>Données :</strong> "Aucune vraie donnée PII, utilise
+                faker.js pour générer des fakes"
+              </li>
+              <li>
+                <strong>Credentials :</strong> "Charge les secrets depuis
+                Cypress.env(), jamais en dur"
+              </li>
+              <li>
+                <strong>RGPD :</strong> "Pas de logs contenant emails ou numéros
+                IBAN réels"
+              </li>
+              <li>
+                <strong>PCI DSS :</strong> "Pas de numéros de carte en clair
+                dans les fixtures"
+              </li>
+            </ul>
+          </div>
+
+          <div class="card info mt-md">
+            <h4>🏗️ Contraintes Architecturales</h4>
+            <ul>
+              <li>
+                <strong>Pattern :</strong> "Respecte strictement le Page Object
+                Model : sélecteurs privés, méthodes chainables"
+              </li>
+              <li>
+                <strong>Structure :</strong> "Place les POM dans
+                /cypress/support/pages/, les tests dans /cypress/e2e/"
+              </li>
+              <li>
+                <strong>Naming :</strong> "Préfixe 'should' pour assertions,
+                'get' pour sélecteurs"
+              </li>
+            </ul>
+          </div>
+
+          <div class="card success mt-md">
+            <h4>✅ Exemple Complet de Contraintes</h4>
+            <pre
+              style="background: #f5f5f5; padding: 1rem; border-radius: 4px"
+            ><code>Contraintes :
+- Sélecteurs : UNIQUEMENT [data-test-id], jamais #id ou .class
+- Pattern : Page Object Model strict (méthodes chainables)
+- Sécurité : Credentials via Cypress.env('ADMIN_PASSWORD')
+- Performance : Pas de cy.wait(5000), utilise cy.intercept() + alias
+- Tests : Arrange-Act-Assert clairement séparé par commentaires
+- Assertions : Minimum 3 assertions par test (UI + API + DB si applicable)
+- Cleanup : Toujours teardown via API en afterEach()</code></pre>
+          </div>
+        </div>
+
+        <!-- 2.1.E : FORMAT -->
+        <div class="card mt-lg">
+          <h3>E. Format : La Structure de Sortie</h3>
+          <p>
+            Spécifier le format de sortie garantit un résultat
+            <strong>directement exploitable</strong> sans post-traitement
+            manuel.
+          </p>
+
+          <h4 class="mt-md">🎨 Formats Courants en QA</h4>
+
+          <div class="grid mt-md">
+            <div class="card">
+              <h4>📝 Gherkin (BDD)</h4>
+              <pre
+                style="
+                  background: #f5f5f5;
+                  padding: 1rem;
+                  border-radius: 4px;
+                  font-size: 0.9em;
+                "
+              ><code>Format attendu :
+@tag-jira @priorite-haute
+Fonctionnalité: [Titre]
+  
+Contexte:
+  Étant donné [précondition]
+
+Scénario: [Nom du cas]
+  Quand [action]
+  Alors [résultat attendu]</code></pre>
+            </div>
+
+            <div class="card">
+              <h4>🧪 TypeScript (Cypress)</h4>
+              <pre
+                style="
+                  background: #f5f5f5;
+                  padding: 1rem;
+                  border-radius: 4px;
+                  font-size: 0.9em;
+                "
+              ><code>Format attendu :
+describe('Feature', () => {
+  beforeEach(() => {
+    // Setup
+  });
+
+  it('should [behavior]', () => {
+    // Arrange
+    // Act
+    // Assert
+  });
+});</code></pre>
+            </div>
+
+            <div class="card">
+              <h4>📊 JSON (Données)</h4>
+              <pre
+                style="
+                  background: #f5f5f5;
+                  padding: 1rem;
+                  border-radius: 4px;
+                  font-size: 0.9em;
+                "
+              ><code>Format attendu :
+{
+  "iban": "FR76...",
+  "valide": true,
+  "raison": "Checksum OK",
+  "pays": "France"
+}</code></pre>
+            </div>
+
+            <div class="card">
+              <h4>📋 Markdown (Rapport)</h4>
+              <pre
+                style="
+                  background: #f5f5f5;
+                  padding: 1rem;
+                  border-radius: 4px;
+                  font-size: 0.9em;
+                "
+              ><code>Format attendu :
+# Analyse Bug #1234
+
+## Symptômes
+- [Liste]
+
+## Cause Racine
+[Explication]
+
+## Solution Proposée
+[Code fix]</code></pre>
+            </div>
+          </div>
+
+          <div class="card warning mt-md">
+            <h4>⚠️ Précision du Format</h4>
+            <p>Plus le format est détaillé, meilleur est le résultat :</p>
+            <ul>
+              <li>❌ "Format JSON" → Structure inconnue</li>
+              <li>
+                ✅ "Format JSON avec clés obligatoires : iban (string), valide
+                (boolean), raison (string), pays (string)" → Structure garantie
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 2.2 : LES 3 TECHNIQUES AVANCÉES -->
+      <section class="mt-xl">
+        <h2>🚀 Module 2.2 : Les 3 Techniques Avancées (30 min)</h2>
+
+        <!-- 2.2.A : CHAIN-OF-THOUGHT -->
+        <div class="card mt-lg">
+          <h3>A. Chain-of-Thought : La Pensée Logique Explicite</h3>
+          <p>
+            Le Chain-of-Thought (CoT) demande à l'IA d'<strong
+              >expliciter son raisonnement étape par étape</strong
+            >
+            avant de fournir la réponse finale. Crucial pour les problèmes
+            complexes nécessitant une analyse multi-étapes.
+          </p>
+
+          <div class="card info mt-md">
+            <h4>🎯 Quand Utiliser Chain-of-Thought ?</h4>
+            <ul>
+              <li>Analyser des logs complexes avec événements corrélés</li>
+              <li>Déboguer des tests flaky nécessitant analyse de timing</li>
+              <li>
+                Identifier des causes racines dans des incidents
+                multi-composants
+              </li>
+              <li>
+                Évaluer la robustesse de sélecteurs face aux changements UI
+              </li>
+            </ul>
+          </div>
+
+          <h4 class="mt-md">📋 Exemple Concret : Analyse de Logs Redmine</h4>
+          <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+            📋 Voir le Prompt Chain-of-Thought + Logs
+          </button>
+          <div class="collapsible-content">
+            <div
+              style="
+                background: #e3f2fd;
+                border-left: 4px solid #2196f3;
+                padding: 1rem;
+                margin: 0.5rem 0;
+              "
+            >
+              <h4>🔵 Rôle</h4>
+              <p>
+                Tu es un expert DevOps spécialisé dans l'analyse de logs
+                d'applications Java/Rails avec une expertise en debugging de
+                transactions base de données.
+              </p>
+            </div>
+
+            <div
+              style="
+                background: #e8f5e9;
+                border-left: 4px solid #4caf50;
+                padding: 1rem;
+                margin: 0.5rem 0;
+              "
+            >
+              <h4>🟢 Tâche</h4>
+              <p>
+                Analyse les logs de production Redmine ci-dessous et identifie
+                la cause racine de l'erreur HTTP 500.
+              </p>
+            </div>
+
+            <div
+              style="
+                background: #fff9c4;
+                border-left: 4px solid #ffeb3b;
+                padding: 1rem;
+                margin: 0.5rem 0;
+              "
+            >
+              <h4>🟡 Contexte</h4>
+              <p>
+                Application : Redmine 5.x (Ruby on Rails + PostgreSQL)<br />
+                Environnement : Production, charge normale (20 req/s)<br />
+                Utilisateur affecté : admin@company.com<br />
+                Action tentée : Modification du nom d'un projet via PATCH
+                /projects/test-modify.json
+              </p>
+
+              <h5 class="mt-md">Logs de Production (extrait 30 secondes) :</h5>
+              <pre
+                style="
+                  background: #1e1e1e;
+                  color: #d4d4d4;
+                  padding: 1rem;
+                  border-radius: 4px;
+                  overflow-x: auto;
+                  font-size: 0.85em;
+                "
+              ><code>[2025-11-02T14:35:12.500Z] INFO  [c0a1d4f2] - Request received: GET /issues/list.json?project_id=42
+[2025-11-02T14:35:12.501Z] DEBUG [c0a1d4f2] - SQL: SELECT * FROM issues WHERE project_id = 42 LIMIT 25
+[2025-11-02T14:35:12.550Z] INFO  [c0a1d4f2] - Response sent: 200 OK (50ms)
+
+[2025-11-02T14:35:12.601Z] INFO  [a9f3b2d1] - Request received: PATCH /projects/test-modify.json
+[2025-11-02T14:35:12.602Z] DEBUG [a9f3b2d1] - Authenticated user: admin@company.com (role: admin)
+[2025-11-02T14:35:12.605Z] DEBUG [a9f3b2d1] - Payload: {"project": {"name": "New Project Name"}}
+[2025-11-02T14:35:12.610Z] DEBUG [a9f3b2d1] - SQL: BEGIN TRANSACTION
+[2025-11-02T14:35:12.620Z] DEBUG [a9f3b2d1] - SQL: UPDATE projects SET name='New Project Name' WHERE id=42
+[2025-11-02T14:35:12.750Z] DEBUG [a9f3b2d1] - Update affected 1 row
+[2025-11-02T14:35:12.755Z] DEBUG [a9f3b2d1] - Triggering before_save callback: update_activity_timestamp
+[2025-11-02T14:35:12.760Z] WARN  [a9f3b2d1] - Callback update_activity_timestamp attempting to set 'updated_on' but column is NULL
+[2025-11-02T14:35:12.765Z] DEBUG [a9f3b2d1] - SQL: UPDATE projects SET updated_on=NULL WHERE id=42
+[2025-11-02T14:35:12.789Z] ERROR [a9f3b2d1] - ActiveRecord::StatementInvalid: PG::NotNullViolation: ERROR: null value in column "updated_on" violates not-null constraint
+[2025-11-02T14:35:12.790Z] ERROR [a9f3b2d1] - DETAIL: Failing row contains (42, New Project Name, NULL, ...)
+[2025-11-02T14:35:12.795Z] DEBUG [a9f3b2d1] - SQL: ROLLBACK TRANSACTION
+[2025-11-02T14:35:12.800Z] WARN  [a9f3b2d1] - Transaction rolled back successfully
+[2025-11-02T14:35:12.805Z] WARN  [a9f3b2d1] - Could not commit transaction. Retrying logic failed.
+[2025-11-02T14:35:12.850Z] ERROR [a9f3b2d1] - HTTP 500 Internal Server Error sent to client
+[2025-11-02T14:35:12.851Z] INFO  [a9f3b2d1] - Request completed: PATCH /projects/test-modify.json (250ms, status: 500)
+
+[2025-11-02T14:35:13.100Z] INFO  [d4e5f6g7] - Request received: GET /projects/42.json
+[2025-11-02T14:35:13.150Z] DEBUG [d4e5f6g7] - SQL: SELECT * FROM projects WHERE id = 42
+[2025-11-02T14:35:13.155Z] DEBUG [d4e5f6g7] - Result: name='Old Project Name' (unchanged due to rollback)
+[2025-11-02T14:35:13.200Z] INFO  [d4e5f6g7] - Response sent: 200 OK (100ms)
+
+[2025-11-02T14:35:14.000Z] INFO  [e8f9g0h1] - Request received: POST /issues.json
+[2025-11-02T14:35:14.050Z] INFO  [e8f9g0h1] - Response sent: 201 Created (50ms)</code></pre>
+            </div>
+
+            <div
+              style="
+                background: #ffebee;
+                border-left: 4px solid #f44336;
+                padding: 1rem;
+                margin: 0.5rem 0;
+              "
+            >
+              <h4>🔴 Contraintes</h4>
+              <p>
+                <strong
+                  >Avant de donner la réponse finale, décris ton raisonnement
+                  étape par étape en analysant :</strong
+                >
+              </p>
+              <ul>
+                <li>
+                  Les requêtes concurrentes (identifie tous les IDs de
+                  transaction)
+                </li>
+                <li>
+                  Les timestamps et corrélations d'ID de transaction pour isoler
+                  la séquence d'erreur
+                </li>
+                <li>
+                  La séquence d'événements menant à l'erreur (de BEGIN à
+                  ROLLBACK)
+                </li>
+                <li>Les contraintes de base de données impliquées</li>
+                <li>Le callback problématique et sa logique défaillante</li>
+              </ul>
+            </div>
+
+            <div
+              style="
+                background: #f3e5f5;
+                border-left: 4px solid #9c27b0;
+                padding: 1rem;
+                margin: 0.5rem 0;
+              "
+            >
+              <h4>🟣 Format</h4>
+              <p>Structure la réponse ainsi :</p>
+              <pre
+                style="background: #f5f5f5; padding: 1rem; border-radius: 4px"
+              ><code>## 🔍 Raisonnement Étape par Étape
+
+### Étape 1 : Identification des Transactions
+[Liste des IDs + types de requêtes]
+
+### Étape 2 : Reconstitution Chronologique
+[Timeline de la transaction a9f3b2d1]
+
+### Étape 3 : Analyse de l'Erreur
+[Explication du callback défaillant]
+
+### Étape 4 : Vérification du Rollback
+[Confirmation que rien n'a été committé]
+
+## 🎯 Cause Racine
+[Réponse finale concise]
+
+## 🛠️ Solution Proposée
+[Code fix]</code></pre>
+            </div>
+          </div>
+
+          <div class="card success mt-md">
+            <h4>✅ Résultat Attendu avec Chain-of-Thought</h4>
+            <p>L'IA va décomposer l'analyse :</p>
+            <ol>
+              <li>
+                <strong>Identification :</strong> 4 transactions concurrentes
+                (c0a1d4f2, a9f3b2d1, d4e5f6g7, e8f9g0h1)
+              </li>
+              <li>
+                <strong>Chronologie :</strong> a9f3b2d1 est la transaction
+                problématique (PATCH project)
+              </li>
+              <li>
+                <strong>Séquence :</strong> BEGIN → UPDATE projects → Callback →
+                tentative SET updated_on=NULL → violation contrainte
+              </li>
+              <li>
+                <strong>Cause racine :</strong> Le callback
+                <code>update_activity_timestamp</code> tente d'écrire NULL dans
+                une colonne NOT NULL
+              </li>
+              <li>
+                <strong>Solution :</strong> Fixer le callback pour utiliser
+                <code>Time.current</code> au lieu de NULL
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- 2.2.B : FEW-SHOT PROMPTING -->
+        <div class="card mt-lg">
+          <h3>B. Few-Shot Prompting : L'Exemple Maître</h3>
+          <p>
+            Le Few-Shot Prompting consiste à
+            <strong>fournir 2-5 exemples concrets</strong> du format/style
+            attendu avant de demander la génération. L'IA apprend le pattern par
+            imitation.
+          </p>
+
+          <div class="card info mt-md">
+            <h4>🎯 Quand Utiliser Few-Shot ?</h4>
+            <ul>
+              <li>
+                Générer des données de test suivant un format complexe (IBAN,
+                SIRET, NIR)
+              </li>
+              <li>
+                Créer des scénarios Gherkin conformes aux conventions de
+                l'équipe
+              </li>
+              <li>Produire des fixtures JSON avec structure spécifique</li>
+              <li>
+                Écrire des tests suivant un template maison (pas AAA standard)
+              </li>
+            </ul>
+          </div>
+
+          <h4 class="mt-md">📋 Exemple Concret : Génération de Données IBAN</h4>
+          <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+            📋 Voir le Prompt Few-Shot + Exemples
+          </button>
+          <div class="collapsible-content">
+            <div
+              style="
+                background: #e3f2fd;
+                border-left: 4px solid #2196f3;
+                padding: 1rem;
+                margin: 0.5rem 0;
+              "
+            >
+              <h4>🔵 Rôle</h4>
+              <p>
+                Tu es un expert en génération de données de test financières
+                conformes aux standards européens (SEPA, ISO 13616).
+              </p>
+            </div>
+
+            <div
+              style="
+                background: #e8f5e9;
+                border-left: 4px solid #4caf50;
+                padding: 1rem;
+                margin: 0.5rem 0;
+              "
+            >
+              <h4>🟢 Tâche</h4>
+              <p>
+                Génère 10 exemples de données de test IBAN : 5 cas valides et 5
+                cas invalides, en respectant EXACTEMENT le format JSON des
+                exemples ci-dessous.
+              </p>
+            </div>
+
+            <div
+              style="
+                background: #fff9c4;
+                border-left: 4px solid #ffeb3b;
+                padding: 1rem;
+                margin: 0.5rem 0;
+              "
+            >
+              <h4>🟡 Contexte</h4>
+              <p><strong>Règles IBAN par Pays :</strong></p>
+              <ul>
+                <li>
+                  France (FR) : 27 caractères (FR + 2 chiffres contrôle + 23
+                  chiffres)
+                </li>
+                <li>
+                  Allemagne (DE) : 22 caractères (DE + 2 chiffres contrôle + 18
+                  chiffres)
+                </li>
+                <li>
+                  Belgique (BE) : 16 caractères (BE + 2 chiffres contrôle + 12
+                  chiffres)
+                </li>
+              </ul>
+
+              <p>
+                <strong>Algorithme Checksum :</strong> Modulo 97 sur conversion
+                alphanumérique
+              </p>
+
+              <h5 class="mt-md">Exemples de Format Souhaité :</h5>
+              <pre
+                style="background: #f5f5f5; padding: 1rem; border-radius: 4px"
+              ><code>{
+  "iban": "FR7630006000011234567890189",
+  "pays": "France",
+  "valide": true,
+  "raison": "IBAN français valide avec checksum correct (76)"
+}
+
+{
+  "iban": "FR7630006000011234567890188",
+  "pays": "France",
+  "valide": false,
+  "raison": "Checksum incorrect (devrait être 76, pas 88)"
+}
+
+{
+  "iban": "DE891234567890123456",
+  "pays": "Allemagne",
+  "valide": false,
+  "raison": "Longueur invalide pour l'Allemagne (20 caractères au lieu de 22)"
+}</code></pre>
+            </div>
+
+            <div
+              style="
+                background: #ffebee;
+                border-left: 4px solid #f44336;
+                padding: 1rem;
+                margin: 0.5rem 0;
+              "
+            >
+              <h4>🔴 Contraintes</h4>
+              <ul>
+                <li>
+                  Suivre <strong>EXACTEMENT</strong> le format JSON des exemples
+                  (4 clés : iban, pays, valide, raison)
+                </li>
+                <li>Inclure au moins 5 cas valides et 5 cas invalides</li>
+                <li>
+                  Varier les raisons d'invalidité : checksum incorrect, longueur
+                  invalide, caractères non-alphanumériques, code pays inconnu
+                </li>
+                <li>
+                  Pour les cas valides, calculer réellement le bon checksum (ou
+                  utiliser des IBANs tests officiels)
+                </li>
+              </ul>
+            </div>
+
+            <div
+              style="
+                background: #f3e5f5;
+                border-left: 4px solid #9c27b0;
+                padding: 1rem;
+                margin: 0.5rem 0;
+              "
+            >
+              <h4>🟣 Format</h4>
+              <p>
+                Array JSON de 10 objets, chacun avec les 4 clés obligatoires :
+                iban, pays, valide, raison
+              </p>
+            </div>
+          </div>
+
+          <div class="card success mt-md">
+            <h4>✅ Résultat Attendu avec Few-Shot</h4>
+            <p>
+              L'IA va générer 10 cas en suivant scrupuleusement le pattern des 3
+              exemples :
+            </p>
+            <ul>
+              <li>Même structure JSON (4 clés identiques)</li>
+              <li>Même niveau de détail dans <code>raison</code></li>
+              <li>Respect des longueurs par pays</li>
+              <li>Checksums réalistes (valides ou avec erreur explicite)</li>
+            </ul>
+            <p>
+              <em
+                >Sans Few-Shot, l'IA pourrait inventer des clés différentes
+                (<code>valid</code> au lieu de <code>valide</code>,
+                <code>country</code> au lieu de <code>pays</code>) ou omettre
+                <code>raison</code>.</em
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- 2.2.C : PROMPT CHAINING -->
+        <div class="card mt-lg">
+          <h3>C. Prompt Chaining : Décomposer en Sous-Prompts</h3>
+          <p>
+            Le Prompt Chaining consiste à
+            <strong
+              >décomposer une tâche complexe en plusieurs prompts
+              séquentiels</strong
+            >, où la sortie de l'un devient l'entrée du suivant. Utile quand une
+            seule génération produit du code incohérent ou incomplet.
+          </p>
+
+          <div class="card info mt-md">
+            <h4>🎯 Quand Utiliser Prompt Chaining ?</h4>
+            <ul>
+              <li>
+                Générer un test E2E complet nécessitant setup + test + teardown
+              </li>
+              <li>
+                Créer une suite de tests où chaque test dépend des données du
+                précédent
+              </li>
+              <li>
+                Refactorer du code en plusieurs étapes (extraction → renommage →
+                optimisation)
+              </li>
+              <li>Générer documentation puis code à partir de cette doc</li>
+            </ul>
+          </div>
+
+          <h4 class="mt-md">📋 Exemple Concret : Test E2E avec Setup API</h4>
+          <p>
+            Objectif : Générer un test complet pour "Modifier le nom d'un projet
+            Redmine"
+          </p>
+
+          <div class="grid mt-md">
+            <div class="card" style="background: #e3f2fd">
+              <h4>Étape 1️⃣ : Setup (Création Projet)</h4>
+              <p><strong>Prompt :</strong></p>
+              <pre
+                style="
+                  background: #fff;
+                  padding: 0.5rem;
+                  border-radius: 4px;
+                  font-size: 0.85em;
+                "
+              ><code>Génère une fonction TypeScript 
+`createProjectAPI(name: string)` 
+qui crée un projet Redmine via 
+POST /projects.json et retourne 
+l'ID du projet créé.</code></pre>
+              <p>
+                <strong>Sortie :</strong> Fonction réutilisable avec gestion
+                d'erreurs
+              </p>
+            </div>
+
+            <div class="card" style="background: #e8f5e9">
+              <h4>Étape 2️⃣ : Test (Modification UI)</h4>
+              <p><strong>Prompt :</strong></p>
+              <pre
+                style="
+                  background: #fff;
+                  padding: 0.5rem;
+                  border-radius: 4px;
+                  font-size: 0.85em;
+                "
+              ><code>Génère un test Cypress qui :
+1. Utilise createProjectAPI() 
+   pour créer "Test Project"
+2. Modifie le nom via UI
+3. Vérifie la modification via 
+   GET /projects/:id.json
+
+Contexte : Voici la fonction 
+createProjectAPI() :
+[coller la sortie de l'étape 1]</code></pre>
+              <p>
+                <strong>Sortie :</strong> Test E2E complet avec setup API +
+                assertions
+              </p>
+            </div>
+
+            <div class="card" style="background: #fff9c4">
+              <h4>Étape 3️⃣ : Teardown (Nettoyage)</h4>
+              <p><strong>Prompt :</strong></p>
+              <pre
+                style="
+                  background: #fff;
+                  padding: 0.5rem;
+                  border-radius: 4px;
+                  font-size: 0.85em;
+                "
+              ><code>Ajoute un afterEach() au test 
+qui supprime le projet créé via 
+DELETE /projects/:id.json
+
+Contexte : Voici le test actuel :
+[coller la sortie de l'étape 2]</code></pre>
+              <p>
+                <strong>Sortie :</strong> Test complet avec cleanup automatique
+              </p>
+            </div>
+          </div>
+
+          <div class="card success mt-md">
+            <h4>✅ Avantages du Chaining</h4>
+            <ul>
+              <li>
+                <strong>Qualité :</strong> Chaque étape est focalisée, donc
+                mieux réalisée
+              </li>
+              <li>
+                <strong>Réutilisabilité :</strong> La fonction
+                <code>createProjectAPI()</code> peut servir à d'autres tests
+              </li>
+              <li>
+                <strong>Contrôle :</strong> Vous validez chaque étape avant de
+                passer à la suivante
+              </li>
+              <li>
+                <strong>Debugging :</strong> Si erreur, facile d'identifier
+                quelle étape a échoué
+              </li>
+            </ul>
+          </div>
+
+          <div class="card warning mt-md">
+            <h4>⚠️ Chaining vs Prompt Unique</h4>
+            <p>Demander tout en un seul prompt produit souvent :</p>
+            <ul>
+              <li>❌ Code monolithique difficile à maintenir</li>
+              <li>❌ Setup/teardown oubliés ou incomplets</li>
+              <li>❌ Gestion d'erreurs absente</li>
+            </ul>
+            <p>Le chaining force une architecture modulaire et complète.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MESSAGE CLÉ FINAL -->
+      <section class="card warning mt-xl">
+        <h2>🎯 Le Message Clé de cette Section</h2>
+        <p>
+          Vous maîtrisez maintenant les fondamentaux du Prompt Engineering pour
+          la QA :
+        </p>
+        <ul>
+          <li>
+            ✅ <strong>Les 5 composantes</strong> : Rôle, Tâche, Contexte,
+            Contraintes, Format
+          </li>
+          <li>
+            ✅ <strong>Chain-of-Thought</strong> : "Explique ton raisonnement
+            étape par étape" pour analyses complexes
+          </li>
+          <li>
+            ✅ <strong>Few-Shot</strong> : "Voici 3 exemples" pour garantir un
+            format précis
+          </li>
+          <li>
+            ✅ <strong>Prompt Chaining</strong> : Décomposer en sous-prompts
+            (Setup → Test → Teardown)
+          </li>
+        </ul>
+        <p class="mt-md">
+          <strong>Prochaine étape :</strong> Appliquer ces techniques à des cas
+          réels (génération tests, debugging, RAG)
+        </p>
+      </section>
+
+      <!-- NAVIGATION -->
+      <div class="navigation mt-xl">
+        <a href="../section-1/index.html" class="btn-secondary">← Section 1</a>
+        <a href="../section-3/index.html" class="btn-primary"
+          >Section 3 : IA et Outillage QA →</a
+        >
       </div>
-    </main>
+    </div>
 
     <footer>
-      <div class="container">
-        <p>📚 Formation QA & IA Générative | Section 2 - L'Art du Prompting</p>
-        <p><small>⏱️ Durée : 90 min | Niveau : NOYAU</small></p>
-      </div>
+      <p>Formation GitHub Copilot pour QA - Section 2/4</p>
+      <p>🎓 Masterclass Prompt Engineering</p>
     </footer>
+
+    <script>
+      function toggleCollapsible(button) {
+        button.classList.toggle("active");
+        const content = button.nextElementSibling;
+        content.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
