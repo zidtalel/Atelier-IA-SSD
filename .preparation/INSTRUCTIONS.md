@@ -136,26 +136,7 @@ Les 5 composantes essentielles d'un prompt performant :
 | **D. Contraintes (Rules)** | Format, longueur, standards de code, bonnes pratiques. | **Assure la conformité QA** (ex: "N'utilise que data-cy", "Respecte POM"). |
 | **E. Format (Output)** | Le livrable précis (JSON, Markdown, Gherkin, tableau). | Permet l'**intégration directe** dans Jira, Xray ou les scripts. |
 
-**Exemple Concret** : Un prompt basique vs. un prompt structuré
 
-Prompt Basique (❌ Générrique) :
-```
-Écris-moi un test pour la connexion.
-```
-
-Prompt Structuré (✅ Efficace) :
-```
-**Rôle** : Tu es un ingénieur QA senior spécialisé en Cypress.
-**Tâche** : Écris un test end-to-end pour la connexion 2FA.
-**Contexte** : Cypress + TypeScript, API Redmine, Page Object Model.
-**Contraintes** : N'utilise que data-test-id. Gère les timeouts asynchrones.
-**Format** : Code TypeScript complet, prêt à l'emploi.
-```
-
-**Exercice Pratique 2.1.1** :
-- Rédiger 3 versions d'un même prompt (basique → optimisé)
-- Comparer les résultats via Copilot
-- Identifier les améliorations
 
 #### **Module 2.2 : Les Techniques de Prompting Avancées** (30 min)
 
@@ -165,29 +146,51 @@ L'idée : Demander à l'IA d'adopter un rôle spécifique **améliore drastiquem
 
 Exemple :
 
+Prompt Basique (❌ Générrique) :
 ```
-**Rôle** : Tu es un ingénieur QA senior spécialisé en automatisation Cypress.
-
-**Tâche** : Écris un test end-to-end complet pour la fonctionnalité de connexion.
-
-**Contexte** : Nous utilisons TypeScript et le Page Object Model.
-
-**Contraintes** : Les sélecteurs doivent **exclusivement** utiliser l'attribut data-test-id. 
-Le mot de passe est stocké dans une variable d'environnement $PASSWORD.
-
-**Format** : Le code doit être complet, prêt à l'emploi.
+Écris-moi un test pour la connexion.
 ```
 
-**Impact** : L'IA génère du code **sénior**, pas générique.
+Prompt Structuré (✅ Efficace) :
+```
+**Rôle** : Tu es un ingénieur QA senior spécialisé en Cypress.
+**Tâche** : Écris un test end-to-end pour la connexion.
+**Contexte** : 
+Cypress + TypeScript, Page Object Model.
+
+Voici le code HTML réel du formulaire de connexion :
+```html
+<form onsubmit="return keepAnchorOnSignIn(this);" action="/login" accept-charset="UTF-8" name="form-135c0b32" method="post">
+  <input name="utf8" type="hidden" value="✓" autocomplete="off">
+  <input type="hidden" name="authenticity_token" value="8QarMovvHJAixMfws8J701f3rvmvfIvtfaH5KS0R6XDDA60hQb44mthQUBRiiJXKaz1Gy0hiyrj+9QNpCfVhww==" autocomplete="off">
+  <input type="hidden" name="back_url" value="/logout" autocomplete="off">
+  
+  <label for="username">Identifiant</label>
+  <input type="text" name="username" id="username" tabindex="1" autofocus="autofocus">
+  
+  <label for="password">Mot de passe</label>
+  <input type="password" name="password" id="password" tabindex="2">
+  
+  <label for="autologin">
+    <input type="checkbox" name="autologin" id="autologin" value="1" tabindex="4"> Rester connecté
+  </label>
+  
+  <input type="submit" name="login" value="Connexion" tabindex="5" id="login-submit">
+</form>
+```
+
+**Contraintes** : N'utilise que des locators solides. Gère les timeouts asynchrones.
+**Format** : Code TypeScript complet, prêt à l'emploi.
+```
 
 **B. Chain-of-Thought (CoT) - La Pensée Logique**
 
 L'idée : Demander à l'IA de **décrire son raisonnement étape par étape** augmente drastiquement la qualité des sorties complexes.
 
-Exemple - Analyser un log d'erreur flaky :
+Exemple - Analyser un log d'erreur complexe :
 
 ```
-**Rôle** : Tu es un analyste DevOps spécialisé en tests instables.
+**Rôle** : Tu es un analyste DevOps spécialisé en diagnostic de logs d'application et bases de données.
 
 **Tâche** : Analyse le log d'erreur ci-dessous et propose :
 1) La cause racine la plus probable.
@@ -195,48 +198,101 @@ Exemple - Analyser un log d'erreur flaky :
 3) Une suggestion pour prévenir ce problème.
 
 **Contexte** : 
-AssertionError: Timed out retrying after 4000ms: 
-Expected to find element: [data-test-id="btn-valider-panier"], 
-but never found it.
-Because this element was required to complete the action: click().
-The previous command was: cy.get('[data-test-id="btn-ajouter-produit"]').click()
+Voici un extrait des logs d'une application Redmine lors d'un test automatisé :
 
-**Contraintes** : Avant de donner la réponse, décris ton raisonnement étape par étape 
-(Chain-of-Thought) en analysant la stack trace et les temps de réponse mentionnés.
+```
+[2025-11-02T14:35:12.500Z] INFO [c0a1d4f2] - Request received: GET /issues/list.json from 10.0.0.5. Processing time: 90ms.
+[2025-11-02T14:35:12.520Z] INFO [a8e7c6d3] - Scheduler task 'CleanupSessions' started.
+[2025-11-02T14:35:12.555Z] INFO [c0a1d4f2] - Database query: SELECT issues where status=open. Rows returned: 450.
+[2025-11-02T14:35:12.601Z] INFO [a9f3b2d1] - Request received: PATCH /projects/test-modify.json from 192.168.1.10. Starting transaction.
+[2025-11-02T14:35:12.610Z] INFO [c0a1d4f2] - Request finished successfully.
+[2025-11-02T14:35:12.650Z] INFO [a9f3b2d1] - User 'qa-tester' authorized successfully. Starting project update.
+[2025-11-02T14:35:12.670Z] INFO [b1c2d3e4] - Request received: GET /users/current.json from 10.0.0.6. Processing time: 30ms.
+[2025-11-02T14:35:12.701Z] INFO [a8e7c6d3] - Scheduler task 'CleanupSessions' finished. Duration: 181ms.
+[2025-11-02T14:35:12.720Z] INFO [b1c2d3e4] - Request finished successfully.
+[2025-11-02T14:35:12.755Z] INFO [a9f3b2d1] - Database query: UPDATE projects SET description = 'Nouvelle description testée par IA' WHERE identifier = 'test-modify'.
+[2025-11-02T14:35:12.760Z] INFO [d4e5f6g7] - Request received: POST /issues/1234/notes.json from 192.168.1.12. Starting transaction.
+[2025-11-02T14:35:12.775Z] INFO [d4e5f6g7] - User 'dev-team' authorized. Comment added to issue 1234.
+[2025-11-02T14:35:12.789Z] ERROR [a9f3b2d1] - **ConstraintViolationException: Column 'updated_on' cannot be NULL.** Transaction rollback initiated.
+[2025-11-02T14:35:12.800Z] INFO [d4e5f6g7] - Transaction committed successfully. Response time: 40ms.
+[2025-11-02T14:35:12.805Z] WARN [a9f3b2d1] - Could not commit transaction. Retrying logic failed.
+[2025-11-02T14:35:12.820Z] INFO [f7g8h9i0] - Request received: GET /settings.json from 10.0.0.7. Processing time: 50ms.
+[2025-11-02T14:35:12.835Z] INFO [f7g8h9i0] - Configuration fetched successfully.
+[2025-11-02T14:35:12.850Z] ERROR [a9f3b2d1] - **HTTP 500 Internal Server Error sent to client.** Cause: Transaction failed due to backend database constraint.
+[2025-11-02T14:35:12.870Z] INFO [j1k2l3m4] - Request received: GET /notifications/unread.json from 10.0.0.8. Processing time: 65ms.
+[2025-11-02T14:35:12.899Z] INFO [a9f3b2d1] - Response time: 298ms.
+[2025-11-02T14:35:12.905Z] INFO [j1k2l3m4] - Request finished successfully.
+[2025-11-02T14:35:13.001Z] INFO [k5l6m7n8] - Request received: GET /status from 10.0.0.9. Processing time: 10ms.
+[2025-11-02T14:35:13.020Z] INFO [o9p0q1r2] - Request received: GET /projects/summary.json from 192.168.1.10.
+[2025-11-02T14:35:13.050Z] INFO [o9p0q1r2] - User 'qa-tester' is checking project summary after failure.
+[2025-11-02T14:35:13.080Z] INFO [r3s4t5u6] - Database query: INSERT INTO audit_log VALUES ('User login success', 'admin').
+[2025-11-02T14:35:13.100Z] INFO [o9p0q1r2] - Project summary generated. Response time: 80ms.
+[2025-11-02T14:35:13.120Z] INFO [v7w8x9y0] - Request received: GET /time_entries/activities.json from 10.0.0.11.
+[2025-11-02T14:35:13.150Z] INFO [v7w8x9y0] - List of activities retrieved.
+```
+
+**Contraintes** : Avant de donner la réponse, décris ton raisonnement étape par étape en analysant :
+- Les requêtes concurrentes
+- Les timestamps et corrélations d'ID de transaction
+- La séquence d'événements menant à l'erreur
+- Les contraintes de base de données impliquées
 
 **Format** : Un tableau Markdown avec les trois points demandés.
 ```
 
-**Impact** : L'IA ne donne pas seulement la réponse, elle **justifie son diagnostic** comme un ingénieur expérimenté.
+**Impact** : L'IA ne donne pas seulement la réponse, elle **justifie son diagnostic** comme un ingénieur expérimenté en analysant les 28 lignes de logs pour isoler le problème lié à la transaction [a9f3b2d1].
 
 **C. Few-Shot Prompting (L'Exemple Maître)**
 
 L'idée : Fournir un ou deux exemples de la sortie souhaitée **avant** la vraie requête.
 
-Exemple - Générer des cas Gherkin conformes :
+Exemple - Générer des données de test financières avec structure spécifique :
 
 ```
-**Rôle** : Tu es expert en rédaction Gherkin pour Xray.
+**Rôle** : Expert en génération de données de test pour applications financières.
 
-**Tâche** : Écris 5 scénarios de test pour la user story suivante.
+**Tâche** : Génère 10 cas de test pour la validation d'IBAN avec différents scénarios (valides et invalides).
 
-**Exemple de Format Souhaité** :
-```gherkin
-@validationMontant
-Scénario : Virement avec montant valide
-  Étant donné que l'utilisateur est sur la page de virement
-  Et qu'il a saisi le montant "1500.50€"
-  Quand il clique sur "Valider"
-  Alors le système affiche "Montant accepté"
-  Et le bouton "Continuer" devient actif
+**Exemples de Format Souhaité** :
+
+Cas 1:
+{
+  "iban": "FR7630006000011234567890189",
+  "pays": "France",
+  "valide": true,
+  "raison": "IBAN français valide avec checksum correct"
+}
+
+Cas 2:
+{
+  "iban": "FR7630006000011234567890188",
+  "pays": "France", 
+  "valide": false,
+  "raison": "Checksum incorrect (dernier chiffre modifié)"
+}
+
+Cas 3:
+{
+  "iban": "DE891234567890123456",
+  "pays": "Allemagne",
+  "valide": false,
+  "raison": "Longueur invalide (IBAN allemand doit avoir 22 caractères)"
+}
+
+**Contexte** : 
+- IBAN français : 27 caractères (FR + 2 chiffres contrôle + 23 chiffres)
+- IBAN allemand : 22 caractères (DE + 2 chiffres contrôle + 18 chiffres)
+- IBAN belge : 16 caractères (BE + 2 chiffres contrôle + 12 chiffres)
+
+**Contraintes** : 
+- Suivre EXACTEMENT le format JSON des exemples
+- Inclure au moins 5 cas valides et 5 cas invalides
+- Varier les raisons d'invalidité (checksum, longueur, format, pays inexistant)
+
+**Format** : Array JSON avec objets structurés comme dans les exemples.
 ```
 
-**Contraintes** : Tous les scénarios doivent suivre EXACTEMENT ce format.
-
-**Format** : Uniquement le code Gherkin.
-```
-
-**Impact** : L'IA génère des sorties cohérentes et standardisées.
+**Impact** : L'IA génère des données de test cohérentes, structurées et variées en suivant précisément le pattern fourni. Les exemples montrent clairement ce qui est attendu (structure, diversité des cas, niveau de détail).
 
 **Exercice Pratique 2.2.1** :
 - Comparer un prompt SIMPLE vs. PERSONA vs. CoT vs. FEW-SHOT
