@@ -501,6 +501,66 @@ nav a.active {
   border-radius: 4px;
 }
 
+/* ========== OBJECTIFS SECTION (FORMAT COMPACT) ========== */
+
+.objectives-section {
+  background: #f8f9fa;
+  padding: var(--spacing-xl);
+  border-radius: 8px;
+  margin-bottom: var(--spacing-xl);
+}
+
+.objectives-section h2 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.intro-text {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: var(--spacing-lg);
+  font-style: italic;
+}
+
+.objectives-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.objective-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-left: 4px solid var(--color-primary);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.objective-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 2px 6px rgba(0, 102, 204, 0.15);
+}
+
+.objective-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.objective-content {
+  line-height: 1.5;
+  flex: 1;
+}
+
+.objective-content strong {
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
 /* ========== RESPONSIVE ========== */
 
 @media (max-width: 768px) {
@@ -511,5 +571,18 @@ nav a.active {
 
   .collapsible-btn::after {
     margin-left: auto;
+  }
+
+  .objectives-section {
+    padding: var(--spacing-lg);
+  }
+
+  .objective-item {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .objective-icon {
+    font-size: 1.25rem;
   }
 }

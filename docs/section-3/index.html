@@ -9,69 +9,1185 @@
   <body>
     <nav>
       <div class="container">
-        <div class="nav-title">📚 Formation QA & IA Générative</div>
+        <div class="nav-title">Formation QA & IA Générative</div>
         <ul>
-          <li><a href="../../index.html">Accueil</a></li>
-          <li><a href="../../section-1/index.html">Section 1</a></li>
-          <li><a href="../../section-2/index.html">Section 2</a></li>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../section-1/index.html">Section 1</a></li>
+          <li><a href="../section-2/index.html">Section 2</a></li>
           <li><a href="#" class="active">Section 3</a></li>
-          <li><a href="../../section-4/index.html">Section 4</a></li>
+          <li><a href="../section-4/index.html">Section 4</a></li>
         </ul>
       </div>
     </nav>
 
     <header>
       <div class="container">
-        <h1>🛠️ Outillage QA - Levier de Productivité</h1>
-        <p class="subtitle">Section 3 - Application Pratique (50 min)</p>
+        <h1>🛠️ Section 3 : IA et Outillage QA</h1>
+        <p class="subtitle">Durée : 50 minutes</p>
       </div>
     </header>
 
     <main>
       <div class="container">
-        <div class="hero">
-          <h2>Section 3 en Préparation</h2>
-          <p>Cette section est actuellement en développement.</p>
+        <!-- HERO SECTION -->
+        <section class="hero">
+          <h2>Pourquoi cette section ?</h2>
           <p>
-            🔄 <strong>Contenu à venir :</strong> Copilot, Xray/Jira,
-            TestComplete, Cypress + Exercice E2E intégré
+            Découvrir comment intégrer l'IA dans vos outils quotidiens de QA
+            pour maximiser la productivité : Copilot, Xray/Jira, TestComplete et
+            Cypress.
           </p>
-        </div>
-
-        <section class="card highlight mt-lg">
-          <h2>📋 Modules Prévus</h2>
-          <ul>
-            <li><strong>Module 3.1 :</strong> Copilot dans l'IDE (15 min)</li>
-            <li>
-              <strong>Module 3.2 :</strong> Xray/Jira + IA (15 min) - User Story
-              → Gherkin workflow
-            </li>
-            <li>
-              <strong>Module 3.3 :</strong> TestComplete + IA (10 min) -
-              Automation 2FA
-            </li>
-            <li>
-              <strong>Module 3.4 :</strong> Cypress + IA (10 min) - Page Object
-              Model
-            </li>
-            <li>
-              <strong>Exercice E2E :</strong> Test complet de bout en bout
-              (30-40 min)
-            </li>
-          </ul>
         </section>
 
-        <div class="text-center mt-lg">
-          <a href="../../index.html" class="button">← Retour à l'Accueil</a>
+        <section class="objectives-section">
+          <h2>🎯 Objectifs de cette Section</h2>
+          <p class="intro-text">
+            À l'issue de cette section, vous serez capable de :
+          </p>
+          <div class="objectives-list">
+            <div class="objective-item">
+              <span class="objective-icon">💻</span>
+              <div class="objective-content">
+                <strong>GitHub Copilot dans l'IDE</strong> — Utiliser Copilot
+                pour générer des tests, du code et des fixtures directement dans
+                votre environnement
+              </div>
+            </div>
+            <div class="objective-item">
+              <span class="objective-icon">📝</span>
+              <div class="objective-content">
+                <strong>Xray/Jira + IA</strong> — Automatiser la création de
+                scénarios Gherkin à partir de User Stories
+              </div>
+            </div>
+            <div class="objective-item">
+              <span class="objective-icon">🔐</span>
+              <div class="objective-content">
+                <strong>TestComplete + IA</strong> — Automatiser des workflows
+                complexes incluant l'authentification 2FA
+              </div>
+            </div>
+            <div class="objective-item">
+              <span class="objective-icon">🧪</span>
+              <div class="objective-content">
+                <strong>Cypress + IA</strong> — Créer des Page Object Models et
+                des tests E2E structurés avec l'assistance de l'IA
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="objectives-section">
+          <h2>🎯 Objectifs de cette Section</h2>
+          <p class="intro-text">
+            À l'issue de cette section, vous serez capable de :
+          </p>
+          <div class="objectives-list">
+            <div class="objective-item">
+              <span class="objective-icon">📋</span>
+              <div class="objective-content">
+                <strong>Définir les fondations</strong> — Créer les fichiers de
+                règles techniques et exigences fonctionnelles pour guider l'IA
+              </div>
+            </div>
+            <div class="objective-item">
+              <span class="objective-icon">💻</span>
+              <div class="objective-content">
+                <strong>Développer avec l'IA</strong> — Générer du code frontend
+                (JavaScript, CSS) guidé par les spécifications
+              </div>
+            </div>
+            <div class="objective-item">
+              <span class="objective-icon">🧪</span>
+              <div class="objective-content">
+                <strong>Automatiser les tests E2E</strong> — Créer des tests
+                Cypress avancés avec simulations d'APIs natives
+              </div>
+            </div>
+            <div class="objective-item">
+              <span class="objective-icon">🔗</span>
+              <div class="objective-content">
+                <strong>Maîtriser le workflow complet</strong> — Enchaîner specs
+                → code → tests de manière reproductible
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTRODUCTION PROJET NAVDASH -->
+        <section class="mt-xl">
+          <h2>🚀 Introduction : Le Projet NavDash</h2>
+          <div class="card highlight">
+            <h3>Contexte du Projet</h3>
+            <p>
+              <strong>NavDash</strong> est un Tableau de Bord de Diagnostic de
+              l'Expérience Utilisateur en temps réel. L'application utilise les
+              APIs natives du navigateur (Connexion, Batterie, Performance) pour
+              afficher des métriques live et implémenter des comportements
+              conditionnels intelligents.
+            </p>
+            <p class="mt-md">
+              <strong>Stack Technique :</strong> Java 17, Spring Boot 2.7.18,
+              Thymeleaf, Cypress 13, TypeScript 5
+            </p>
+          </div>
+
+          <div class="card info mt-md">
+            <h4>🎯 Objectif Pédagogique</h4>
+            <p>
+              Vous allez construire cette application de A à Z en utilisant
+              <strong>6 prompts successifs</strong> qui s'appuient les uns sur
+              les autres. Ce workflow complet démontre comment l'IA peut
+              accélérer chaque phase : spécifications → développement → tests.
+            </p>
+          </div>
+        </section>
+
+        <!-- MODULE 3.1 : FONDATIONS DU PROJET -->
+        <section class="mt-xl">
+          <h2>📐 Module 3.1 : Fondations du Projet avec l'IA (15 min)</h2>
+          <p>
+            <strong>Workflow :</strong> Présentation (7 min) → Pratique (5 min)
+            → Débrief (3 min)
+          </p>
+
+          <div class="card mt-lg">
+            <h3>Pourquoi Commencer par les Spécifications ?</h3>
+            <p>
+              Avant de générer du code, il faut établir deux fichiers qui
+              serviront de <strong>source de vérité</strong> pour tous les
+              prompts suivants :
+            </p>
+            <ul>
+              <li>
+                <strong>instructions.md</strong> : Règles techniques
+                (architecture, naming, data-cy pour tests)
+              </li>
+              <li>
+                <strong>prd.md</strong> : Exigences fonctionnelles (métriques,
+                règles conditionnelles)
+              </li>
+            </ul>
+          </div>
+
+          <!-- PROMPT 1 -->
+          <div class="card success mt-lg">
+            <h4>A. Prompt 1 : Générer instructions.md</h4>
+            <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+              📋 Voir le Prompt pour instructions.md
+            </button>
+            <div class="collapsible-content">
+              <div style="text-align: right; margin-bottom: 0.5rem">
+                <button
+                  onclick="copyPrompt(this)"
+                  style="
+                    background: #2196f3;
+                    color: white;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 0.9em;
+                  "
+                >
+                  📋 Copier le prompt
+                </button>
+              </div>
+              <div
+                style="
+                  background: #e3f2fd;
+                  border-left: 4px solid #2196f3;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔵 Rôle</h4>
+                <p>
+                  Tu es l'Architecte Technique Senior du projet Spring Boot
+                  nommé 'navdash' (com.bdeb.navdash). Ta tâche est de rédiger le
+                  fichier de règles techniques et de codage, nommé
+                  <strong>instructions.md</strong>, à placer à la racine du
+                  projet. Ce fichier servira de source unique de vérité pour
+                  tous les développements futurs assistés par IA.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #fff3e0;
+                  border-left: 4px solid #ff9800;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟡 Contexte</h4>
+                <p>
+                  Le projet utilise <strong>Java 17</strong>,
+                  <strong>Spring Boot 2.7.18</strong> (avec Thymeleaf pour le
+                  frontend et WebSocket), et <strong>JUnit 5</strong> pour les
+                  tests. Les dépendances incluent <strong>Gson</strong> et
+                  <strong>SLF4J</strong>.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #e8f5e9;
+                  border-left: 4px solid #4caf50;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟢 Tâche</h4>
+                <p>
+                  Génère le contenu complet du fichier
+                  <code>instructions.md</code>. Ce fichier doit dicter les
+                  règles pour toute génération future de code (backend Java et
+                  templates HTML) par l'IA.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #ffebee;
+                  border-left: 4px solid #f44336;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔴 Contraintes</h4>
+                <ol>
+                  <li>
+                    <strong>Architecture Java/Spring Boot :</strong> Le code
+                    doit respecter la structure Spring Boot MVC (Controller,
+                    Service, Repository). Le nommage des classes doit être en
+                    PascalCase. Le nommage des méthodes et variables doit être
+                    en camelCase.
+                  </li>
+                  <li>
+                    <strong>Gestion des Données :</strong> Utiliser la
+                    bibliothèque Gson pour la sérialisation et la
+                    désérialisation des objets (DTOs).
+                  </li>
+                  <li>
+                    <strong>Rendu Frontend :</strong> Les templates HTML doivent
+                    obligatoirement utiliser la syntaxe et les attributs
+                    Thymeleaf. Le code JavaScript de gestion des APIs natives du
+                    navigateur doit être placé dans un fichier séparé et non
+                    inline.
+                  </li>
+                  <li>
+                    <strong>Standards d'Automatisation QA (CRUCIAL) :</strong>
+                    Pour toute génération de code HTML ou de templates
+                    Thymeleaf, tous les éléments interactifs (boutons, champs de
+                    saisie, liens) et les éléments d'affichage de métrique
+                    critiques doivent impérativement inclure l'attribut
+                    <code>data-cy</code> comme identifiant de sélecteur unique
+                    pour les tests E2E.
+                  </li>
+                  <li>
+                    <strong>Logging :</strong> Utiliser la façade SLF4J pour
+                    toutes les sorties de log du backend.
+                  </li>
+                </ol>
+              </div>
+              <div
+                style="
+                  background: #f3e5f5;
+                  border-left: 4px solid #9c27b0;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟣 Format</h4>
+                <p>
+                  Le contenu du fichier <code>instructions.md</code> en
+                  Markdown, structuré par sections claires et titres pour une
+                  lecture facile par l'IA et l'équipe.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROMPT 2 -->
+          <div class="card success mt-lg">
+            <h4>B. Prompt 2 : Générer prd.md</h4>
+            <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+              📋 Voir le Prompt pour prd.md
+            </button>
+            <div class="collapsible-content">
+              <div style="text-align: right; margin-bottom: 0.5rem">
+                <button
+                  onclick="copyPrompt(this)"
+                  style="
+                    background: #2196f3;
+                    color: white;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 0.9em;
+                  "
+                >
+                  📋 Copier le prompt
+                </button>
+              </div>
+              <div
+                style="
+                  background: #e3f2fd;
+                  border-left: 4px solid #2196f3;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔵 Rôle</h4>
+                <p>
+                  Tu es le <strong>Product Owner (PO)</strong> du projet
+                  'navdash'. Ta tâche est de rédiger les exigences produit
+                  détaillées et enrichies dans un fichier nommé
+                  <strong>prd.md</strong>, à placer à la racine du projet. Ce
+                  document est la référence fonctionnelle unique pour l'équipe
+                  de développement et de QA.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #fff3e0;
+                  border-left: 4px solid #ff9800;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟡 Contexte</h4>
+                <p>
+                  Le projet vise à créer un
+                  <strong
+                    >Tableau de Bord de Diagnostic de l'Expérience
+                    Utilisateur</strong
+                  >
+                  (NavDash) en temps réel, basé sur les APIs natives du
+                  navigateur (Connexion, Batterie, Cœurs) et des préférences
+                  utilisateur.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #e8f5e9;
+                  border-left: 4px solid #4caf50;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟢 Tâche</h4>
+                <p>Génère le contenu complet du fichier <code>prd.md</code>.</p>
+              </div>
+              <div
+                style="
+                  background: #ffebee;
+                  border-left: 4px solid #f44336;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔴 Contraintes Fonctionnelles</h4>
+                <ol>
+                  <li>
+                    <strong>Affichage de Données Live :</strong> Vitesse Réseau,
+                    État de la Batterie, Cœurs Logiques, Résolution d'Écran,
+                    Latence de Chargement.
+                  </li>
+                  <li>
+                    <strong>Formulaire "Profil de Diagnostic" :</strong> Nom,
+                    Prénom, Email, Type d'Abonnement, Seuil de Latence (ms),
+                    Seuil de Qualité Réseau.
+                  </li>
+                  <li>
+                    <strong
+                      >Règles de Validation et Comportements Conditionnels
+                      :</strong
+                    >
+                    <ul>
+                      <li>
+                        Si la bande passante réelle ≤ Seuil de Qualité Réseau →
+                        afficher champ "Motif de la Lenteur" (obligatoire).
+                      </li>
+                      <li>
+                        Si Latence de Chargement > Seuil de Latence → Bandeau
+                        d'Alerte Critique (Rouge).
+                      </li>
+                      <li>
+                        Désactivation du formulaire si batterie < 10% ET non
+                        branchée OU largeur viewport < 768px.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Exigences Non-Fonctionnelles :</strong>
+                    Préférences persistées dans Local Storage. Serveur sur port
+                    8087.
+                  </li>
+                </ol>
+              </div>
+              <div
+                style="
+                  background: #f3e5f5;
+                  border-left: 4px solid #9c27b0;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟣 Format</h4>
+                <p>
+                  Le contenu du fichier <code>prd.md</code> en Markdown,
+                  structuré par titres et listes claires.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAUSE PRATIQUE MODULE 3.1 -->
+          <div class="card warning mt-lg">
+            <h3>⏸️ PAUSE PRATIQUE (5 min)</h3>
+            <h4>🎯 À vous de jouer !</h4>
+            <ol>
+              <li>
+                Copiez le <strong>Prompt 1</strong> → Collez dans GitHub Copilot
+                Chat
+              </li>
+              <li>Sauvegardez le résultat dans <code>instructions.md</code></li>
+              <li>
+                Répétez avec le <strong>Prompt 2</strong> →
+                <code>prd.md</code>
+              </li>
+              <li>Lisez rapidement les règles générées</li>
+            </ol>
+
+            <div
+              class="card info"
+              style="margin-top: 1rem; background: #e3f2fd"
+            >
+              <h4>💡 Note : Enrichissement des Prompts</h4>
+              <p>
+                Les prompts proposés sont des <strong>points de départ</strong>.
+                Vous pouvez les enrichir pour obtenir des résultats
+                personnalisés et adaptés à votre contexte :
+              </p>
+              <ul>
+                <li>
+                  <strong>Ajoutez votre stack :</strong> "Le projet utilise
+                  PostgreSQL 14 et Redis pour le cache"
+                </li>
+                <li>
+                  <strong>Précisez vos conventions :</strong> "Tous les DTOs
+                  doivent se terminer par 'Dto', ex: UserDto"
+                </li>
+                <li>
+                  <strong>Intégrez vos contraintes métier :</strong> "Les logs
+                  doivent inclure un correlation ID pour le tracking distribué"
+                </li>
+                <li>
+                  <strong>Adaptez le format de sortie :</strong> "Génère aussi
+                  un diagramme Mermaid de l'architecture"
+                </li>
+              </ul>
+              <p class="mt-md">
+                <strong>Résultat :</strong> Chaque apprenant obtiendra un
+                <code>instructions.md</code> et un <code>prd.md</code> uniques,
+                reflétant ses besoins spécifiques !
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE 3.2 : DÉVELOPPEMENT FRONTEND -->
+        <section class="mt-xl">
+          <h2>
+            💻 Module 3.2 : Développement Frontend Guidé par l'IA (15 min)
+          </h2>
+          <p>
+            <strong>Workflow :</strong> Présentation (7 min) → Pratique (5 min)
+            → Débrief (3 min)
+          </p>
+
+          <div class="card mt-lg">
+            <h3>Le Pouvoir du Contexte</h3>
+            <p>
+              Les prompts suivants
+              <strong>référencent explicitement</strong> les fichiers
+              <code>instructions.md</code> et <code>prd.md</code>
+              générés précédemment. L'IA utilisera ces spécifications pour
+              générer du code parfaitement aligné avec vos règles.
+            </p>
+          </div>
+
+          <!-- PROMPT 3 -->
+          <div class="card success mt-lg">
+            <h4>C. Prompt 3 : Générer main.js</h4>
+            <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+              📋 Voir le Prompt pour script.js
+            </button>
+            <div class="collapsible-content">
+              <div style="text-align: right; margin-bottom: 0.5rem">
+                <button
+                  onclick="copyPrompt(this)"
+                  style="
+                    background: #2196f3;
+                    color: white;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 0.9em;
+                  "
+                >
+                  📋 Copier le prompt
+                </button>
+              </div>
+              <div
+                style="
+                  background: #e3f2fd;
+                  border-left: 4px solid #2196f3;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔵 Rôle</h4>
+                <p>
+                  Tu es un <strong>Développeur Frontend Senior</strong>
+                  spécialisé en JavaScript pur (Vanilla JS) et tu travailles sur
+                  le projet 'navdash' (dont le HTML a été généré avec
+                  Thymeleaf).
+                </p>
+              </div>
+              <div
+                style="
+                  background: #e8f5e9;
+                  border-left: 4px solid #4caf50;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟢 Tâche</h4>
+                <p>
+                  Génère le code JavaScript complet
+                  (<code>static/js/main.js</code>) nécessaire pour implémenter
+                  toutes les logiques conditionnelles et l'affichage des
+                  métriques live de l'application "Tableau de Bord de Diagnostic
+                  Enrichi".
+                </p>
+              </div>
+              <div
+                style="
+                  background: #ffebee;
+                  border-left: 4px solid #f44336;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔴 Contexte/Contraintes</h4>
+                <ol>
+                  <li>
+                    <strong>Référencement des Éléments :</strong> Utilise
+                    exclusivement les attributs <code>data-cy</code> et l'ID des
+                    éléments pour cibler les inputs (conformément à
+                    <code>instructions.md</code>).
+                  </li>
+                  <li>
+                    <strong>Affichage des Métriques Live :</strong> Récupère et
+                    affiche la Vitesse Réseau, État de la Batterie (mise à jour
+                    toutes les 10 secondes), Nombre de Cœurs Logiques,
+                    Résolution d'Écran, Latence de Chargement.
+                  </li>
+                  <li>
+                    <strong
+                      >Implémentation des Logiques Conditionnelles :</strong
+                    >
+                    <ul>
+                      <li>
+                        <strong>Règle Réseau :</strong> Si connexion réseau ≤
+                        Seuil de Qualité Réseau → rendre visible et obligatoire
+                        le champ "Motif de la Lenteur".
+                      </li>
+                      <li>
+                        <strong>Règle Latence :</strong> Si Latence > Seuil de
+                        Latence → afficher Bandeau d'Alerte Critique (Rouge).
+                      </li>
+                      <li>
+                        <strong>Désactivation du Formulaire :</strong> Si
+                        batterie < 10% ET non branchée OU viewport < 768px.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Gestion des Préférences :</strong> Charger les
+                    valeurs depuis Local Storage si elles existent (conformément
+                    à <code>prd.md</code>).
+                  </li>
+                  <li>
+                    <strong>Gestion Asynchrone :</strong> Utiliser gestion
+                    asynchrone appropriée pour <code>getBattery()</code>.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROMPT 4 -->
+          <div class="card success mt-lg">
+            <h4>D. Prompt 4 : Générer style.css</h4>
+            <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+              📋 Voir le Prompt pour CSS
+            </button>
+            <div class="collapsible-content">
+              <div style="text-align: right; margin-bottom: 0.5rem">
+                <button
+                  onclick="copyPrompt(this)"
+                  style="
+                    background: #2196f3;
+                    color: white;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 0.9em;
+                  "
+                >
+                  📋 Copier le prompt
+                </button>
+              </div>
+              <div
+                style="
+                  background: #e3f2fd;
+                  border-left: 4px solid #2196f3;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔵 Rôle</h4>
+                <p>Tu es un Designer Web.</p>
+              </div>
+              <div
+                style="
+                  background: #e8f5e9;
+                  border-left: 4px solid #4caf50;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟢 Tâche</h4>
+                <p>
+                  Génère le fichier CSS (<code>static/css/style.css</code>) pour
+                  donner un style professionnel, sobre et lisible à
+                  l'application.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #ffebee;
+                  border-left: 4px solid #f44336;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔴 Contraintes</h4>
+                <p>
+                  Assure-toi que les indicateurs d'alerte (bandeau d'alerte
+                  rouge batterie faible, champ de motif de lenteur affiché, ...)
+                  soient clairement visibles par des couleurs d'arrière-plan ou
+                  des bordures épaisses.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAUSE PRATIQUE MODULE 3.2 -->
+          <div class="card warning mt-lg">
+            <h3>⏸️ PAUSE PRATIQUE (5 min)</h3>
+            <h4>🎯 À vous de jouer !</h4>
+            <ol>
+              <li>
+                Exécutez <strong>Prompt 3</strong> →
+                <code>static/js/main.js</code>
+              </li>
+              <li>
+                Exécutez <strong>Prompt 4</strong> →
+                <code>static/css/style.css</code>
+              </li>
+              <li>
+                Ouvrez l'app dans le navigateur (<code>localhost:8087</code>)
+              </li>
+              <li>Testez manuellement : changez la batterie dans DevTools</li>
+            </ol>
+
+            <div
+              class="card info"
+              style="margin-top: 1rem; background: #e3f2fd"
+            >
+              <h4>💡 Idées d'Enrichissement des Prompts</h4>
+              <p><strong>Pour le JavaScript (Prompt 3) :</strong></p>
+              <ul>
+                <li>
+                  "Utilise ESLint avec la config Airbnb pour garantir la qualité
+                  du code"
+                </li>
+                <li>
+                  "Ajoute des logs de debug dans la console avec un préfixe
+                  [NAVDASH]"
+                </li>
+                <li>
+                  "Implémente un système de notifications toast pour les alertes
+                  au lieu d'un bandeau fixe"
+                </li>
+                <li>
+                  "Utilise le pattern Observer pour les mises à jour de
+                  métriques"
+                </li>
+              </ul>
+              <p class="mt-md"><strong>Pour le CSS (Prompt 4) :</strong></p>
+              <ul>
+                <li>
+                  "Utilise la palette de couleurs Material Design avec bleu
+                  #2196F3 comme couleur primaire"
+                </li>
+                <li>
+                  "Ajoute des animations CSS subtiles sur les transitions
+                  d'alerte"
+                </li>
+                <li>
+                  "Génère aussi un thème sombre (dark mode) avec CSS Variables"
+                </li>
+                <li>
+                  "Optimise pour l'accessibilité (WCAG 2.1 niveau AA) avec des
+                  contrastes élevés"
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE 3.3 : TESTS E2E AVEC CYPRESS -->
+        <section class="mt-xl">
+          <h2>🧪 Module 3.3 : Tests E2E avec Cypress et l'IA (20 min)</h2>
+          <p>
+            <strong>Workflow :</strong> Présentation (8 min) → Pratique (8 min)
+            → Débrief (4 min)
+          </p>
+
+          <div class="card mt-lg">
+            <h3>La Puissance des Tests Avancés</h3>
+            <p>
+              Nous allons maintenant générer des tests Cypress qui utilisent des
+              techniques avancées de
+              <strong>simulation d'APIs natives</strong> (batterie, réseau) avec
+              <code>cy.stub()</code>. Ces tests valident les comportements
+              conditionnels de l'application sans dépendre de l'environnement
+              réel.
+            </p>
+          </div>
+
+          <!-- PROMPT 5 -->
+          <div class="card success mt-lg">
+            <h4>E. Prompt 5 : Générer test_instructions.md</h4>
+            <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+              📋 Voir le Prompt pour test_instructions.md
+            </button>
+            <div class="collapsible-content">
+              <div style="text-align: right; margin-bottom: 0.5rem">
+                <button
+                  onclick="copyPrompt(this)"
+                  style="
+                    background: #2196f3;
+                    color: white;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 0.9em;
+                  "
+                >
+                  📋 Copier le prompt
+                </button>
+              </div>
+              <div
+                style="
+                  background: #e3f2fd;
+                  border-left: 4px solid #2196f3;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔵 Rôle</h4>
+                <p>
+                  Tu es le <strong>Lead QA Automation Engineer</strong> du
+                  projet <code>navdash</code>. Ta tâche est de rédiger les
+                  règles d'automatisation des tests E2E dans un fichier nommé
+                  <strong>test_instructions.md</strong>, à placer à la racine ou
+                  dans le dossier de tests du projet. Ce document est la source
+                  unique de vérité pour la génération des scripts de test.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #fff3e0;
+                  border-left: 4px solid #ff9800;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟡 Contexte</h4>
+                <p>
+                  L'application est un Tableau de Bord de Diagnostic basé sur
+                  Java/Spring Boot/Thymeleaf. Les tests E2E doivent valider les
+                  comportements conditionnels basés sur les APIs natives du
+                  navigateur (Connexion Réseau, Batterie, Latence, Résolution).
+                </p>
+              </div>
+              <div
+                style="
+                  background: #e8f5e9;
+                  border-left: 4px solid #4caf50;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟢 Tâche</h4>
+                <p>
+                  Génère le contenu complet du fichier
+                  <code>test_instructions.md</code>.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #ffebee;
+                  border-left: 4px solid #f44336;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔴 Contraintes de Tests</h4>
+                <ol>
+                  <li>
+                    <strong>Framework de Test :</strong> Tous les tests E2E
+                    doivent être écrits avec <strong>Cypress</strong>. Le
+                    nommage des fichiers de spécification Cypress doit être en
+                    camelCase et se terminer par <code>.cy.ts</code>.
+                  </li>
+                  <li>
+                    <strong>Sélecteurs et Maintenance (CRUCIAL) :</strong> Règle
+                    ABSOLUE : Les sélecteurs d'éléments doivent EXCLUSIVEMENT
+                    utiliser l'attribut <code>data-cy</code> (comme défini dans
+                    <code>instructions.md</code>). Les sélecteurs par ID, Class
+                    CSS ou XPath sont interdits.
+                  </li>
+                  <li>
+                    <strong>Techniques de Simulation Avancée :</strong> Pour
+                    tester les scénarios conditionnels, utiliser des méthodes de
+                    simulation pour forcer l'état des APIs :
+                    <ul>
+                      <li>
+                        <strong>API Réseau et Batterie :</strong> Utiliser
+                        <code>cy.stub()</code> pour simuler une connexion réseau
+                        'slow-3G' et un niveau de batterie inférieur à 10%.
+                      </li>
+                      <li>
+                        <strong>Latence de Chargement :</strong> Utiliser
+                        <code>cy.stub()</code> ou des commandes de manipulation
+                        de la Performance API pour simuler un temps de
+                        chargement > 3000 ms.
+                      </li>
+                      <li>
+                        <strong>Résolution/Viewport :</strong> Utiliser
+                        <code>cy.viewport()</code> pour simuler une résolution
+                        d'écran mobile (largeur < 768px).
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Structure des Scénarios :</strong> Les scénarios de
+                    test doivent être structurés clairement avec des blocs
+                    <code>describe</code> et <code>it</code>. La phase de
+                    <code>beforeEach</code> doit être utilisée pour initialiser
+                    l'état du navigateur (ex: vider le Local Storage).
+                  </li>
+                  <li>
+                    <strong>Couverture :</strong> Les tests générés doivent
+                    couvrir toutes les règles de validation et les comportements
+                    conditionnels définis dans le fichier <code>prd.md</code>.
+                  </li>
+                </ol>
+              </div>
+              <div
+                style="
+                  background: #f3e5f5;
+                  border-left: 4px solid #9c27b0;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟣 Format</h4>
+                <p>
+                  Le contenu du fichier <code>test_instructions.md</code> en
+                  Markdown, structuré par sections claires et titres.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROMPT 6 -->
+          <div class="card success mt-lg">
+            <h4>F. Prompt 6 : Générer networkAndBatteryValidation.cy.ts</h4>
+            <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+              📋 Voir le Prompt pour les Tests Cypress
+            </button>
+            <div class="collapsible-content">
+              <div style="text-align: right; margin-bottom: 0.5rem">
+                <button
+                  onclick="copyPrompt(this)"
+                  style="
+                    background: #2196f3;
+                    color: white;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 0.9em;
+                  "
+                >
+                  📋 Copier le prompt
+                </button>
+              </div>
+              <div
+                style="
+                  background: #e3f2fd;
+                  border-left: 4px solid #2196f3;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔵 Rôle</h4>
+                <p>
+                  Tu es un
+                  <strong>Spécialiste en Automatisation QA Cypress</strong>
+                  travaillant sur le projet 'navdash'.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #e8f5e9;
+                  border-left: 4px solid #4caf50;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟢 Tâche</h4>
+                <p>
+                  Génère le code complet du fichier de test E2E pour
+                  l'application, nommé
+                  <strong>networkAndBatteryValidation.cy.ts</strong>.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #ffebee;
+                  border-left: 4px solid #f44336;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔴 Contraintes</h4>
+                <ol>
+                  <li>
+                    Le test doit se concentrer sur la validation des deux
+                    <strong>Comportements Conditionnels</strong> les plus
+                    critiques définis dans le <code>prd.md</code> : l'alerte de
+                    connexion réseau lente et l'alerte de batterie faible.
+                  </li>
+                  <li>
+                    Pour réussir ces tests, tu dois obligatoirement utiliser la
+                    méthode <code>cy.stub()</code> pour simuler les états des
+                    APIs du navigateur (comme spécifié dans
+                    <code>test_instructions.md</code>).
+                  </li>
+                  <li>
+                    Assure-toi que les sélecteurs utilisés dans le script sont
+                    conformes à la Règle ABSOLUE de notre équipe (définie dans
+                    <code>test_instructions.md</code>).
+                  </li>
+                </ol>
+              </div>
+              <div
+                style="
+                  background: #f3e5f5;
+                  border-left: 4px solid #9c27b0;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟣 Format</h4>
+                <p>Le code Cypress/TypeScript complet, prêt à être exécuté.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAUSE PRATIQUE MODULE 3.3 -->
+          <div class="card warning mt-lg">
+            <h3>⏸️ PAUSE PRATIQUE (8 min)</h3>
+            <h4>🎯 À vous de jouer !</h4>
+            <ol>
+              <li>
+                Exécutez <strong>Prompt 5</strong> →
+                <code>test_instructions.md</code>
+              </li>
+              <li>
+                Exécutez <strong>Prompt 6</strong> →
+                <code>cypress/e2e/networkAndBatteryValidation.cy.ts</code>
+              </li>
+              <li>Lancez Cypress : <code>npm run cypress:open</code></li>
+              <li>Exécutez les tests et observez les simulations (cy.stub)</li>
+            </ol>
+
+            <div
+              class="card info"
+              style="margin-top: 1rem; background: #e3f2fd"
+            >
+              <h4>💡 Idées d'Enrichissement des Prompts de Tests</h4>
+              <p><strong>Pour test_instructions.md (Prompt 5) :</strong></p>
+              <ul>
+                <li>
+                  "Ajoute une section sur les tests de performance avec Cypress
+                  Lighthouse"
+                </li>
+                <li>
+                  "Inclus des règles pour les tests d'accessibilité avec
+                  cypress-axe"
+                </li>
+                <li>
+                  "Définis une convention de nommage pour les fixtures JSON (ex:
+                  user-valid.json)"
+                </li>
+                <li>
+                  "Spécifie l'utilisation de Page Object Model pour tous les
+                  tests"
+                </li>
+              </ul>
+              <p class="mt-md">
+                <strong>Pour les tests Cypress (Prompt 6) :</strong>
+              </p>
+              <ul>
+                <li>
+                  "Génère aussi des tests pour la persistance Local Storage
+                  (vérifier que les seuils sont sauvegardés)"
+                </li>
+                <li>
+                  "Ajoute des tests de régression visuelle avec Percy ou
+                  Applitools"
+                </li>
+                <li>
+                  "Implémente des custom commands Cypress pour les simulations
+                  récurrentes (ex: cy.stubBattery())"
+                </li>
+                <li>
+                  "Génère des rapports de test avec Mochawesome et capture
+                  d'écran automatique sur échec"
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- MESSAGE CLÉ FINAL -->
+        <section class="card warning mt-xl">
+          <h2>🎯 Le Message Clé de cette Section</h2>
+          <p>
+            Vous avez construit une application complète de A à Z en utilisant
+            <strong>6 prompts successifs et interdépendants</strong> :
+          </p>
+          <ul>
+            <li>
+              ✅ <strong>Prompts 1-2</strong> : Spécifications (instructions.md,
+              prd.md) → La fondation
+            </li>
+            <li>
+              ✅ <strong>Prompts 3-4</strong> : Code Frontend (JavaScript, CSS)
+              → Le développement
+            </li>
+            <li>
+              ✅ <strong>Prompts 5-6</strong> : Tests E2E (Cypress) → La
+              validation
+            </li>
+          </ul>
+          <p class="mt-md">
+            <strong>Leçons Clés :</strong>
+          </p>
+          <ul>
+            <li>
+              🔗 <strong>Le prompt chaining avec contexte</strong> est plus
+              puissant que des prompts isolés
+            </li>
+            <li>
+              📋 <strong>Les fichiers de spécifications</strong>
+              (instructions.md, prd.md) sont la clé de la cohérence
+            </li>
+            <li>
+              🧪 <strong>L'IA peut générer des tests avancés</strong> (cy.stub)
+              si les règles sont claires
+            </li>
+            <li>
+              🔄 <strong>Ce workflow est reproductible</strong> sur tous vos
+              projets QA
+            </li>
+          </ul>
+          <p class="mt-md">
+            <strong>Prochaine étape :</strong> Appliquer ce pattern à vos
+            projets réels et explorer des cas d'usage avancés (Section 4)
+          </p>
+        </section>
+
+        <!-- NAVIGATION -->
+        <div class="navigation mt-xl">
+          <a href="../section-2/index.html" class="btn-secondary"
+            >← Section 2</a
+          >
+          <a href="../section-4/index.html" class="btn-primary"
+            >Section 4 : Cas d'Usage Avancés →</a
+          >
         </div>
       </div>
     </main>
 
     <footer>
-      <div class="container">
-        <p>📚 Formation QA & IA Générative | Section 3 - Outillage QA</p>
-        <p><small>⏱️ Durée : 50 min | Niveau : Pratique</small></p>
-      </div>
+      <p>Formation GitHub Copilot pour QA - Section 3/4</p>
+      <p>🎓 Masterclass Prompt Engineering</p>
     </footer>
+
+    <script>
+      function toggleCollapsible(button) {
+        button.classList.toggle("active");
+        const content = button.nextElementSibling;
+        content.classList.toggle("active");
+      }
+
+      function copyPrompt(button) {
+        const promptContainer = button.closest(".collapsible-content");
+        const clone = promptContainer.cloneNode(true);
+        const copyBtn = clone.querySelector("button");
+        if (copyBtn) copyBtn.remove();
+        let fullPrompt = clone.innerText.trim();
+
+        navigator.clipboard
+          .writeText(fullPrompt)
+          .then(() => {
+            const originalText = button.innerHTML;
+            button.innerHTML = "✅ Copié !";
+            button.style.background = "#4caf50";
+
+            setTimeout(() => {
+              button.innerHTML = originalText;
+              button.style.background = "#2196f3";
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("Erreur de copie:", err);
+            alert("Erreur lors de la copie. Utilisez Ctrl+C manuellement.");
+          });
+      }
+    </script>
   </body>
 </html>

@@ -8,44 +8,71 @@
   </head>
   <body>
     <nav>
-      <a href="../../index.html">🏠 Accueil</a>
-      <a href="../section-1/index.html">Section 1</a>
-      <a href="../section-2/index.html" class="active">Section 2</a>
-      <a href="../section-3/index.html">Section 3</a>
-      <a href="../section-4/index.html">Section 4</a>
+      <div class="container">
+        <div class="nav-title">Formation QA & IA Générative</div>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../section-1/index.html">Section 1</a></li>
+          <li><a href="#" class="active">Section 2</a></li>
+          <li><a href="../section-3/index.html">Section 3</a></li>
+          <li><a href="../section-4/index.html">Section 4</a></li>
+        </ul>
+      </div>
     </nav>
 
     <header>
-      <h1>🎯 Section 2 : Maîtriser le Prompt Engineering pour la QA</h1>
-      <p class="subtitle">Durée : 90 minutes</p>
+      <div class="container">
+        <h1>🎯 Section 2 : Maîtriser le Prompt Engineering pour la QA</h1>
+        <p class="subtitle">Durée : 90 minutes</p>
+      </div>
     </header>
 
-    <div class="container">
-      <section class="hero">
-        <h2>🎓 Objectifs de cette Section</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>📐 Anatomie</h3>
-            <p>
-              Comprendre les 5 composantes essentielles d'un prompt efficace
-            </p>
+    <main>
+      <div class="container">
+        <!-- HERO SECTION -->
+        <section class="hero">
+          <h2>Pourquoi cette section ?</h2>
+          <p>
+            Maîtriser l'art du prompt engineering pour transformer l'IA en 
+            véritable partenaire : obtenir des résultats précis, cohérents 
+            et adaptés à vos besoins QA spécifiques.
+          </p>
+        </section>
+
+        <section class="objectives-section">
+        <h2>🎯 Objectifs de cette Section</h2>
+        <p class="intro-text">
+          À l'issue de cette section, vous serez capable de :
+        </p>
+        <div class="objectives-list">
+          <div class="objective-item">
+            <span class="objective-icon">📐</span>
+            <div class="objective-content">
+              <strong>Anatomie d'un prompt efficace</strong> — Maîtriser les 5
+              composantes essentielles (Rôle, Tâche, Contexte, Contraintes,
+              Format)
+            </div>
           </div>
-          <div class="card">
-            <h3>🚀 Techniques Avancées</h3>
-            <p>Maîtriser Chain-of-Thought, Few-Shot et Prompt Chaining</p>
+          <div class="objective-item">
+            <span class="objective-icon">🧠</span>
+            <div class="objective-content">
+              <strong>Chain-of-Thought</strong> — Faire expliciter le
+              raisonnement étape par étape pour résoudre des problèmes complexes
+            </div>
           </div>
-          <div class="card">
-            <h3>🧪 Génération de Tests</h3>
-            <p>
-              Générer des scénarios Gherkin, scripts Cypress et données de test
-            </p>
+          <div class="objective-item">
+            <span class="objective-icon">📚</span>
+            <div class="objective-content">
+              <strong>Few-Shot Learning</strong> — Guider l'IA avec des exemples
+              concrets pour garantir un format précis et cohérent
+            </div>
           </div>
-          <div class="card">
-            <h3>🔍 Debugging</h3>
-            <p>
-              Analyser les logs, déboguer les tests flaky et évaluer la
-              robustesse
-            </p>
+          <div class="objective-item">
+            <span class="objective-icon">🔗</span>
+            <div class="objective-content">
+              <strong>Prompt Chaining</strong> — Décomposer une tâche complexe
+              en sous-prompts séquentiels pour des résultats modulaires
+            </div>
           </div>
         </div>
       </section>
@@ -103,27 +130,49 @@
           <h3>A. Rôle/Persona : L'Impact du Contexte Professionnel</h3>
           <p>
             Définir le rôle transforme radicalement la qualité et la pertinence
-            de la réponse. Observons la différence :
+            de la réponse. Observons l'impact du <strong>Rôle seul</strong> :
           </p>
 
           <div class="grid mt-md">
             <div class="card warning">
-              <h4>❌ Prompt Basique (Sans Rôle)</h4>
-              <p><em>"Crée un test pour la page de connexion Redmine"</em></p>
+              <h4>❌ Sans Rôle</h4>
+              <p>
+                <em
+                  >"Crée une classe Page Object pour la page de connexion
+                  Redmine"</em
+                >
+              </p>
+              <p><strong>Problèmes :</strong></p>
               <ul>
-                <li>Réponse générique</li>
-                <li>Sélecteurs CSS fragiles (#username)</li>
-                <li>Pas de bonnes pratiques</li>
-                <li>Code non idiomatique</li>
+                <li>Réponse générique, peu contextualisée</li>
+                <li>Sélecteurs fragiles (classes CSS, XPath)</li>
+                <li>Pas de bonnes pratiques professionnelles</li>
+                <li>Code minimal, non idiomatique</li>
               </ul>
             </div>
 
             <div class="card success">
-              <h4>✅ Prompt Structuré (Avec Rôle)</h4>
+              <h4>✅ Avec Rôle Uniquement</h4>
               <button class="collapsible-btn" onclick="toggleCollapsible(this)">
-                📋 Voir le Prompt Structuré avec les 5 Composantes
+                📋 Voir le Prompt avec Rôle
               </button>
               <div class="collapsible-content">
+                <div style="text-align: right; margin-bottom: 0.5rem">
+                  <button
+                    onclick="copyPrompt(this)"
+                    style="
+                      background: #2196f3;
+                      color: white;
+                      border: none;
+                      padding: 0.5rem 1rem;
+                      border-radius: 4px;
+                      cursor: pointer;
+                      font-size: 0.9em;
+                    "
+                  >
+                    📋 Copier le prompt
+                  </button>
+                </div>
                 <div
                   style="
                     background: #e3f2fd;
@@ -136,119 +185,35 @@
                   <p>
                     Tu es un ingénieur QA senior avec 8 ans d'expérience en
                     automatisation de tests E2E. Tu maîtrises parfaitement
-                    Cypress, TypeScript et le Page Object Model.
+                    Cypress, TypeScript et le Page Object Model. Tu appliques
+                    toujours les meilleures pratiques de l'industrie.
                   </p>
                 </div>
-
-                <div
-                  style="
-                    background: #e8f5e9;
-                    border-left: 4px solid #4caf50;
-                    padding: 1rem;
-                    margin: 0.5rem 0;
-                  "
-                >
-                  <h4>🟢 Tâche</h4>
-                  <p>
-                    Génère une classe Page Object TypeScript complète pour la
-                    page de connexion de l'application Redmine avec toutes les
-                    méthodes d'interaction nécessaires.
-                  </p>
-                </div>
-
-                <div
-                  style="
-                    background: #fff9c4;
-                    border-left: 4px solid #ffeb3b;
-                    padding: 1rem;
-                    margin: 0.5rem 0;
-                  "
-                >
-                  <h4>🟡 Contexte</h4>
-                  <p>
-                    Contexte : Cypress + TypeScript, API Redmine, Page Object
-                    Model.
-                  </p>
-                  <p>
-                    <strong
-                      >Voici le code HTML réel du formulaire de connexion
-                      :</strong
-                    >
-                  </p>
-                  <pre
-                    style="
-                      background: #1e1e1e;
-                      color: #d4d4d4;
-                      padding: 1rem;
-                      border-radius: 4px;
-                      overflow-x: auto;
-                    "
-                  ><code>&lt;form onsubmit="return keepAnchorOnSignIn(this);" action="/login" method="post"&gt;
-  &lt;input type="hidden" name="authenticity_token" value="..." /&gt;
-  &lt;label for="username"&gt;Identifiant&lt;/label&gt;
-  &lt;input type="text" name="username" id="username" tabindex="1" /&gt;
-  &lt;label for="password"&gt;Mot de passe&lt;/label&gt;
-  &lt;input type="password" name="password" id="password" tabindex="2" /&gt;
-  &lt;input type="checkbox" name="autologin" id="autologin" value="1" /&gt; Rester connecté
-  &lt;input type="submit" id="login-submit" value="Connexion" tabindex="5" /&gt;
-&lt;/form&gt;</code></pre>
-                </div>
-
-                <div
-                  style="
-                    background: #ffebee;
-                    border-left: 4px solid #f44336;
-                    padding: 1rem;
-                    margin: 0.5rem 0;
-                  "
-                >
-                  <h4>🔴 Contraintes</h4>
-                  <ul>
-                    <li>
-                      Utilise <strong>UNIQUEMENT</strong> les attributs
-                      <code>id</code> natifs pour les sélecteurs
-                    </li>
-                    <li>
-                      Jamais de XPath, de sélecteurs CSS complexes ou de texte
-                      visible
-                    </li>
-                    <li>Applique le pattern Page Object Model strict</li>
-                    <li>Méthodes chainables (retournent <code>this</code>)</li>
-                    <li>Gestion des erreurs avec messages explicites</li>
-                  </ul>
-                </div>
-
-                <div
-                  style="
-                    background: #f3e5f5;
-                    border-left: 4px solid #9c27b0;
-                    padding: 1rem;
-                    margin: 0.5rem 0;
-                  "
-                >
-                  <h4>🟣 Format</h4>
-                  <p>Code TypeScript complet avec :</p>
-                  <ul>
-                    <li>Classe <code>LoginPage</code> exportée</li>
-                    <li>Sélecteurs privés en haut</li>
-                    <li>
-                      Méthodes publiques : <code>visit()</code>,
-                      <code>fillUsername()</code>, <code>fillPassword()</code>,
-                      <code>submit()</code>
-                    </li>
-                    <li>JSDoc pour chaque méthode</li>
-                  </ul>
-                </div>
+                <p class="mt-md">
+                  <em
+                    >Crée une classe Page Object pour la page de connexion
+                    Redmine</em
+                  >
+                </p>
               </div>
 
-              <p class="mt-md"><strong>Résultat :</strong></p>
+              <p class="mt-md"><strong>Amélioration visible :</strong></p>
               <ul>
-                <li>Code professionnel idiomatique</li>
-                <li>Sélecteurs robustes (id natifs)</li>
-                <li>Architecture POM respectée</li>
-                <li>Documentation JSDoc complète</li>
+                <li>✅ Ton professionnel, vocabulaire expert</li>
+                <li>✅ Structure TypeScript idiomatique</li>
+                <li>✅ Méthodes chainables (best practice)</li>
+                <li>✅ JSDoc automatiquement ajouté</li>
               </ul>
             </div>
+          </div>
+
+          <div class="card info mt-md">
+            <h4>💡 Leçon Clé</h4>
+            <p>
+              Le rôle <strong>active le bon "mode d'expertise"</strong> de l'IA.
+              Sans rôle, l'IA répond en mode généraliste. Avec un rôle QA
+              senior, elle applique automatiquement les standards du métier.
+            </p>
           </div>
         </div>
 
@@ -257,47 +222,145 @@
           <h3>B. Tâche : La Clarté de l'Intention</h3>
           <p>
             Une tâche bien formulée est
-            <strong>spécifique, mesurable et actionnable</strong>. La différence
-            entre une demande vague et une tâche claire :
+            <strong>spécifique, mesurable et actionnable</strong>. Ajoutons
+            maintenant une <strong>Tâche claire</strong> au Rôle établi en A :
           </p>
 
           <div class="grid mt-md">
-            <div>
-              <h4>❌ Tâches Mal Formulées</h4>
-              <ul class="warning-list">
-                <li>"Fais un truc pour tester la connexion"</li>
-                <li>"Améliore mes tests"</li>
-                <li>"Génère du code de test"</li>
-                <li>"Aide-moi avec Cypress"</li>
+            <div class="card warning">
+              <h4>❌ Rôle + Tâche Vague</h4>
+              <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                📋 Voir le Prompt Incomplet
+              </button>
+              <div class="collapsible-content">
+                <div style="text-align: right; margin-bottom: 0.5rem">
+                  <button
+                    onclick="copyPrompt(this)"
+                    style="
+                      background: #2196f3;
+                      color: white;
+                      border: none;
+                      padding: 0.5rem 1rem;
+                      border-radius: 4px;
+                      cursor: pointer;
+                      font-size: 0.9em;
+                    "
+                  >
+                    📋 Copier le prompt
+                  </button>
+                </div>
+                <div
+                  style="
+                    background: #e3f2fd;
+                    border-left: 4px solid #2196f3;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔵 Rôle</h4>
+                  <p>
+                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
+                    automatisation de tests E2E.
+                  </p>
+                </div>
+                <div
+                  style="
+                    background: #ffebee;
+                    border-left: 4px solid #f44336;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟢 Tâche (Vague)</h4>
+                  <p>
+                    <em>"Crée un test pour la page de connexion Redmine"</em>
+                  </p>
+                </div>
+              </div>
+              <p class="mt-md"><strong>Problèmes :</strong></p>
+              <ul>
+                <li>Type de test non précisé (unitaire ? E2E ? POM ?)</li>
+                <li>
+                  Framework/langage inconnu (Cypress ? Selenium ? Java ?
+                  TypeScript ?)
+                </li>
+                <li>
+                  Périmètre flou (tous les champs ? juste connexion réussie ?)
+                </li>
+                <li>
+                  Pas de spécification des méthodes ou de la structure attendue
+                </li>
               </ul>
-              <p class="text-muted">
-                <em>Trop vague, pas d'objectif clair, résultat imprévisible</em>
-              </p>
             </div>
 
-            <div>
-              <h4>✅ Tâches Bien Formulées</h4>
-              <ul class="success-list">
+            <div class="card success">
+              <h4>✅ Rôle + Tâche Claire</h4>
+              <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                📋 Voir le Prompt Amélioré
+              </button>
+              <div class="collapsible-content">
+                <div style="text-align: right; margin-bottom: 0.5rem">
+                  <button
+                    onclick="copyPrompt(this)"
+                    style="
+                      background: #2196f3;
+                      color: white;
+                      border: none;
+                      padding: 0.5rem 1rem;
+                      border-radius: 4px;
+                      cursor: pointer;
+                      font-size: 0.9em;
+                    "
+                  >
+                    📋 Copier le prompt
+                  </button>
+                </div>
+                <div
+                  style="
+                    background: #e3f2fd;
+                    border-left: 4px solid #2196f3;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔵 Rôle</h4>
+                  <p>
+                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
+                    automatisation de tests E2E. Tu maîtrises parfaitement
+                    Cypress, TypeScript et le Page Object Model. Tu appliques
+                    toujours les meilleures pratiques de l'industrie.
+                  </p>
+                </div>
+                <div
+                  style="
+                    background: #e8f5e9;
+                    border-left: 4px solid #4caf50;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟢 Tâche (Précise)</h4>
+                  <p>
+                    <strong
+                      >Génère une classe Page Object TypeScript complète pour la
+                      page de connexion Redmine</strong
+                    >
+                    avec les méthodes suivantes : <code>visit()</code>,
+                    <code>fillUsername()</code>, <code>fillPassword()</code>,
+                    <code>submit()</code>, <code>clickLostPassword()</code>.
+                  </p>
+                </div>
+              </div>
+              <p class="mt-md"><strong>Amélioration :</strong></p>
+              <ul>
+                <li>✅ Livrable défini (classe Page Object)</li>
+                <li>✅ Langage spécifié (TypeScript)</li>
+                <li>✅ Méthodes explicites (5 méthodes nommées)</li>
+                <li>✅ Périmètre clair (page de connexion uniquement)</li>
                 <li>
-                  "Génère un test E2E Cypress qui valide le workflow complet de
-                  virement bancaire"
-                </li>
-                <li>
-                  "Crée une factory TypeScript pour générer 20 IBANs français
-                  valides avec checksum correct"
-                </li>
-                <li>
-                  "Écris 5 scénarios Gherkin couvrant les cas limites de
-                  validation de montant (négatif, zéro, >1M€)"
-                </li>
-                <li>
-                  "Analyse ce log de 50 lignes et identifie la cause racine de
-                  l'erreur 500"
+                  ✅ Fonctionnalités réelles (lien mot de passe perdu inclus)
                 </li>
               </ul>
-              <p class="text-success">
-                <em>Spécifique, mesurable, contextualisé</em>
-              </p>
             </div>
           </div>
 
@@ -311,15 +374,29 @@
             <ul>
               <li>
                 <strong>Verbe :</strong> Génère, Crée, Analyse, Identifie,
-                Corrige, Évalue
+                Corrige, Refactorise
               </li>
               <li>
-                <strong>Livrable :</strong> Type exact (test E2E, scénario
-                Gherkin, factory, classe POM)
+                <strong>Livrable :</strong> Type exact (classe POM, test E2E,
+                scénario Gherkin)
               </li>
               <li>
-                <strong>Critères :</strong> Nombre, format, contraintes (20
-                IBANs, format JSON, pas de XPath)
+                <strong>Critères :</strong> Méthodes requises, format,
+                contraintes techniques
+              </li>
+            </ul>
+            <p class="mt-md"><em>Exemples de tâches bien formulées :</em></p>
+            <ul class="success-list">
+              <li>
+                "Génère 10 IBANs français valides avec checksums corrects"
+              </li>
+              <li>
+                "Crée 5 scénarios Gherkin couvrant les cas limites de validation
+                de montant"
+              </li>
+              <li>
+                "Analyse ces 50 lignes de logs et identifie la cause racine de
+                l'erreur 500"
               </li>
             </ul>
           </div>
@@ -330,64 +407,229 @@
           <h3>C. Contexte : Le Carburant de la Précision</h3>
           <p>
             Le contexte transforme une réponse générique en solution sur-mesure.
-            Plus vous fournissez de contexte technique, meilleure sera la
-            qualité du code généré.
+            Ajoutons le <strong>Contexte technique</strong> au Rôle + Tâche :
           </p>
 
-          <h4 class="mt-md">🎯 Types de Contexte à Fournir</h4>
           <div class="grid mt-md">
-            <div class="card">
-              <h4>🏗️ Architecture</h4>
+            <div class="card warning">
+              <h4>❌ Rôle + Tâche Sans Contexte</h4>
+              <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                📋 Voir le Prompt Sans Contexte
+              </button>
+              <div class="collapsible-content">
+                <div style="text-align: right; margin-bottom: 0.5rem">
+                  <button
+                    onclick="copyPrompt(this)"
+                    style="
+                      background: #2196f3;
+                      color: white;
+                      border: none;
+                      padding: 0.5rem 1rem;
+                      border-radius: 4px;
+                      cursor: pointer;
+                      font-size: 0.9em;
+                    "
+                  >
+                    📋 Copier le prompt
+                  </button>
+                </div>
+                <div
+                  style="
+                    background: #e3f2fd;
+                    border-left: 4px solid #2196f3;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔵 Rôle</h4>
+                  <p>
+                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
+                    automatisation de tests E2E. Tu maîtrises parfaitement
+                    Cypress, TypeScript et le Page Object Model. Tu appliques
+                    toujours les meilleures pratiques de l'industrie.
+                  </p>
+                </div>
+                <div
+                  style="
+                    background: #e8f5e9;
+                    border-left: 4px solid #4caf50;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟢 Tâche</h4>
+                  <p>
+                    Génère une classe Page Object TypeScript complète pour la
+                    page de connexion Redmine avec les méthodes suivantes :
+                    <code>visit()</code>, <code>fillUsername()</code>,
+                    <code>fillPassword()</code>, <code>submit()</code>,
+                    <code>clickLostPassword()</code>.
+                  </p>
+                </div>
+              </div>
+              <p class="mt-md"><strong>Problème :</strong></p>
               <ul>
-                <li>Framework : Cypress, Playwright, Selenium</li>
-                <li>Langage : TypeScript, JavaScript, Python</li>
-                <li>Pattern : Page Object Model, Screenplay</li>
+                <li>⚠️ L'IA va deviner la structure HTML</li>
+                <li>
+                  ⚠️ Sélecteurs probablement incorrects (#email au lieu de
+                  #username)
+                </li>
+                <li>
+                  ⚠️ Code générique, pas adapté à votre application réelle
+                </li>
               </ul>
             </div>
 
-            <div class="card">
-              <h4>🔧 Configuration</h4>
+            <div class="card success">
+              <h4>✅ Rôle + Tâche + Contexte</h4>
+              <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                📋 Voir le Prompt Avec Contexte
+              </button>
+              <div class="collapsible-content">
+                <div style="text-align: right; margin-bottom: 0.5rem">
+                  <button
+                    onclick="copyPrompt(this)"
+                    style="
+                      background: #2196f3;
+                      color: white;
+                      border: none;
+                      padding: 0.5rem 1rem;
+                      border-radius: 4px;
+                      cursor: pointer;
+                      font-size: 0.9em;
+                    "
+                  >
+                    📋 Copier le prompt
+                  </button>
+                </div>
+                <div
+                  style="
+                    background: #e3f2fd;
+                    border-left: 4px solid #2196f3;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔵 Rôle</h4>
+                  <p>
+                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
+                    automatisation de tests E2E. Tu maîtrises parfaitement
+                    Cypress, TypeScript et le Page Object Model. Tu appliques
+                    toujours les meilleures pratiques de l'industrie.
+                  </p>
+                </div>
+                <div
+                  style="
+                    background: #e8f5e9;
+                    border-left: 4px solid #4caf50;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟢 Tâche</h4>
+                  <p>
+                    Génère une classe Page Object TypeScript complète pour la
+                    page de connexion Redmine avec les méthodes suivantes :
+                    <code>visit()</code>, <code>fillUsername()</code>,
+                    <code>fillPassword()</code>, <code>submit()</code>,
+                    <code>clickLostPassword()</code>.
+                  </p>
+                </div>
+                <div
+                  style="
+                    background: #fff9c4;
+                    border-left: 4px solid #ffeb3b;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟡 Contexte</h4>
+                  <p>
+                    <strong>Application :</strong> Redmine 5.x (Ruby on Rails)
+                  </p>
+                  <p><strong>Stack :</strong> Cypress 13 + TypeScript 5</p>
+                  <p>
+                    <strong>Voici le code HTML réel du formulaire :</strong>
+                  </p>
+                  <pre
+                    style="
+                      background: #1e1e1e;
+                      padding: 1rem;
+                      border-radius: 4px;
+                      overflow-x: auto;
+                      font-size: 0.85em;
+                    "
+                  ><code style="color: #d4d4d4;">&lt;form onsubmit="return keepAnchorOnSignIn(this);" action="/login" method="post"&gt;
+  &lt;input type="hidden" name="authenticity_token" value="..." /&gt;
+  &lt;input type="hidden" name="back_url" value="/" /&gt;
+  
+  &lt;label for="username"&gt;Identifiant&lt;/label&gt;
+  &lt;input type="text" name="username" id="username" tabindex="1" autofocus /&gt;
+  
+  &lt;label for="password"&gt;
+    Mot de passe
+    &lt;a class="lost_password" href="/account/lost_password"&gt;Mot de passe perdu&lt;/a&gt;
+  &lt;/label&gt;
+  &lt;input type="password" name="password" id="password" tabindex="2" /&gt;
+  
+  &lt;input type="submit" name="login" value="Connexion" tabindex="5" id="login-submit" /&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+              </div>
+              <p class="mt-md"><strong>Amélioration :</strong></p>
               <ul>
-                <li>Fichiers : tsconfig.json, cypress.config.ts</li>
-                <li>Plugins : @testing-library, faker</li>
-                <li>Conventions : naming, structure de dossiers</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h4>🌐 Application</h4>
-              <ul>
-                <li>Structure HTML réelle (comme vu en 2.1.A)</li>
-                <li>API endpoints et payloads</li>
-                <li>Règles métier (IBAN format, limites montants)</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h4>📚 Standards</h4>
-              <ul>
-                <li>Guidelines projet (sélecteurs data-test-id)</li>
-                <li>Normes sécurité (PCI DSS, GDPR)</li>
-                <li>Formats attendus (ISO 8601 dates)</li>
+                <li>
+                  ✅ Sélecteurs <strong>exacts</strong> :
+                  <code>#username</code>, <code>#password</code>,
+                  <code>#login-submit</code>, <code>.lost_password</code>
+                </li>
+                <li>
+                  ✅ Méthodes adaptées au DOM réel (pas de champ "email", mais
+                  lien "Mot de passe perdu")
+                </li>
+                <li>
+                  ✅ Code immédiatement fonctionnel, pas de debug nécessaire
+                </li>
+                <li>
+                  ✅ Gestion des champs cachés (authenticity_token, back_url)
+                </li>
               </ul>
             </div>
           </div>
 
-          <div class="card warning mt-md">
-            <h4>⚠️ Erreur Courante : Contexte Implicite</h4>
-            <p>
-              Ne présumez jamais que l'IA connaît votre environnement. Exemple :
+          <div class="card info mt-md">
+            <h4>🎯 Types de Contexte à Fournir</h4>
+            <div class="grid mt-md">
+              <div class="card">
+                <h4>🏗️ Architecture</h4>
+                <ul>
+                  <li>Framework : Cypress, Playwright</li>
+                  <li>Langage : TypeScript, Python</li>
+                  <li>Pattern : Page Object Model</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h4>🌐 Application</h4>
+                <ul>
+                  <li>Structure HTML réelle</li>
+                  <li>API endpoints</li>
+                  <li>Règles métier</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h4>🔧 Configuration</h4>
+                <ul>
+                  <li>Fichiers : tsconfig.json</li>
+                  <li>Plugins installés</li>
+                  <li>Conventions de nommage</li>
+                </ul>
+              </div>
+            </div>
+            <p class="mt-md">
+              <strong>Règle d'or :</strong> Ne jamais présumer que l'IA connaît
+              votre environnement. Fournissez le HTML/API/Config réels pour des
+              sélecteurs précis garantis.
             </p>
-            <ul>
-              <li>
-                ❌ "Génère un test pour le virement" → L'IA ne connaît pas votre
-                structure HTML
-              </li>
-              <li>
-                ✅ "Génère un test pour le virement. Voici le formulaire HTML :
-                &lt;form&gt;...&lt;/form&gt;" → Sélecteurs précis garantis
-              </li>
-            </ul>
           </div>
         </div>
 
@@ -396,86 +638,268 @@
           <h3>D. Contraintes : Le Garde-Fou de la Qualité</h3>
           <p>
             Les contraintes transforment du code fonctionnel en code
-            <strong>maintenable, sécurisé et conforme</strong>. Elles guident
-            l'IA vers les meilleures pratiques de votre équipe.
+            <strong>maintenable, sécurisé et conforme</strong>. Ajoutons les
+            <strong>Contraintes</strong>
+            qui guident l'IA vers les meilleures pratiques de votre équipe :
           </p>
 
-          <h4 class="mt-md">📋 Catégories de Contraintes Efficaces</h4>
+          <div class="grid mt-md">
+            <div class="card warning">
+              <h4>❌ Rôle + Tâche + Contexte Sans Contraintes</h4>
+              <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                📋 Voir le Prompt Sans Contraintes
+              </button>
+              <div class="collapsible-content">
+                <div style="text-align: right; margin-bottom: 0.5rem">
+                  <button
+                    onclick="copyPrompt(this)"
+                    style="
+                      background: #2196f3;
+                      color: white;
+                      border: none;
+                      padding: 0.5rem 1rem;
+                      border-radius: 4px;
+                      cursor: pointer;
+                      font-size: 0.9em;
+                    "
+                  >
+                    📋 Copier le prompt
+                  </button>
+                </div>
+                <div
+                  style="
+                    background: #e3f2fd;
+                    border-left: 4px solid #2196f3;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔵 Rôle</h4>
+                  <p>
+                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
+                    automatisation de tests E2E. Tu maîtrises parfaitement
+                    Cypress, TypeScript et le Page Object Model. Tu appliques
+                    toujours les meilleures pratiques de l'industrie.
+                  </p>
+                </div>
+                <div
+                  style="
+                    background: #e8f5e9;
+                    border-left: 4px solid #4caf50;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟢 Tâche</h4>
+                  <p>
+                    Génère une classe Page Object TypeScript complète pour la
+                    page de connexion Redmine avec les méthodes suivantes :
+                    <code>visit()</code>, <code>fillUsername()</code>,
+                    <code>fillPassword()</code>, <code>submit()</code>,
+                    <code>clickLostPassword()</code>.
+                  </p>
+                </div>
+                <div
+                  style="
+                    background: #fff9c4;
+                    border-left: 4px solid #ffeb3b;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟡 Contexte</h4>
+                  <p>
+                    <strong>Application :</strong> Redmine 5.x (Ruby on Rails)
+                  </p>
+                  <p><strong>Stack :</strong> Cypress 13 + TypeScript 5</p>
+                  <p>
+                    <strong
+                      >Voici le code HTML réel du formulaire (extrait
+                      simplifié).</strong
+                    >
+                  </p>
+                </div>
+              </div>
+              <p class="mt-md"><strong>Problème :</strong></p>
+              <ul>
+                <li>
+                  ⚠️ L'IA utilise peut-être des sélecteurs non-standards
+                  (.class, XPath)
+                </li>
+                <li>⚠️ Pas de gestion d'erreurs</li>
+                <li>⚠️ Architecture non conforme aux standards de l'équipe</li>
+              </ul>
+            </div>
 
-          <div class="card info mt-md">
-            <h4>🎯 Contraintes Techniques</h4>
-            <ul>
-              <li>
-                <strong>Sélecteurs :</strong> "Utilise UNIQUEMENT data-test-id,
-                jamais de XPath ou CSS complexes"
-              </li>
-              <li>
-                <strong>Versioning :</strong> "Compatible TypeScript 5.0+,
-                Cypress 13.x"
-              </li>
-              <li>
-                <strong>Performance :</strong> "Temps d'exécution &lt; 5s, pas
-                de cy.wait() hardcodés"
-              </li>
-              <li>
-                <strong>Dépendances :</strong> "N'utilise que les librairies
-                déjà présentes (faker, dayjs)"
-              </li>
-            </ul>
+            <div class="card success">
+              <h4>✅ Rôle + Tâche + Contexte + Contraintes</h4>
+              <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                📋 Voir le Prompt Avec Contraintes
+              </button>
+              <div class="collapsible-content">
+                <div style="text-align: right; margin-bottom: 0.5rem">
+                  <button
+                    onclick="copyPrompt(this)"
+                    style="
+                      background: #2196f3;
+                      color: white;
+                      border: none;
+                      padding: 0.5rem 1rem;
+                      border-radius: 4px;
+                      cursor: pointer;
+                      font-size: 0.9em;
+                    "
+                  >
+                    📋 Copier le prompt
+                  </button>
+                </div>
+                <div
+                  style="
+                    background: #e3f2fd;
+                    border-left: 4px solid #2196f3;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔵 Rôle</h4>
+                  <p>
+                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
+                    automatisation de tests E2E. Tu maîtrises parfaitement
+                    Cypress, TypeScript et le Page Object Model. Tu appliques
+                    toujours les meilleures pratiques de l'industrie.
+                  </p>
+                </div>
+                <div
+                  style="
+                    background: #e8f5e9;
+                    border-left: 4px solid #4caf50;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟢 Tâche</h4>
+                  <p>
+                    Génère une classe Page Object TypeScript complète pour la
+                    page de connexion Redmine avec les méthodes suivantes :
+                    <code>visit()</code>, <code>fillUsername()</code>,
+                    <code>fillPassword()</code>, <code>submit()</code>,
+                    <code>clickLostPassword()</code>.
+                  </p>
+                </div>
+                <div
+                  style="
+                    background: #fff9c4;
+                    border-left: 4px solid #ffeb3b;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟡 Contexte</h4>
+                  <p>
+                    <strong>Application :</strong> Redmine 5.x (Ruby on Rails)
+                  </p>
+                  <p><strong>Stack :</strong> Cypress 13 + TypeScript 5</p>
+                  <p>
+                    <strong>Voici le code HTML réel du formulaire :</strong>
+                  </p>
+                  <pre
+                    style="
+                      background: #1e1e1e;
+                      padding: 1rem;
+                      border-radius: 4px;
+                      overflow-x: auto;
+                      font-size: 0.85em;
+                    "
+                  ><code style="color: #d4d4d4;">&lt;form onsubmit="return keepAnchorOnSignIn(this);" action="/login" method="post"&gt;
+  &lt;input type="hidden" name="authenticity_token" value="..." /&gt;
+  &lt;input type="hidden" name="back_url" value="/" /&gt;
+  
+  &lt;label for="username"&gt;Identifiant&lt;/label&gt;
+  &lt;input type="text" name="username" id="username" tabindex="1" autofocus /&gt;
+  
+  &lt;label for="password"&gt;
+    Mot de passe
+    &lt;a class="lost_password" href="/account/lost_password"&gt;Mot de passe perdu&lt;/a&gt;
+  &lt;/label&gt;
+  &lt;input type="password" name="password" id="password" tabindex="2" /&gt;
+  
+  &lt;input type="submit" name="login" value="Connexion" tabindex="5" id="login-submit" /&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+                <div
+                  style="
+                    background: #ffebee;
+                    border-left: 4px solid #f44336;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔴 Contraintes</h4>
+                  <ul>
+                    <li>
+                      <strong>Sélecteurs :</strong> Utilise UNIQUEMENT les
+                      attributs <code>id</code> natifs (jamais de XPath, classes
+                      CSS ou texte visible)
+                    </li>
+                    <li>
+                      <strong>Pattern :</strong> Page Object Model strict
+                      (sélecteurs privés, méthodes chainables retournant
+                      <code>this</code>)
+                    </li>
+                    <li>
+                      <strong>Erreurs :</strong> Chaque méthode doit inclure une
+                      vérification d'existence avec message explicite
+                    </li>
+                    <li>
+                      <strong>Documentation :</strong> JSDoc obligatoire pour
+                      toutes les méthodes publiques
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="mt-md"><strong>Amélioration :</strong></p>
+              <ul>
+                <li>
+                  ✅ Sélecteurs robustes garantis
+                  (<code>cy.get('#username')</code>)
+                </li>
+                <li>✅ Architecture conforme aux standards de l'équipe</li>
+                <li>
+                  ✅ Méthodes chainables pour meilleure lisibilité des tests
+                </li>
+                <li>✅ Gestion d'erreurs proactive</li>
+              </ul>
+            </div>
           </div>
 
           <div class="card info mt-md">
-            <h4>🔒 Contraintes Sécurité/Conformité</h4>
-            <ul>
-              <li>
-                <strong>Données :</strong> "Aucune vraie donnée PII, utilise
-                faker.js pour générer des fakes"
-              </li>
-              <li>
-                <strong>Credentials :</strong> "Charge les secrets depuis
-                Cypress.env(), jamais en dur"
-              </li>
-              <li>
-                <strong>RGPD :</strong> "Pas de logs contenant emails ou numéros
-                IBAN réels"
-              </li>
-              <li>
-                <strong>PCI DSS :</strong> "Pas de numéros de carte en clair
-                dans les fixtures"
-              </li>
-            </ul>
-          </div>
-
-          <div class="card info mt-md">
-            <h4>🏗️ Contraintes Architecturales</h4>
-            <ul>
-              <li>
-                <strong>Pattern :</strong> "Respecte strictement le Page Object
-                Model : sélecteurs privés, méthodes chainables"
-              </li>
-              <li>
-                <strong>Structure :</strong> "Place les POM dans
-                /cypress/support/pages/, les tests dans /cypress/e2e/"
-              </li>
-              <li>
-                <strong>Naming :</strong> "Préfixe 'should' pour assertions,
-                'get' pour sélecteurs"
-              </li>
-            </ul>
-          </div>
-
-          <div class="card success mt-md">
-            <h4>✅ Exemple Complet de Contraintes</h4>
-            <pre
-              style="background: #f5f5f5; padding: 1rem; border-radius: 4px"
-            ><code>Contraintes :
-- Sélecteurs : UNIQUEMENT [data-test-id], jamais #id ou .class
-- Pattern : Page Object Model strict (méthodes chainables)
-- Sécurité : Credentials via Cypress.env('ADMIN_PASSWORD')
-- Performance : Pas de cy.wait(5000), utilise cy.intercept() + alias
-- Tests : Arrange-Act-Assert clairement séparé par commentaires
-- Assertions : Minimum 3 assertions par test (UI + API + DB si applicable)
-- Cleanup : Toujours teardown via API en afterEach()</code></pre>
+            <h4>📋 Catégories de Contraintes Efficaces</h4>
+            <div class="grid mt-md">
+              <div class="card">
+                <h4>🎯 Techniques</h4>
+                <ul>
+                  <li>Sélecteurs autorisés/interdits</li>
+                  <li>Versions compatibles</li>
+                  <li>Performance (timeout max)</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h4>🔒 Sécurité</h4>
+                <ul>
+                  <li>Pas de données PII en dur</li>
+                  <li>Credentials via env variables</li>
+                  <li>Conformité RGPD/PCI DSS</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h4>🏗️ Architecture</h4>
+                <ul>
+                  <li>Pattern à respecter (POM)</li>
+                  <li>Structure de dossiers</li>
+                  <li>Conventions de nommage</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -485,105 +909,343 @@
           <p>
             Spécifier le format de sortie garantit un résultat
             <strong>directement exploitable</strong> sans post-traitement
-            manuel.
+            manuel. Voyons les <strong>5 composantes réunies</strong> sur un
+            exemple différent : la génération de scénarios
+            <strong>Gherkin</strong> pour Xray/Jira.
           </p>
 
-          <h4 class="mt-md">🎨 Formats Courants en QA</h4>
-
-          <div class="grid mt-md">
-            <div class="card">
-              <h4>📝 Gherkin (BDD)</h4>
-              <pre
+          <div class="card highlight mt-md">
+            <h4>🎯 Exemple Complet : User Story → Scénarios Gherkin (BDD)</h4>
+            <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+              📋 Voir le Prompt Complet avec les 5 Composantes
+            </button>
+            <div class="collapsible-content">
+              <div style="text-align: right; margin-bottom: 0.5rem">
+                <button
+                  onclick="copyPrompt(this)"
+                  style="
+                    background: #2196f3;
+                    color: white;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 0.9em;
+                  "
+                >
+                  📋 Copier le prompt
+                </button>
+              </div>
+              <div
                 style="
-                  background: #f5f5f5;
+                  background: #e3f2fd;
+                  border-left: 4px solid #2196f3;
                   padding: 1rem;
-                  border-radius: 4px;
-                  font-size: 0.9em;
+                  margin: 0.5rem 0;
                 "
-              ><code>Format attendu :
-@tag-jira @priorite-haute
-Fonctionnalité: [Titre]
+              >
+                <h4>🔵 Rôle</h4>
+                <p>
+                  Tu es un Business Analyst et expert QA spécialisé en BDD
+                  (Behavior-Driven Development). Tu maîtrises parfaitement la
+                  syntaxe Gherkin et l'intégration avec Xray pour Jira. Tu as 10
+                  ans d'expérience dans la rédaction de scénarios de tests
+                  métier.
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #e8f5e9;
+                  border-left: 4px solid #4caf50;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟢 Tâche</h4>
+                <p>
+                  Convertis la User Story ci-dessous en
+                  <strong>scénarios Gherkin complets</strong> couvrant le cas de
+                  succès nominal, les cas d'erreur de validation des champs
+                  obligatoires, et les cas limites pertinents.
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff9c4;
+                  border-left: 4px solid #ffeb3b;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟡 Contexte</h4>
+                <p><strong>User Story JIRA-2456 :</strong></p>
+                <blockquote
+                  style="
+                    border-left: 3px solid #999;
+                    padding-left: 1rem;
+                    color: #555;
+                  "
+                >
+                  "En tant qu'employé connecté, je veux pouvoir saisir le temps
+                  passé sur mes activités dans Redmine, afin de suivre mon temps
+                  de travail par projet et par demande."
+                </blockquote>
+
+                <p class="mt-md"><strong>Critères d'acceptation :</strong></p>
+                <ul>
+                  <li>Le projet doit être sélectionné (champ obligatoire)</li>
+                  <li>
+                    La date doit être valide et au format ISO (YYYY-MM-DD)
+                  </li>
+                  <li>
+                    Le nombre d'heures doit être un nombre positif supérieur à 0
+                  </li>
+                  <li>
+                    L'activité doit être sélectionnée parmi : Design,
+                    Development, Test
+                  </li>
+                  <li>
+                    La demande (issue) est <strong>obligatoire</strong> et doit
+                    exister dans le projet sélectionné
+                  </li>
+                  <li>
+                    Le commentaire est <strong>obligatoire</strong> et limité à
+                    1024 caractères maximum
+                  </li>
+                  <li>
+                    Après soumission réussie, rediriger vers
+                    <code>/time_entries</code>
+                  </li>
+                </ul>
+
+                <p class="mt-md"><strong>Règles métier :</strong></p>
+                <ul>
+                  <li>
+                    Projet manquant → Message d'erreur : "Project can't be
+                    blank"
+                  </li>
+                  <li>Issue manquante → Message : "Issue can't be blank"</li>
+                  <li>Issue inexistante → Message : "Issue is invalid"</li>
+                  <li>
+                    Commentaire manquant → Message : "Comments can't be blank"
+                  </li>
+                  <li>
+                    Commentaire > 1024 caractères → Message : "Comments is too
+                    long (maximum is 1024 characters)"
+                  </li>
+                  <li>
+                    Heures = 0 ou négatives → Message : "Hours must be greater
+                    than 0"
+                  </li>
+                  <li>
+                    Activité non sélectionnée → Message : "Activity can't be
+                    blank"
+                  </li>
+                </ul>
+
+                <p class="mt-md">
+                  <strong>Voici le code HTML réel du formulaire :</strong>
+                </p>
+                <pre
+                  style="
+                    background: #1e1e1e;
+                    padding: 1rem;
+                    border-radius: 4px;
+                    overflow-x: auto;
+                    font-size: 0.85em;
+                  "
+                ><code style="color: #d4d4d4;">&lt;form id="new_time_entry" action="/time_entries" method="post"&gt;
+  &lt;input type="hidden" name="authenticity_token" value="..." /&gt;
+  &lt;input type="hidden" name="back_url" value="/time_entries" /&gt;
   
-Contexte:
-  Étant donné [précondition]
+  &lt;label for="time_entry_project_id"&gt;Projet&lt;span class="required"&gt; *&lt;/span&gt;&lt;/label&gt;
+  &lt;select name="time_entry[project_id]" id="time_entry_project_id"&gt;
+    &lt;option value=""&gt;&amp;nbsp;&lt;/option&gt;
+    &lt;option value="1"&gt;projet1289&lt;/option&gt;
+    &lt;option value="2"&gt;Projet1269&lt;/option&gt;
+    &lt;!-- ... autres projets ... --&gt;
+  &lt;/select&gt;
+  
+  &lt;label for="time_entry_issue_id"&gt;Demande&lt;/label&gt;
+  &lt;input size="6" type="text" id="time_entry_issue_id" class="autocomplete" /&gt;
+  
+  &lt;label for="time_entry_spent_on"&gt;Date&lt;span class="required"&gt; *&lt;/span&gt;&lt;/label&gt;
+  &lt;input type="date" name="time_entry[spent_on]" id="time_entry_spent_on" value="2026-01-05" /&gt;
+  
+  &lt;label for="time_entry_hours"&gt;Heures&lt;span class="required"&gt; *&lt;/span&gt;&lt;/label&gt;
+  &lt;input size="6" type="text" name="time_entry[hours]" id="time_entry_hours" /&gt;
+  
+  &lt;label for="time_entry_comments"&gt;Commentaire&lt;/label&gt;
+  &lt;input size="100" maxlength="1024" type="text" name="time_entry[comments]" id="time_entry_comments" /&gt;
+  
+  &lt;label for="time_entry_activity_id"&gt;Activité&lt;span class="required"&gt; *&lt;/span&gt;&lt;/label&gt;
+  &lt;select name="time_entry[activity_id]" id="time_entry_activity_id"&gt;
+    &lt;option value=""&gt;--- Choisir ---&lt;/option&gt;
+    &lt;option value="8"&gt;Design&lt;/option&gt;
+    &lt;option value="9"&gt;Development&lt;/option&gt;
+    &lt;option value="10"&gt;Test&lt;/option&gt;
+  &lt;/select&gt;
+  
+  &lt;input type="submit" name="commit" value="Créer" /&gt;
+&lt;/form&gt;</code></pre>
+              </div>
 
-Scénario: [Nom du cas]
-  Quand [action]
-  Alors [résultat attendu]</code></pre>
+              <div
+                style="
+                  background: #ffebee;
+                  border-left: 4px solid #f44336;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🔴 Contraintes</h4>
+                <ul>
+                  <li>
+                    <strong>Syntaxe :</strong> Utilise UNIQUEMENT les mots-clés
+                    ANGLAIS : <code>Feature</code>, <code>Background</code>,
+                    <code>Scenario</code>, <code>Given</code>,
+                    <code>When</code>, <code>Then</code>, <code>And</code>
+                  </li>
+                  <li>
+                    <strong>Tags Jira :</strong> Chaque scénario doit avoir le
+                    tag <code>@JIRA-2456</code> et un tag de priorité
+                    (<code>@high-priority</code>, <code>@medium-priority</code>)
+                  </li>
+                  <li>
+                    <strong>Données :</strong> Utilise des exemples réalistes
+                    (noms de projets, IDs de demandes, dates valides/invalides,
+                    nombres d'heures variés)
+                  </li>
+                  <li>
+                    <strong>Atomicité :</strong> Chaque scénario doit être
+                    indépendant et exécutable seul
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                style="
+                  background: #f3e5f5;
+                  border-left: 4px solid #9c27b0;
+                  padding: 1rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <h4>🟣 Format</h4>
+                <p>Respecte EXACTEMENT cette structure Gherkin :</p>
+                <pre
+                  style="
+                    background: #f5f5f5;
+                    padding: 1rem;
+                    border-radius: 4px;
+                    font-size: 0.9em;
+                  "
+                ><code>@JIRA-2456 @time-tracking
+Feature: Time Entry Logging in Redmine
+  As a logged-in employee
+  I want to log time spent on activities
+  So that I can track my work time by project and issue
+
+  Background:
+    Given I am logged in as "john.doe@company.com"
+    And I am on the time entry page "/time_entries/new"
+    And the project "Projet1289" with ID "1" exists
+
+  @high-priority @nominal-case
+  Scenario: Successfully log time entry with all required fields
+    When I select "Projet1289" from the project dropdown
+    And I enter issue number "1234" in the issue field
+    And I enter "2026-01-05" in the date field
+    And I enter "3.5" in the hours field
+    And I enter "Completed feature X development" in the comments field
+    And I select "Development" from the activity dropdown
+    And I click the "Create" button
+    Then I should be redirected to "/time_entries"
+    And I should see the success message "Time entry created successfully"
+
+  @medium-priority @validation-hours
+  Scenario: Fail to log time entry with invalid hours
+    When I select "Projet1289" from the project dropdown
+    And I enter "0" in the hours field
+    [...]</code></pre>
+                <p class="mt-md">
+                  <strong>Attendu :</strong> Scénarios complets avec tags,
+                  background, et étapes Given/When/Then en ANGLAIS, couvrant
+                  tous les cas de validation
+                </p>
+              </div>
             </div>
 
-            <div class="card">
-              <h4>🧪 TypeScript (Cypress)</h4>
-              <pre
-                style="
-                  background: #f5f5f5;
-                  padding: 1rem;
-                  border-radius: 4px;
-                  font-size: 0.9em;
-                "
-              ><code>Format attendu :
-describe('Feature', () => {
-  beforeEach(() => {
-    // Setup
-  });
-
-  it('should [behavior]', () => {
-    // Arrange
-    // Act
-    // Assert
-  });
-});</code></pre>
+            <div class="card success mt-md">
+              <h4>✅ Résultat Attendu avec les 5 Composantes</h4>
+              <p>
+                L'IA va générer des scénarios Gherkin parfaitement structurés :
+              </p>
+              <ul>
+                <li>
+                  ✅ <strong>Rôle :</strong> Vocabulaire métier (pas technique),
+                  focus validation fonctionnelle
+                </li>
+                <li>
+                  ✅ <strong>Tâche :</strong> Scénarios complets couvrant cas
+                  nominal, erreurs de validation et cas limites (nombre
+                  déterminé par l'IA selon les règles métier)
+                </li>
+                <li>
+                  ✅ <strong>Contexte :</strong> Données réalistes tirées des
+                  critères d'acceptation et du HTML réel
+                </li>
+                <li>
+                  ✅ <strong>Contraintes :</strong> Tags Jira présents, syntaxe
+                  ANGLAISE respectée (Given/When/Then)
+                </li>
+                <li>
+                  ✅ <strong>Format :</strong> Structure Gherkin identique pour
+                  tous les scénarios
+                </li>
+              </ul>
+              <p class="mt-md">
+                <em
+                  >Ces scénarios sont prêts à être importés dans Xray et
+                  exécutés par Cucumber/Cypress-Cucumber.</em
+                >
+              </p>
             </div>
+          </div>
 
-            <div class="card">
-              <h4>📊 JSON (Données)</h4>
-              <pre
-                style="
-                  background: #f5f5f5;
-                  padding: 1rem;
-                  border-radius: 4px;
-                  font-size: 0.9em;
-                "
-              ><code>Format attendu :
-{
-  "iban": "FR76...",
-  "valide": true,
-  "raison": "Checksum OK",
-  "pays": "France"
-}</code></pre>
-            </div>
-
-            <div class="card">
-              <h4>📋 Markdown (Rapport)</h4>
-              <pre
-                style="
-                  background: #f5f5f5;
-                  padding: 1rem;
-                  border-radius: 4px;
-                  font-size: 0.9em;
-                "
-              ><code>Format attendu :
-# Analyse Bug #1234
-
-## Symptômes
-- [Liste]
-
-## Cause Racine
-[Explication]
-
-## Solution Proposée
-[Code fix]</code></pre>
+          <div class="card info mt-md">
+            <h4>🎨 Autres Formats Courants en QA</h4>
+            <div class="grid">
+              <div class="card">
+                <h4>🧪 TypeScript (Cypress)</h4>
+                <p>Structure : <code>describe/it/beforeEach</code></p>
+                <p>Pattern : Arrange-Act-Assert</p>
+              </div>
+              <div class="card">
+                <h4>📊 JSON (Données)</h4>
+                <p>Clés obligatoires spécifiées</p>
+                <p>Types de données explicites</p>
+              </div>
+              <div class="card">
+                <h4>📋 Markdown (Rapport)</h4>
+                <p>Sections : Symptômes / Cause / Solution</p>
+                <p>Code fix inclus</p>
+              </div>
             </div>
           </div>
 
           <div class="card warning mt-md">
-            <h4>⚠️ Précision du Format</h4>
-            <p>Plus le format est détaillé, meilleur est le résultat :</p>
+            <h4>⚠️ Précision du Format = Qualité Garantie</h4>
             <ul>
-              <li>❌ "Format JSON" → Structure inconnue</li>
               <li>
-                ✅ "Format JSON avec clés obligatoires : iban (string), valide
-                (boolean), raison (string), pays (string)" → Structure garantie
+                ❌ "Format Gherkin" → L'IA pourrait utiliser Given/When/Then en
+                français ou mélanger les langues
+              </li>
+              <li>
+                ✅ "Format Gherkin en ANGLAIS avec tags @JIRA-XXX et structure
+                Feature/Background/Scenario" → Structure exacte garantie
               </li>
             </ul>
           </div>
@@ -625,6 +1287,22 @@ describe('Feature', () => {
             📋 Voir le Prompt Chain-of-Thought + Logs
           </button>
           <div class="collapsible-content">
+            <div style="text-align: right; margin-bottom: 0.5rem">
+              <button
+                onclick="copyPrompt(this)"
+                style="
+                  background: #2196f3;
+                  color: white;
+                  border: none;
+                  padding: 0.5rem 1rem;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  font-size: 0.9em;
+                "
+              >
+                📋 Copier le prompt
+              </button>
+            </div>
             <div
               style="
                 background: #e3f2fd;
@@ -677,13 +1355,12 @@ describe('Feature', () => {
               <pre
                 style="
                   background: #1e1e1e;
-                  color: #d4d4d4;
                   padding: 1rem;
                   border-radius: 4px;
                   overflow-x: auto;
                   font-size: 0.85em;
                 "
-              ><code>[2025-11-02T14:35:12.500Z] INFO  [c0a1d4f2] - Request received: GET /issues/list.json?project_id=42
+              ><code style="color: #d4d4d4;">[2025-11-02T14:35:12.500Z] INFO  [c0a1d4f2] - Request received: GET /issues/list.json?project_id=42
 [2025-11-02T14:35:12.501Z] DEBUG [c0a1d4f2] - SQL: SELECT * FROM issues WHERE project_id = 42 LIMIT 25
 [2025-11-02T14:35:12.550Z] INFO  [c0a1d4f2] - Response sent: 200 OK (50ms)
 
@@ -842,6 +1519,22 @@ describe('Feature', () => {
             📋 Voir le Prompt Few-Shot + Exemples
           </button>
           <div class="collapsible-content">
+            <div style="text-align: right; margin-bottom: 0.5rem">
+              <button
+                onclick="copyPrompt(this)"
+                style="
+                  background: #2196f3;
+                  color: white;
+                  border: none;
+                  padding: 0.5rem 1rem;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  font-size: 0.9em;
+                "
+              >
+                📋 Copier le prompt
+              </button>
+            </div>
             <div
               style="
                 background: #e3f2fd;
@@ -1172,7 +1865,7 @@ Contexte : Voici le test actuel :
           >Section 3 : IA et Outillage QA →</a
         >
       </div>
-    </div>
+    </main>
 
     <footer>
       <p>Formation GitHub Copilot pour QA - Section 2/4</p>
@@ -1184,6 +1877,40 @@ Contexte : Voici le test actuel :
         button.classList.toggle("active");
         const content = button.nextElementSibling;
         content.classList.toggle("active");
+      }
+
+      function copyPrompt(button) {
+        // Récupère le contenu du prompt (tous les textes dans les divs colorées + le texte additionnel)
+        const promptContainer = button.closest(".collapsible-content");
+
+        // Clone le container pour manipulation sans affecter l'affichage
+        const clone = promptContainer.cloneNode(true);
+
+        // Retire le bouton de copie du clone
+        const copyBtn = clone.querySelector("button");
+        if (copyBtn) copyBtn.remove();
+
+        // Extrait tout le texte
+        let fullPrompt = clone.innerText.trim();
+
+        // Copie dans le presse-papiers
+        navigator.clipboard
+          .writeText(fullPrompt)
+          .then(() => {
+            // Feedback visuel
+            const originalText = button.innerHTML;
+            button.innerHTML = "✅ Copié !";
+            button.style.background = "#4caf50";
+
+            setTimeout(() => {
+              button.innerHTML = originalText;
+              button.style.background = "#2196f3";
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("Erreur de copie:", err);
+            alert("Erreur lors de la copie. Utilisez Ctrl+C manuellement.");
+          });
       }
     </script>
   </body>
