@@ -292,6 +292,22 @@
               📋 Afficher le Prompt Complet (Cliquez pour déplier)
             </button>
             <div class="collapsible-content">
+              <div style="text-align: right; margin-bottom: 0.5rem">
+                <button
+                  onclick="copyPrompt(this)"
+                  style="
+                    background: #2196f3;
+                    color: white;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 0.9em;
+                  "
+                >
+                  📋 Copier le prompt
+                </button>
+              </div>
               <div style="background: #f8f9fa; border-radius: 8px; padding: var(--spacing-lg); border: 1px solid #dee2e6;">
                 
                 <!-- Rôle -->
@@ -457,6 +473,31 @@
         if (content && content.classList.contains("collapsible-content")) {
           content.classList.toggle("active");
         }
+      }
+
+      function copyPrompt(button) {
+        const promptContainer = button.closest(".collapsible-content");
+        const clone = promptContainer.cloneNode(true);
+        const copyBtn = clone.querySelector("button");
+        if (copyBtn) copyBtn.remove();
+        let fullPrompt = clone.innerText.trim();
+
+        navigator.clipboard
+          .writeText(fullPrompt)
+          .then(() => {
+            const originalText = button.innerHTML;
+            button.innerHTML = "✅ Copié !";
+            button.style.background = "#4caf50";
+
+            setTimeout(() => {
+              button.innerHTML = originalText;
+              button.style.background = "#2196f3";
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("Erreur de copie:", err);
+            alert("Erreur lors de la copie. Utilisez Ctrl+C manuellement.");
+          });
       }
 
       // Optional: Close other collapsibles when opening a new one
