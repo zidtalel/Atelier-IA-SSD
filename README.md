@@ -58,7 +58,7 @@ qa-prompt-masterclass/
 - Règles "Garbage In, Garbage Out"
 - Hallucinations et validation humaine
 
-### 🎨 Section 2 : L'Art du Prompting (30 min)
+### 🎨 Section 2 : L'Art du Prompting (50 min)
 
 **Objectifs :**
 - Maîtriser les 5 composantes d'un prompt efficace
@@ -89,7 +89,7 @@ Application de tableau de bord diagnostic construite de A à Z avec 7 prompts su
 - Cypress 13, TypeScript 5
 - APIs natives du navigateur (Battery, Network, Performance)
 
-### ⚡ Section 4 : Cas d'Usage Avancés & Perspectives (30 min)
+### ⚡ Section 4 : Cas d'Usage Avancés & Perspectives (40 min)
 
 **Objectifs :**
 - Maîtriser le contexte implicite (@workspace, #file, @terminal)
