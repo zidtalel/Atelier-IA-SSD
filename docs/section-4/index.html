@@ -770,12 +770,12 @@ Génère des tests pour cette classe...</code></pre>
                 <ul>
                   <li>
                     Prenez un fichier de test existant (ex:
-                    <code>networkAndBatteryValidation.cy.ts</code>)
+                    <code>networkAndBatteryValidation.cy.js</code>)
                   </li>
                   <li>
                     Demandez à l'IA :
                     <code
-                      >#networkAndBatteryValidation.cy.ts Quelles mutations de
+                      >#networkAndBatteryValidation.cy.js Quelles mutations de
                       code ces tests ne détecteraient PAS ? Propose 3 mutations
                       qui survivraient.</code
                     >
@@ -1327,7 +1327,7 @@ Génère des tests pour cette classe...</code></pre>
                   border-radius: 4px;
                   overflow-x: auto;
                 "
-              ><code style="color: #d4d4d4;">#networkAndBatteryValidation.cy.ts Génère une documentation complète de ce fichier de tests au format Markdown. Pour chaque test, explique :
+              ><code style="color: #d4d4d4;">#networkAndBatteryValidation.cy.js Génère une documentation complète de ce fichier de tests au format Markdown. Pour chaque test, explique :
 1. Objectif du test (en langage métier, non technique)
 2. Prérequis et setup
 3. Scénario étape par étape
@@ -1439,7 +1439,7 @@ Format : Tableau Markdown avec colonnes [ID Exigence | Exigence | Fichier Code |
                 <ul>
                   <li>
                     Sélectionnez un fichier de test Cypress (ex:
-                    <code>networkAndBatteryValidation.cy.ts</code>)
+                    <code>networkAndBatteryValidation.cy.js</code>)
                   </li>
                   <li>Exécutez le Prompt du Scénario A</li>
                   <li>
@@ -1517,7 +1517,7 @@ Format : Tableau Markdown avec colonnes [ID Exigence | Exigence | Fichier Code |
                     <strong>Doc de tests</strong>
                   </td>
                   <td style="padding: 0.75rem; border: 1px solid #ddd">
-                    <code>#test.cy.ts Génère la doc Markdown</code>
+                    <code>#test.cy.js Génère la doc Markdown</code>
                   </td>
                   <td style="padding: 0.75rem; border: 1px solid #ddd">
                     Onboarding nouveaux QA
@@ -1688,7 +1688,7 @@ Format : Tableau Markdown avec colonnes [ID Exigence | Exigence | Fichier Code |
 
 3. Conformité :
    - Les tests suivent-ils le pattern Arrange-Act-Assert ?
-   - Les noms de fichiers respectent-ils la convention : feature-action.cy.ts ?
+  - Les noms de fichiers respectent-ils la convention : feature-action.cy.js ?
    - Les data-testid sont-ils utilisés au lieu de classes CSS fragiles ?
 
 4. Maintenabilité :
@@ -1771,7 +1771,7 @@ Critères :
 1. Utiliser cy.intercept() pour mocker les réponses (fixtures dans fixtures/[ENTITY_NAME]/)
 2. Valider les codes HTTP (200, 201, 204, 400, 404, 500)
 3. Tester les cas limites (token expiré, ID inexistant, payload invalide)
-4. Générer un fichier : e2e/api/[ENTITY_NAME]-crud.cy.ts
+4. Générer un fichier : e2e/api/[ENTITY_NAME]-crud.cy.js
 5. Ajouter un custom command : cy.create[ENTITY_NAME]() pour les autres tests
 
 Schema JSON de l'entité :
@@ -1917,7 +1917,7 @@ cy.create[ENTITY_NAME]({ name: 'Test Item' })
                   </td>
                   <td style="padding: 0.75rem; border: 1px solid #ddd">
                     Documentez les patterns attendus :
-                    <code>feature-action.cy.ts</code>,
+                    <code>feature-action.cy.js</code>,
                     <code>data-testid="btn-submit"</code>
                   </td>
                   <td style="padding: 0.75rem; border: 1px solid #ddd">
@@ -2086,12 +2086,12 @@ cy.create[ENTITY_NAME]({ name: 'Test Item' })
               <pre><code>@workspace Je veux créer un workflow de test autonome pour la nouvelle fonctionnalité de filtre de recherche.
 
 Étape 1 : ANALYSE
-- Identifie les fichiers modifiés dans la dernière PR (#file src/components/SearchFilter.tsx)
+- Identifie les fichiers modifiés dans la dernière PR (#file src/components/SearchFilter.jsx)
 - Liste les endpoints API appelés (GET /api/vessels/search)
 - Détecte les nouveaux éléments UI (data-testid="filter-input", boutons, dropdowns)
 
 Étape 2 : GÉNÉRATION DE TESTS
-- Crée un fichier e2e/search-filter.cy.ts avec :
+- Crée un fichier e2e/search-filter.cy.js avec :
   * Test de recherche basique (saisie texte → résultats filtrés)
   * Test de recherche vide (aucun résultat trouvé)
   * Test de combinaison de filtres (texte + catégorie)
@@ -2099,7 +2099,7 @@ cy.create[ENTITY_NAME]({ name: 'Test Item' })
 - Utilise cy.intercept() pour mocker l'API avec fixtures/search-results.json
 
 Étape 3 : EXÉCUTION
-- Génère le script npm pour exécuter ces tests : npm run cy:run -- --spec "e2e/search-filter.cy.ts"
+- Génère le script npm pour exécuter ces tests : npm run cy:run -- --spec "e2e/search-filter.cy.js"
 - Fournis la commande complète que je peux copier-coller dans @terminal
 
 Étape 4 : AUTO-CORRECTION (si échecs)
