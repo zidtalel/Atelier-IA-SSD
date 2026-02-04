@@ -358,13 +358,13 @@ npm install -g json-server
 demo-qa-cypress/
 ├── cypress/
 │   ├── e2e/
-│   │   └── demo.spec.ts          ← À GÉNÉRER EN LIVE
+│   │   └── demo.spec.js          ← À GÉNÉRER EN LIVE
 │   ├── support/
-│   │   └── commands.ts
+│   │   └── commands.js
 │   └── fixtures/
-├── cypress.config.ts
+├── cypress.config.js
 ├── package.json
-└── tsconfig.json
+└── jsconfig.json
 ```
 
 ---
@@ -376,13 +376,13 @@ demo-qa-cypress/
 Copier ce texte dans GitHub Copilot Chat :
 
 ```
-**Rôle** : Tu es un ingénieur QA Redmine automatisant en TypeScript.
+**Rôle** : Tu es un ingénieur QA Redmine automatisant en JavaScript.
 
 **Tâche** : Crée une fonction utilitaire asynchrone nommée `createProjectAPI()` 
 qui utilise `cy.request('POST', '/projects.json', ...)` pour créer un projet Redmine.
 
 **Contexte** : 
-- Nous utilisons Cypress avec TypeScript
+- Nous utilisons Cypress avec JavaScript
 - L'API Redmine est à `https://redmine.example.com`
 - L'authentification se fait via un header `X-Redmine-API-Key`
 
@@ -393,7 +393,7 @@ qui utilise `cy.request('POST', '/projects.json', ...)` pour créer un projet Re
 - La fonction doit retourner l'ID du projet créé pour usage ultérieur
 - Utilise Authorization si nécessaire
 
-**Format** : Le code TypeScript de la fonction complète, prêt à l'emploi.
+**Format** : Le code JavaScript de la fonction complète, prêt à l'emploi.
 ```
 
 **Attendu** : Copilot génère une fonction complète pour créer le projet.
@@ -449,7 +449,7 @@ qui utilise `cy.request('DELETE', ...)` pour supprimer le projet Redmine.
 - L'API de suppression de Redmine utilise le endpoint `/projects/{project_id}.json`
 - La méthode HTTP est DELETE
 - L'authentification se fait via header `X-Redmine-API-Key`
-- Nous utilisons Cypress avec TypeScript
+- Nous utilisons Cypress avec JavaScript
 
 **Contraintes** : 
 - La fonction doit être robuste
@@ -457,7 +457,7 @@ qui utilise `cy.request('DELETE', ...)` pour supprimer le projet Redmine.
 - Elle doit gérer les erreurs (ex: projet inexistant)
 - Elle doit être appelée dans `afterEach()` pour garantir le nettoyage
 
-**Format** : Le code TypeScript de la fonction complète, avec gestion d'erreurs.
+**Format** : Le code JavaScript de la fonction complète, avec gestion d'erreurs.
 ```
 
 **Attendu** : Copilot génère la fonction de teardown robuste.
@@ -489,7 +489,7 @@ Les prompts sont affichés sur la page Section 1 que vous consultez."
 2. Copier/Coller le **Prompt #1** dans le chat
 3. 💡 Souligner les 5 composantes (Rôle, Tâche, Contexte, Contraintes, Format)
 4. Observer la génération du code
-5. 📌 Copier le code généré dans `cypress/e2e/setup.ts`
+5. 📌 Copier le code généré dans `cypress/e2e/setup.js`
 
 **Phase 3 : Étape 2 - Test UI (4 min)**
 1. Copier/Coller le **Prompt #2** dans GitHub Copilot Chat
@@ -497,14 +497,14 @@ Les prompts sont affichés sur la page Section 1 que vous consultez."
 3. Observer la génération du test complet
 4. 📌 Montrer le Page Object Model appliqué
 5. Souligner les sélecteurs `data-test-id` standardisés
-6. Copier le code dans `cypress/e2e/test.ts`
+6. Copier le code dans `cypress/e2e/test.js`
 
 **Phase 4 : Étape 3 - Teardown (3 min)**
 1. Copier/Coller le **Prompt #3** dans GitHub Copilot Chat
 2. 💡 Souligner la gestion d'erreurs générée
 3. Observer le code robuste
 4. 📌 Montrer l'intégrité du cycle Setup → Test → Teardown
-5. Copier le code dans `cypress/e2e/teardown.ts`
+5. Copier le code dans `cypress/e2e/teardown.js`
 
 **Phase 5 : Conclusion (1 min)**
 ```
@@ -521,7 +521,7 @@ C'est exactement ce qu'on va maîtriser en Section II."
 ### **Point 1️⃣ : Les 5 Composantes Travaillent**
 - ✅ **Rôle** : "Testeur Cypress E2E spécialisé en finance" → code spécialisé
 - ✅ **Tâche** : Précise et claire → IA sait quoi générer
-- ✅ **Contexte** : Redmine, TypeScript, POM → IA s'adapte
+- ✅ **Contexte** : Redmine, JavaScript, POM → IA s'adapte
 - ✅ **Contraintes** : data-test-id, robustesse → qualité du code
 - ✅ **Format** : "Bloc it() complet" → intégration directe
 
@@ -567,10 +567,10 @@ Vous verrez ça en pratique en Section III."
 Vous pouvez fournir :
 
 1. **Fichier projet Cypress complet** (zippé)
-   - `cypress/e2e/setup.ts` (généré en live)
-   - `cypress/e2e/test.ts` (généré en live)
-   - `cypress/e2e/teardown.ts` (généré en live)
-   - `cypress.config.ts` (déjà configuré)
+   - `cypress/e2e/setup.js` (généré en live)
+   - `cypress/e2e/test.js` (généré en live)
+   - `cypress/e2e/teardown.js` (généré en live)
+   - `cypress.config.js` (déjà configuré)
 
 2. **Cheat Sheet des 3 Prompts**
    - Format : PDF ou Markdown
