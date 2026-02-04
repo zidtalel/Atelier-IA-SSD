@@ -86,7 +86,7 @@ Application de tableau de bord diagnostic construite de A à Z avec 7 prompts su
 **Technologies :**
 - Java 17, Spring Boot 2.7.18
 - Thymeleaf, JavaScript Vanilla
-- Cypress 13, TypeScript 5
+- Cypress 13, JavaScript
 - APIs natives du navigateur (Battery, Network, Performance)
 
 ### ⚡ Section 4 : Cas d'Usage Avancés & Perspectives (40 min)
@@ -158,7 +158,7 @@ Application de tableau de bord diagnostic construite de A à Z avec 7 prompts su
 ### Projet NavDash
 - **Backend** : Java 17, Spring Boot 2.7.18, Maven
 - **Frontend** : Thymeleaf, JavaScript ES6+, CSS3
-- **Tests** : Cypress 13.x, TypeScript 5.x
+- **Tests** : Cypress 13.x, JavaScript
 - **APIs** : Battery Status API, Network Information API, Performance API
 
 ## 📊 Durée et Format
