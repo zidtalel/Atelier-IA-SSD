@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Section 2 : Maîtriser le Prompt Engineering pour la QA</title>
+    <title>Section 2 : Maîtriser le Prompt Engineering pour les Data Solutions</title>
     <link rel="stylesheet" href="../assets/style.css" />
   </head>
   <body>
     <nav>
       <div class="container">
-        <div class="nav-title">Formation QA & IA Générative</div>
+        <div class="nav-title">Formation Spécialiste de Solutions de Données & IA Générative</div>
         <ul>
           <li><a href="../../index.html">Accueil</a></li>
           <li><a href="../section-1/index.html">Section 1</a></li>
@@ -22,7 +22,7 @@
 
     <header>
       <div class="container">
-        <h1>🎯 Section 2 : Maîtriser le Prompt Engineering pour la QA</h1>
+        <h1>🎯 Section 2 : Maîtriser le Prompt Engineering pour le Spécialiste de Données</h1>
         <p class="subtitle">Durée : 90 minutes</p>
       </div>
     </header>
@@ -34,8 +34,8 @@
           <h2>Pourquoi cette section ?</h2>
           <p>
             Maîtriser l'art du prompt engineering pour transformer l'IA en 
-            véritable partenaire : obtenir des résultats précis, cohérents 
-            et adaptés à vos besoins QA spécifiques.
+            véritable partenaire : obtenir des scripts SQL optimisés, des transformations de données précises, 
+            des pipelines ETL robustes et adaptés à vos architectures de données spécifiques.
           </p>
         </section>
 
@@ -50,29 +50,32 @@
             <div class="objective-content">
               <strong>Anatomie d'un prompt efficace</strong> — Maîtriser les 5
               composantes essentielles (Rôle, Tâche, Contexte, Contraintes,
-              Format)
+              Format) pour générer des requêtes SQL, scripts Python et transformations de données
             </div>
           </div>
           <div class="objective-item">
             <span class="objective-icon">🧠</span>
             <div class="objective-content">
               <strong>Chain-of-Thought</strong> — Faire expliciter le
-              raisonnement étape par étape pour résoudre des problèmes complexes
+              raisonnement étape par étape pour analyser la qualité des données et identifier les anomalies
             </div>
           </div>
           <div class="objective-item">
             <span class="objective-icon">📚</span>
             <div class="objective-content">
               <strong>Few-Shot Learning</strong> — Guider l'IA avec des exemples
-              concrets pour garantir un format précis et cohérent
+              concrets pour générer des transformations de données ou des données de test conformes à votre schéma
             </div>
           </div>
           <div class="objective-item">
             <span class="objective-icon">🔗</span>
             <div class="objective-content">
-              <strong>Prompt Chaining</strong> — Décomposer une tâche complexe
-              en sous-prompts séquentiels pour des résultats modulaires
+              <strong>Prompt Chaining</strong> — Décomposer un pipeline ETL complexe
+              en sous-prompts séquentiels pour des transformations modulaires et testables
             </div>
+          </div>
+        </div>
+      </section>
           </div>
         </div>
       </section>
@@ -99,27 +102,27 @@
               <tr>
                 <td>🔵 <strong>Rôle</strong></td>
                 <td>Définit l'expertise et le contexte professionnel</td>
-                <td>"Tu es un ingénieur QA senior spécialisé en tests E2E"</td>
+                <td>"Tu es un spécialiste de solutions de données avec expertise en migration de données et schémas relationnels"</td>
               </tr>
               <tr>
                 <td>🟢 <strong>Tâche</strong></td>
                 <td>L'action précise à réaliser</td>
-                <td>"Génère un test Cypress pour la connexion Redmine"</td>
+                <td>"Génère un script SQL pour transformer le fichier CSV en table normalisée"</td>
               </tr>
               <tr>
                 <td>🟡 <strong>Contexte</strong></td>
                 <td>Informations techniques nécessaires</td>
-                <td>"JavaScript, Page Object Model, API REST Redmine"</td>
+                <td>"Base de données PostgreSQL, schéma existant avec 15 tables, données client CSV avec 50 000 lignes"</td>
               </tr>
               <tr>
                 <td>🔴 <strong>Contraintes</strong></td>
                 <td>Règles et limites à respecter</td>
-                <td>"Utilise uniquement data-test-id, pas de XPath"</td>
+                <td>"Respecte les contraintes de clés étrangères, gère les doublons avec dédupplication par email"</td>
               </tr>
               <tr>
                 <td>🟣 <strong>Format</strong></td>
                 <td>Structure de sortie attendue</td>
-                <td>"Format JSON avec clés : iban, valide, raison"</td>
+                <td>"Script SQL avec commentaires, sections CREATE TABLE et INSERT, gestion des transactions"</td>
               </tr>
             </tbody>
           </table>
@@ -138,16 +141,16 @@
               <h4>❌ Sans Rôle</h4>
               <p>
                 <em
-                  >"Crée une classe Page Object pour la page de connexion
-                  Redmine"</em
+                  >"Génère un script SQL pour charger les données client du fichier CSV clients.csv dans PostgreSQL"</em
                 >
               </p>
               <p><strong>Problèmes :</strong></p>
               <ul>
-                <li>Réponse générique, peu contextualisée</li>
-                <li>Sélecteurs fragiles (classes CSS, XPath)</li>
-                <li>Pas de bonnes pratiques professionnelles</li>
-                <li>Code minimal, non idiomatique</li>
+                <li>Schéma générique, pas optimisé pour votre domaine</li>
+                <li>Pas de gestion des doublons ou valeurs manquantes</li>
+                <li>Pas de contraintes d'intégrité (clés étrangères, unicité)</li>
+                <li>Pas de normalisation ou de respect des conventions de nommage</li>
+                <li>Performance non optimisée pour volumétrie données réelles</li>
               </ul>
             </div>
 
@@ -183,26 +186,25 @@
                 >
                   <h4>🔵 Rôle</h4>
                   <p>
-                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
-                    automatisation de tests E2E. Tu maîtrises parfaitement
-                    Cypress, JavaScript et le Page Object Model. Tu appliques
-                    toujours les meilleures pratiques de l'industrie.
+                    Tu es un spécialiste de solutions de données avec 10 ans d'expérience en ETL et normalisation de données.
+                    Tu maîtrises PostgreSQL, Python, et les bonnes pratiques d'architecture de données. 
+                    Tu appliques toujours les principes de normalisation, dédupplication et optimisation des performances.
                   </p>
                 </div>
                 <p class="mt-md">
                   <em
-                    >Crée une classe Page Object pour la page de connexion
-                    Redmine</em
+                    >Génère un script SQL pour charger les données client du fichier CSV clients.csv dans PostgreSQL</em
                   >
                 </p>
               </div>
 
               <p class="mt-md"><strong>Amélioration visible :</strong></p>
               <ul>
-                <li>✅ Ton professionnel, vocabulaire expert</li>
-                <li>✅ Structure JavaScript idiomatique</li>
-                <li>✅ Méthodes chainables (best practice)</li>
-                <li>✅ JSDoc automatiquement ajouté</li>
+                <li>✅ Schéma normalisé avec tables relationnelles appropriées</li>
+                <li>✅ Gestion intégrée des doublons et valeurs NULL</li>
+                <li>✅ Contraintes d'intégrité référentielle automatiques</li>
+                <li>✅ Conventions de nommage cohérentes et professionnelles</li>
+                <li>✅ Indexes sur colonnes clés pour performance</li>
               </ul>
             </div>
           </div>
@@ -211,8 +213,8 @@
             <h4>💡 Leçon Clé</h4>
             <p>
               Le rôle <strong>active le bon "mode d'expertise"</strong> de l'IA.
-              Sans rôle, l'IA répond en mode généraliste. Avec un rôle QA
-              senior, elle applique automatiquement les standards du métier.
+              Sans rôle, l'IA répond en mode généraliste. Avec un rôle de spécialiste de données,
+              elle applique automatiquement les standards d'architecture, de performance et de qualité de données.
             </p>
           </div>
         </div>
@@ -259,8 +261,9 @@
                 >
                   <h4>🔵 Rôle</h4>
                   <p>
-                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
-                    automatisation de tests E2E.
+                    Tu es un spécialiste de solutions de données avec 10 ans d'expérience en ETL et normalisation de données.
+                    Tu maîtrises PostgreSQL, Python, et les bonnes pratiques d'architecture de données. 
+                    Tu appliques toujours les principes de normalisation, dédupplication et optimisation des performances.
                   </p>
                 </div>
                 <div
@@ -273,28 +276,27 @@
                 >
                   <h4>🟢 Tâche (Vague)</h4>
                   <p>
-                    <em>"Crée un test pour la page de connexion Redmine"</em>
+                    <em>"Crée un script pour charger les données client dans la base de données"</em>
                   </p>
                 </div>
               </div>
               <p class="mt-md"><strong>Problèmes :</strong></p>
               <ul>
-                <li>Type de test non précisé (unitaire ? E2E ? POM ?)</li>
+                <li>Type de données non précisé (fichier ? API ? quelle format ?)</li>
                 <li>
-                  Framework/langage inconnu (Cypress ? Selenium ? Java ?
-                  JavaScript ?)
+                  Base de données non spécifiée (PostgreSQL ? MongoDB ? AWS RDS ?)
                 </li>
                 <li>
-                  Périmètre flou (tous les champs ? juste connexion réussie ?)
+                  Périmètre flou (tout charger d'un coup ? étapes progressives ?)
                 </li>
                 <li>
-                  Pas de spécification des méthodes ou de la structure attendue
+                  Pas de spécification de déduplication, validation ou nettoyage
                 </li>
               </ul>
             </div>
 
             <div class="card success">
-              <h4>✅ Rôle + Tâche Claire</h4>
+              <h4>✅ Rôle + Tâche Claire (IDENTIQUE Rôle + Tâche Nouvelle)</h4>
               <button class="collapsible-btn" onclick="toggleCollapsible(this)">
                 📋 Voir le Prompt Amélioré
               </button>
@@ -325,10 +327,9 @@
                 >
                   <h4>🔵 Rôle</h4>
                   <p>
-                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
-                    automatisation de tests E2E. Tu maîtrises parfaitement
-                    Cypress, JavaScript et le Page Object Model. Tu appliques
-                    toujours les meilleures pratiques de l'industrie.
+                    Tu es un spécialiste de solutions de données avec 10 ans d'expérience en ETL et normalisation de données.
+                    Tu maîtrises PostgreSQL, Python, et les bonnes pratiques d'architecture de données. 
+                    Tu appliques toujours les principes de normalisation, dédupplication et optimisation des performances.
                   </p>
                 </div>
                 <div
@@ -341,25 +342,25 @@
                 >
                   <h4>🟢 Tâche (Précise)</h4>
                   <p>
-                    <strong
-                      >Génère une classe Page Object JavaScript complète pour la
-                      page de connexion Redmine</strong
-                    >
-                    avec les méthodes suivantes : <code>visit()</code>,
-                    <code>fillUsername()</code>, <code>fillPassword()</code>,
-                    <code>submit()</code>, <code>clickLostPassword()</code>.
+                    <strong>Génère un script PostgreSQL complet</strong>
+                    pour charger des données client d'un fichier CSV (clients.csv) dans une table PostgreSQL avec :
                   </p>
+                  <ul>
+                    <li>Création de la table <code>customers</code> avec colonnes : id, email, first_name, last_name, phone, created_at</li>
+                    <li>Déduplication sur l'email (une seule entrée par adresse email)</li>
+                    <li>Gestion des valeurs NULL pour phone</li>
+                    <li>Indexes sur id, email et created_at</li>
+                    <li>Contrainte d'unicité sur email</li>
+                  </ul>
                 </div>
               </div>
               <p class="mt-md"><strong>Amélioration :</strong></p>
               <ul>
-                <li>✅ Livrable défini (classe Page Object)</li>
-                <li>✅ Langage spécifié (JavaScript)</li>
-                <li>✅ Méthodes explicites (5 méthodes nommées)</li>
-                <li>✅ Périmètre clair (page de connexion uniquement)</li>
-                <li>
-                  ✅ Fonctionnalités réelles (lien mot de passe perdu inclus)
-                </li>
+                <li>✅ Livrable défini (script PostgreSQL complet)</li>
+                <li>✅ Source de données spécifiée (CSV)</li>
+                <li>✅ Colonnes explicites et typées</li>
+                <li>✅ Régles de qualité données (déduplication, gestion NULL)</li>
+                <li>✅ Performance optimisée (indexes sur colonnes clés)</li>
               </ul>
             </div>
           </div>
@@ -368,35 +369,33 @@
             <h4>💡 Formule Gagnante pour une Tâche Claire</h4>
             <p>
               <strong
-                >Verbe d'action + Livrable précis + Critères de succès</strong
+                >Verbe d'action + Livrable précis + Critères de succès + Structure de données</strong
               >
             </p>
             <ul>
               <li>
-                <strong>Verbe :</strong> Génère, Crée, Analyse, Identifie,
-                Corrige, Refactorise
+                <strong>Verbe :</strong> Génère, Crée, Transforme, Migre, Nettoie, Normalise
               </li>
               <li>
-                <strong>Livrable :</strong> Type exact (classe POM, test E2E,
-                scénario Gherkin)
+                <strong>Livrable :</strong> Type exact (script SQL, DataFrame Python, script ETL)
               </li>
               <li>
-                <strong>Critères :</strong> Méthodes requises, format,
-                contraintes techniques
+                <strong>Critères :</strong> Colonnes, transformations, règles de déduplication
+              </li>
+              <li>
+                <strong>Performance :</strong> Handling de volumétrie, optimisation
               </li>
             </ul>
             <p class="mt-md"><em>Exemples de tâches bien formulées :</em></p>
             <ul class="success-list">
               <li>
-                "Génère 10 IBANs français valides avec checksums corrects"
+                "Génère un script Python Pandas pour convertir 50 fichiers CSV en une unique table normalisée"
               </li>
               <li>
-                "Crée 5 scénarios Gherkin couvrant les cas limites de validation
-                de montant"
+                "Crée une requête SQL pour fusionner 3 sources de données clients avec dédupplication par ID"
               </li>
               <li>
-                "Analyse ces 50 lignes de logs et identifie la cause racine de
-                l'erreur 500"
+                "Transforme ce JSON imbriqué en tables PostgreSQL respectant la 3ème forme normale"
               </li>
             </ul>
           </div>
@@ -443,10 +442,9 @@
                 >
                   <h4>🔵 Rôle</h4>
                   <p>
-                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
-                    automatisation de tests E2E. Tu maîtrises parfaitement
-                    Cypress, JavaScript et le Page Object Model. Tu appliques
-                    toujours les meilleures pratiques de l'industrie.
+                    Tu es un spécialiste de solutions de données avec 10 ans d'expérience en ETL et normalisation de données.
+                    Tu maîtrises PostgreSQL, Python, et les bonnes pratiques d'architecture de données. 
+                    Tu appliques toujours les principes de normalisation, dédupplication et optimisation des performances.
                   </p>
                 </div>
                 <div
@@ -459,23 +457,29 @@
                 >
                   <h4>🟢 Tâche</h4>
                   <p>
-                    Génère une classe Page Object JavaScript complète pour la
-                    page de connexion Redmine avec les méthodes suivantes :
-                    <code>visit()</code>, <code>fillUsername()</code>,
-                    <code>fillPassword()</code>, <code>submit()</code>,
-                    <code>clickLostPassword()</code>.
+                    <strong>Génère un script PostgreSQL complet</strong>
+                    pour charger des données client d'un fichier CSV (clients.csv) dans une table PostgreSQL avec :
                   </p>
+                  <ul>
+                    <li>Création de la table <code>customers</code> avec colonnes : id, email, first_name, last_name, phone, created_at</li>
+                    <li>Déduplication sur l'email (une seule entrée par adresse email)</li>
+                    <li>Gestion des valeurs NULL pour phone</li>
+                    <li>Indexes sur id, email et created_at</li>
+                    <li>Contrainte d'unicité sur email</li>
+                  </ul>
                 </div>
               </div>
               <p class="mt-md"><strong>Problème :</strong></p>
               <ul>
-                <li>⚠️ L'IA va deviner la structure HTML</li>
+                <li>⚠️ L'IA va deviner la structure du CSV</li>
                 <li>
-                  ⚠️ Sélecteurs probablement incorrects (#email au lieu de
-                  #username)
+                  ⚠️ Types de données génériques (TEXT au lieu de BIGINT pour ID)
                 </li>
                 <li>
-                  ⚠️ Code générique, pas adapté à votre application réelle
+                  ⚠️ Pas d'optimisation pour votre schéma existant
+                </li>
+                <li>
+                  ⚠️ Nettoyage de données incomplet
                 </li>
               </ul>
             </div>
@@ -512,10 +516,9 @@
                 >
                   <h4>🔵 Rôle</h4>
                   <p>
-                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
-                    automatisation de tests E2E. Tu maîtrises parfaitement
-                    Cypress, JavaScript et le Page Object Model. Tu appliques
-                    toujours les meilleures pratiques de l'industrie.
+                    Tu es un spécialiste de solutions de données avec 10 ans d'expérience en ETL et normalisation de données.
+                    Tu maîtrises PostgreSQL, Python, et les bonnes pratiques d'architecture de données. 
+                    Tu appliques toujours les principes de normalisation, dédupplication et optimisation des performances.
                   </p>
                 </div>
                 <div
@@ -528,12 +531,15 @@
                 >
                   <h4>🟢 Tâche</h4>
                   <p>
-                    Génère une classe Page Object JavaScript complète pour la
-                    page de connexion Redmine avec les méthodes suivantes :
-                    <code>visit()</code>, <code>fillUsername()</code>,
-                    <code>fillPassword()</code>, <code>submit()</code>,
-                    <code>clickLostPassword()</code>.
+                    Génère un script PostgreSQL complet pour charger des données client d'un fichier CSV (clients.csv) dans une table PostgreSQL avec :
                   </p>
+                  <ul>
+                    <li>Création de la table <code>customers</code> avec colonnes : id, email, first_name, last_name, phone, created_at</li>
+                    <li>Déduplication sur l'email (une seule entrée par adresse email)</li>
+                    <li>Gestion des valeurs NULL pour phone</li>
+                    <li>Indexes sur id, email et created_at</li>
+                    <li>Contrainte d'unicité sur email</li>
+                  </ul>
                 </div>
                 <div
                   style="
@@ -545,11 +551,11 @@
                 >
                   <h4>🟡 Contexte</h4>
                   <p>
-                    <strong>Application :</strong> Redmine 5.x (Ruby on Rails)
+                    <strong>Environnement :</strong> PostgreSQL 15 (base de données "production_db")
                   </p>
-                  <p><strong>Stack :</strong> Cypress 13 + JavaScript</p>
+                  <p><strong>Stack :</strong> Python 3.11 + psycopg2</p>
                   <p>
-                    <strong>Voici le code HTML réel du formulaire :</strong>
+                    <strong>Voici la structure du fichier CSV clients.csv :</strong>
                   </p>
                   <pre
                     style="
@@ -559,39 +565,34 @@
                       overflow-x: auto;
                       font-size: 0.85em;
                     "
-                  ><code style="color: #d4d4d4;">&lt;form onsubmit="return keepAnchorOnSignIn(this);" action="/login" method="post"&gt;
-  &lt;input type="hidden" name="authenticity_token" value="..." /&gt;
-  &lt;input type="hidden" name="back_url" value="/" /&gt;
-  
-  &lt;label for="username"&gt;Identifiant&lt;/label&gt;
-  &lt;input type="text" name="username" id="username" tabindex="1" autofocus /&gt;
-  
-  &lt;label for="password"&gt;
-    Mot de passe
-    &lt;a class="lost_password" href="/account/lost_password"&gt;Mot de passe perdu&lt;/a&gt;
-  &lt;/label&gt;
-  &lt;input type="password" name="password" id="password" tabindex="2" /&gt;
-  
-  &lt;input type="submit" name="login" value="Connexion" tabindex="5" id="login-submit" /&gt;
-&lt;/form&gt;</code></pre>
+                  ><code style="color: #d4d4d4;">id,email,first_name,last_name,phone,registration_date
+1,alice@company.com,Alice,Martin,,2024-01-15
+2,bob@company.com,Bob,Dupont,+33612345678,2024-02-03
+3,alice@company.com,Alice,Martin,,2024-03-20
+4,charlie@test.fr,Charlie,,+33698765432,2024-01-10</code></pre>
+                  <p class="mt-md"><strong>Notes :</strong></p>
+                  <ul>
+                    <li>50 000 lignes de données (volumétrie production)</li>
+                    <li>Doublons potentiels sur email (lignes 1 et 3)</li>
+                    <li>Champs last_name et phone peuvent être vides</li>
+                    <li>Dates au format ISO (YYYY-MM-DD)</li>
+                  </ul>
                 </div>
               </div>
               <p class="mt-md"><strong>Amélioration :</strong></p>
               <ul>
                 <li>
-                  ✅ Sélecteurs <strong>exacts</strong> :
-                  <code>#username</code>, <code>#password</code>,
-                  <code>#login-submit</code>, <code>.lost_password</code>
+                  ✅ Types de données <strong>exacts</strong> :
+                  <code>BIGINT</code> pour ID, <code>VARCHAR(255)</code> pour email
                 </li>
                 <li>
-                  ✅ Méthodes adaptées au DOM réel (pas de champ "email", mais
-                  lien "Mot de passe perdu")
+                  ✅ Structure adaptée à vos données réelles (détection colonnes manquantes)
                 </li>
                 <li>
-                  ✅ Code immédiatement fonctionnel, pas de debug nécessaire
+                  ✅ Déduplication intégrée (vous avez 4 entrées mais seulement 3 clients uniques)
                 </li>
                 <li>
-                  ✅ Gestion des champs cachés (authenticity_token, back_url)
+                  ✅ Optimisation pour volumétrie 50K lignes (batch INSERT)
                 </li>
               </ul>
             </div>
@@ -603,32 +604,32 @@
               <div class="card">
                 <h4>🏗️ Architecture</h4>
                 <ul>
-                  <li>Framework : Cypress, Playwright</li>
-                  <li>Langage : JavaScript, Python</li>
-                  <li>Pattern : Page Object Model</li>
+                  <li>Base de données : PostgreSQL, MySQL</li>
+                  <li>Langage : SQL, Python</li>
+                  <li>Pattern : ETL, normalisation</li>
                 </ul>
               </div>
               <div class="card">
-                <h4>🌐 Application</h4>
+                <h4>🌐 Données</h4>
                 <ul>
-                  <li>Structure HTML réelle</li>
-                  <li>API endpoints</li>
-                  <li>Règles métier</li>
+                  <li>Structure CSV/JSON réelle</li>
+                  <li>Schéma de la table cible</li>
+                  <li>Règles métier de déduplication</li>
                 </ul>
               </div>
               <div class="card">
                 <h4>🔧 Configuration</h4>
                 <ul>
-                  <li>Fichiers : jsconfig.json</li>
-                  <li>Plugins installés</li>
-                  <li>Conventions de nommage</li>
+                  <li>Versions base de données</li>
+                  <li>Charsets et encodages</li>
+                  <li>Conventions de nommage des colonnes</li>
                 </ul>
               </div>
             </div>
             <p class="mt-md">
               <strong>Règle d'or :</strong> Ne jamais présumer que l'IA connaît
-              votre environnement. Fournissez le HTML/API/Config réels pour des
-              sélecteurs précis garantis.
+              votre schéma et vos données. Fournissez la structure CSV/JSON et le schéma
+              PostgreSQL réels pour une transformation précise garantie.
             </p>
           </div>
         </div>
@@ -645,7 +646,7 @@
 
           <div class="grid mt-md">
             <div class="card warning">
-              <h4>❌ Rôle + Tâche + Contexte Sans Contraintes</h4>
+              <h4>❌ Rôle + Tâche + Contexte Sans Contraintes (IDENTIQUE 2.1.C)</h4>
               <button class="collapsible-btn" onclick="toggleCollapsible(this)">
                 📋 Voir le Prompt Sans Contraintes
               </button>
@@ -676,10 +677,9 @@
                 >
                   <h4>🔵 Rôle</h4>
                   <p>
-                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
-                    automatisation de tests E2E. Tu maîtrises parfaitement
-                    Cypress, JavaScript et le Page Object Model. Tu appliques
-                    toujours les meilleures pratiques de l'industrie.
+                    Tu es un spécialiste de solutions de données avec 10 ans d'expérience en ETL et normalisation de données.
+                    Tu maîtrises PostgreSQL, Python, et les bonnes pratiques d'architecture de données. 
+                    Tu appliques toujours les principes de normalisation, dédupplication et optimisation des performances.
                   </p>
                 </div>
                 <div
@@ -692,12 +692,16 @@
                 >
                   <h4>🟢 Tâche</h4>
                   <p>
-                    Génère une classe Page Object JavaScript complète pour la
-                    page de connexion Redmine avec les méthodes suivantes :
-                    <code>visit()</code>, <code>fillUsername()</code>,
-                    <code>fillPassword()</code>, <code>submit()</code>,
-                    <code>clickLostPassword()</code>.
+                    <strong>Génère un script PostgreSQL complet</strong>
+                    pour charger des données client d'un fichier CSV (clients.csv) dans une table PostgreSQL avec :
                   </p>
+                  <ul>
+                    <li>Création de la table <code>customers</code> avec colonnes : id, email, first_name, last_name, phone, created_at</li>
+                    <li>Déduplication sur l'email (une seule entrée par adresse email)</li>
+                    <li>Gestion des valeurs NULL pour phone</li>
+                    <li>Indexes sur id, email et created_at</li>
+                    <li>Contrainte d'unicité sur email</li>
+                  </ul>
                 </div>
                 <div
                   style="
@@ -709,30 +713,46 @@
                 >
                   <h4>🟡 Contexte</h4>
                   <p>
-                    <strong>Application :</strong> Redmine 5.x (Ruby on Rails)
+                    <strong>Environnement :</strong> PostgreSQL 15 (base de données "production_db")
                   </p>
-                  <p><strong>Stack :</strong> Cypress 13 + JavaScript</p>
+                  <p><strong>Stack :</strong> Python 3.11 + psycopg2</p>
                   <p>
-                    <strong
-                      >Voici le code HTML réel du formulaire (extrait
-                      simplifié).</strong
-                    >
+                    <strong>Voici la structure du fichier CSV clients.csv :</strong>
                   </p>
+                  <pre
+                    style="
+                      background: #1e1e1e;
+                      padding: 1rem;
+                      border-radius: 4px;
+                      overflow-x: auto;
+                      font-size: 0.85em;
+                    "
+                  ><code style="color: #d4d4d4;">id,email,first_name,last_name,phone,registration_date
+1,alice@company.com,Alice,Martin,,2024-01-15
+2,bob@company.com,Bob,Dupont,+33612345678,2024-02-03
+3,alice@company.com,Alice,Martin,,2024-03-20
+4,charlie@test.fr,Charlie,,+33698765432,2024-01-10</code></pre>
+                  <p class="mt-md"><strong>Notes :</strong></p>
+                  <ul>
+                    <li>50 000 lignes de données (volumétrie production)</li>
+                    <li>Doublons potentiels sur email (lignes 1 et 3)</li>
+                    <li>Champs last_name et phone peuvent être vides</li>
+                    <li>Dates au format ISO (YYYY-MM-DD)</li>
+                  </ul>
                 </div>
               </div>
               <p class="mt-md"><strong>Problème :</strong></p>
               <ul>
                 <li>
-                  ⚠️ L'IA utilise peut-être des sélecteurs non-standards
-                  (.class, XPath)
+                  ⚠️ L'IA génère un script sans déduplication
                 </li>
-                <li>⚠️ Pas de gestion d'erreurs</li>
-                <li>⚠️ Architecture non conforme aux standards de l'équipe</li>
+                <li>⚠️ Pas de gestion des valeurs NULL</li>
+                <li>⚠️ Pas de contraintes d'intégrité ni indexes</li>
               </ul>
             </div>
 
             <div class="card success">
-              <h4>✅ Rôle + Tâche + Contexte + Contraintes</h4>
+              <h4>✅ Rôle + Tâche + Contexte + Contraintes (ACCUMULATION)</h4>
               <button class="collapsible-btn" onclick="toggleCollapsible(this)">
                 📋 Voir le Prompt Avec Contraintes
               </button>
@@ -763,10 +783,9 @@
                 >
                   <h4>🔵 Rôle</h4>
                   <p>
-                    Tu es un ingénieur QA senior avec 8 ans d'expérience en
-                    automatisation de tests E2E. Tu maîtrises parfaitement
-                    Cypress, JavaScript et le Page Object Model. Tu appliques
-                    toujours les meilleures pratiques de l'industrie.
+                    Tu es un spécialiste de solutions de données avec 10 ans d'expérience en ETL et normalisation de données.
+                    Tu maîtrises PostgreSQL, Python, et les bonnes pratiques d'architecture de données. 
+                    Tu appliques toujours les principes de normalisation, dédupplication et optimisation des performances.
                   </p>
                 </div>
                 <div
@@ -779,12 +798,16 @@
                 >
                   <h4>🟢 Tâche</h4>
                   <p>
-                    Génère une classe Page Object JavaScript complète pour la
-                    page de connexion Redmine avec les méthodes suivantes :
-                    <code>visit()</code>, <code>fillUsername()</code>,
-                    <code>fillPassword()</code>, <code>submit()</code>,
-                    <code>clickLostPassword()</code>.
+                    <strong>Génère un script PostgreSQL complet</strong>
+                    pour charger des données client d'un fichier CSV (clients.csv) dans une table PostgreSQL avec :
                   </p>
+                  <ul>
+                    <li>Création de la table <code>customers</code> avec colonnes : id, email, first_name, last_name, phone, created_at</li>
+                    <li>Déduplication sur l'email (une seule entrée par adresse email)</li>
+                    <li>Gestion des valeurs NULL pour phone</li>
+                    <li>Indexes sur id, email et created_at</li>
+                    <li>Contrainte d'unicité sur email</li>
+                  </ul>
                 </div>
                 <div
                   style="
@@ -796,11 +819,11 @@
                 >
                   <h4>🟡 Contexte</h4>
                   <p>
-                    <strong>Application :</strong> Redmine 5.x (Ruby on Rails)
+                    <strong>Environnement :</strong> PostgreSQL 15 (base de données "production_db")
                   </p>
-                  <p><strong>Stack :</strong> Cypress 13 + JavaScript</p>
+                  <p><strong>Stack :</strong> Python 3.11 + psycopg2</p>
                   <p>
-                    <strong>Voici le code HTML réel du formulaire :</strong>
+                    <strong>Voici la structure du fichier CSV clients.csv :</strong>
                   </p>
                   <pre
                     style="
@@ -810,23 +833,19 @@
                       overflow-x: auto;
                       font-size: 0.85em;
                     "
-                  ><code style="color: #d4d4d4;">&lt;form onsubmit="return keepAnchorOnSignIn(this);" action="/login" method="post"&gt;
-  &lt;input type="hidden" name="authenticity_token" value="..." /&gt;
-  &lt;input type="hidden" name="back_url" value="/" /&gt;
-  
-  &lt;label for="username"&gt;Identifiant&lt;/label&gt;
-  &lt;input type="text" name="username" id="username" tabindex="1" autofocus /&gt;
-  
-  &lt;label for="password"&gt;
-    Mot de passe
-    &lt;a class="lost_password" href="/account/lost_password"&gt;Mot de passe perdu&lt;/a&gt;
-  &lt;/label&gt;
-  &lt;input type="password" name="password" id="password" tabindex="2" /&gt;
-  
-  &lt;input type="submit" name="login" value="Connexion" tabindex="5" id="login-submit" /&gt;
-&lt;/form&gt;</code></pre>
-                </div>
-                <div
+                  ><code style="color: #d4d4d4;">id,email,first_name,last_name,phone,registration_date
+1,alice@company.com,Alice,Martin,,2024-01-15
+2,bob@company.com,Bob,Dupont,+33612345678,2024-02-03
+3,alice@company.com,Alice,Martin,,2024-03-20
+4,charlie@test.fr,Charlie,,+33698765432,2024-01-10</code></pre>
+                  <p class="mt-md"><strong>Notes :</strong></p>
+                  <ul>
+                    <li>50 000 lignes de données (volumétrie production)</li>
+                    <li>Doublons potentiels sur email (lignes 1 et 3)</li>
+                    <li>Champs last_name et phone peuvent être vides</li>
+                    <li>Dates au format ISO (YYYY-MM-DD)</li>
+                  </ul>
+                </div>                <div
                   style="
                     background: #ffebee;
                     border-left: 4px solid #f44336;
@@ -837,22 +856,20 @@
                   <h4>🔴 Contraintes</h4>
                   <ul>
                     <li>
-                      <strong>Sélecteurs :</strong> Utilise UNIQUEMENT les
-                      attributs <code>id</code> natifs (jamais de XPath, classes
-                      CSS ou texte visible)
+                      <strong>Déduplication :</strong> Une seule entrée par email
+                      (garder la première occurrence, ignorer les doublons)
                     </li>
                     <li>
-                      <strong>Pattern :</strong> Page Object Model strict
-                      (sélecteurs privés, méthodes chainables retournant
-                      <code>this</code>)
+                      <strong>NULL Handling :</strong> Phone peut être NULL, mais
+                      first_name et last_name doivent avoir une valeur par défaut (ex: 'Unknown')
                     </li>
                     <li>
-                      <strong>Erreurs :</strong> Chaque méthode doit inclure une
-                      vérification d'existence avec message explicite
+                      <strong>Data Types :</strong> id (INTEGER PRIMARY KEY), email (VARCHAR 255 UNIQUE),
+                      first_name (VARCHAR 100), last_name (VARCHAR 100), phone (VARCHAR 20 NULL),
+                      registration_date (DATE)
                     </li>
                     <li>
-                      <strong>Documentation :</strong> JSDoc obligatoire pour
-                      toutes les méthodes publiques
+                      <strong>Intégrité :</strong> Ajouter indexes sur email, registration_date et contrainte UNIQUE sur email
                     </li>
                   </ul>
                 </div>
@@ -860,14 +877,13 @@
               <p class="mt-md"><strong>Amélioration :</strong></p>
               <ul>
                 <li>
-                  ✅ Sélecteurs robustes garantis
-                  (<code>cy.get('#username')</code>)
+                  ✅ Déduplication garantie avec DISTINCT ON (email)
                 </li>
-                <li>✅ Architecture conforme aux standards de l'équipe</li>
+                <li>✅ Architecture conforme aux standards de normalisation</li>
                 <li>
-                  ✅ Méthodes chainables pour meilleure lisibilité des tests
+                  ✅ NULL handling et types de données gérés automatiquement
                 </li>
-                <li>✅ Gestion d'erreurs proactive</li>
+                <li>✅ Intégrité référentielle proactive avec indexes</li>
               </ul>
             </div>
           </div>
@@ -909,329 +925,384 @@
           <p>
             Spécifier le format de sortie garantit un résultat
             <strong>directement exploitable</strong> sans post-traitement
-            manuel. Voyons les <strong>5 composantes réunies</strong> sur un
-            exemple différent : la génération de scénarios
-            <strong>Gherkin</strong> pour Xray/Jira.
+            manuel. Voyons comment ajouter chaque composante progressivement
+            jusqu'à obtenir les <strong>5 composantes réunies</strong> avec un
+            exemple de transformation SQL pour normaliser les données clients.
           </p>
 
-          <div class="card highlight mt-md">
-            <h4>🎯 Exemple Complet : User Story → Scénarios Gherkin (BDD)</h4>
-            <button class="collapsible-btn" onclick="toggleCollapsible(this)">
-              📋 Voir le Prompt Complet avec les 5 Composantes
-            </button>
-            <div class="collapsible-content">
-              <div style="text-align: right; margin-bottom: 0.5rem">
-                <button
-                  onclick="copyPrompt(this)"
+          <div class="grid mt-md">
+            <div class="card warning">
+              <h4>❌ Rôle + Tâche + Contexte + Contraintes Sans Format</h4>
+              <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                📋 Voir le Prompt Sans Format
+              </button>
+              <div class="collapsible-content">
+                <div style="text-align: right; margin-bottom: 0.5rem">
+                  <button
+                    onclick="copyPrompt(this)"
+                    style="
+                      background: #2196f3;
+                      color: white;
+                      border: none;
+                      padding: 0.5rem 1rem;
+                      border-radius: 4px;
+                      cursor: pointer;
+                      font-size: 0.9em;
+                    "
+                  >
+                    📋 Copier le prompt
+                  </button>
+                </div>
+                <div
                   style="
-                    background: #2196f3;
-                    color: white;
-                    border: none;
-                    padding: 0.5rem 1rem;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    font-size: 0.9em;
+                    background: #e3f2fd;
+                    border-left: 4px solid #2196f3;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
                   "
                 >
-                  📋 Copier le prompt
-                </button>
-              </div>
-              <div
-                style="
-                  background: #e3f2fd;
-                  border-left: 4px solid #2196f3;
-                  padding: 1rem;
-                  margin: 0.5rem 0;
-                "
-              >
-                <h4>🔵 Rôle</h4>
-                <p>
-                  Tu es un Business Analyst et expert QA spécialisé en BDD
-                  (Behavior-Driven Development). Tu maîtrises parfaitement la
-                  syntaxe Gherkin et l'intégration avec Xray pour Jira. Tu as 10
-                  ans d'expérience dans la rédaction de scénarios de tests
-                  métier.
-                </p>
-              </div>
+                  <h4>🔵 Rôle</h4>
+                  <p>
+                    Tu es un spécialiste de solutions de données avec 10 ans d'expérience en ETL et normalisation de données.
+                    Tu maîtrises PostgreSQL, Python, et les bonnes pratiques d'architecture de données. 
+                    Tu appliques toujours les principes de normalisation, dédupplication et optimisation des performances.
+                  </p>
+                </div>
 
-              <div
-                style="
-                  background: #e8f5e9;
-                  border-left: 4px solid #4caf50;
-                  padding: 1rem;
-                  margin: 0.5rem 0;
-                "
-              >
-                <h4>🟢 Tâche</h4>
-                <p>
-                  Convertis la User Story ci-dessous en
-                  <strong>scénarios Gherkin complets</strong> couvrant le cas de
-                  succès nominal, les cas d'erreur de validation des champs
-                  obligatoires, et les cas limites pertinents.
-                </p>
-              </div>
-
-              <div
-                style="
-                  background: #fff9c4;
-                  border-left: 4px solid #ffeb3b;
-                  padding: 1rem;
-                  margin: 0.5rem 0;
-                "
-              >
-                <h4>🟡 Contexte</h4>
-                <p><strong>User Story JIRA-2456 :</strong></p>
-                <blockquote
+                <div
                   style="
-                    border-left: 3px solid #999;
-                    padding-left: 1rem;
-                    color: #555;
+                    background: #e8f5e9;
+                    border-left: 4px solid #4caf50;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
                   "
                 >
-                  "En tant qu'employé connecté, je veux pouvoir saisir le temps
-                  passé sur mes activités dans Redmine, afin de suivre mon temps
-                  de travail par projet et par demande."
-                </blockquote>
+                  <h4>🟢 Tâche</h4>
+                  <p>
+                    <strong>Génère un script PostgreSQL complet</strong>
+                    pour charger des données client d'un fichier CSV (clients.csv) dans une table PostgreSQL avec :
+                  </p>
+                  <ul>
+                    <li>Création de la table <code>customers</code> avec colonnes : id, email, first_name, last_name, phone, created_at</li>
+                    <li>Déduplication sur l'email (une seule entrée par adresse email)</li>
+                    <li>Gestion des valeurs NULL pour phone</li>
+                    <li>Indexes sur id, email et created_at</li>
+                    <li>Contrainte d'unicité sur email</li>
+                  </ul>
+                </div>
 
-                <p class="mt-md"><strong>Critères d'acceptation :</strong></p>
-                <ul>
-                  <li>Le projet doit être sélectionné (champ obligatoire)</li>
-                  <li>
-                    La date doit être valide et au format ISO (YYYY-MM-DD)
-                  </li>
-                  <li>
-                    Le nombre d'heures doit être un nombre positif supérieur à 0
-                  </li>
-                  <li>
-                    L'activité doit être sélectionnée parmi : Design,
-                    Development, Test
-                  </li>
-                  <li>
-                    La demande (issue) est <strong>obligatoire</strong> et doit
-                    exister dans le projet sélectionné
-                  </li>
-                  <li>
-                    Le commentaire est <strong>obligatoire</strong> et limité à
-                    1024 caractères maximum
-                  </li>
-                  <li>
-                    Après soumission réussie, rediriger vers
-                    <code>/time_entries</code>
-                  </li>
-                </ul>
-
-                <p class="mt-md"><strong>Règles métier :</strong></p>
-                <ul>
-                  <li>
-                    Projet manquant → Message d'erreur : "Project can't be
-                    blank"
-                  </li>
-                  <li>Issue manquante → Message : "Issue can't be blank"</li>
-                  <li>Issue inexistante → Message : "Issue is invalid"</li>
-                  <li>
-                    Commentaire manquant → Message : "Comments can't be blank"
-                  </li>
-                  <li>
-                    Commentaire > 1024 caractères → Message : "Comments is too
-                    long (maximum is 1024 characters)"
-                  </li>
-                  <li>
-                    Heures = 0 ou négatives → Message : "Hours must be greater
-                    than 0"
-                  </li>
-                  <li>
-                    Activité non sélectionnée → Message : "Activity can't be
-                    blank"
-                  </li>
-                </ul>
-
-                <p class="mt-md">
-                  <strong>Voici le code HTML réel du formulaire :</strong>
-                </p>
-                <pre
+                <div
                   style="
-                    background: #1e1e1e;
+                    background: #fff9c4;
+                    border-left: 4px solid #ffeb3b;
                     padding: 1rem;
-                    border-radius: 4px;
-                    overflow-x: auto;
-                    font-size: 0.85em;
+                    margin: 0.5rem 0;
                   "
-                ><code style="color: #d4d4d4;">&lt;form id="new_time_entry" action="/time_entries" method="post"&gt;
-  &lt;input type="hidden" name="authenticity_token" value="..." /&gt;
-  &lt;input type="hidden" name="back_url" value="/time_entries" /&gt;
-  
-  &lt;label for="time_entry_project_id"&gt;Projet&lt;span class="required"&gt; *&lt;/span&gt;&lt;/label&gt;
-  &lt;select name="time_entry[project_id]" id="time_entry_project_id"&gt;
-    &lt;option value=""&gt;&amp;nbsp;&lt;/option&gt;
-    &lt;option value="1"&gt;projet1289&lt;/option&gt;
-    &lt;option value="2"&gt;Projet1269&lt;/option&gt;
-    &lt;!-- ... autres projets ... --&gt;
-  &lt;/select&gt;
-  
-  &lt;label for="time_entry_issue_id"&gt;Demande&lt;/label&gt;
-  &lt;input size="6" type="text" id="time_entry_issue_id" class="autocomplete" /&gt;
-  
-  &lt;label for="time_entry_spent_on"&gt;Date&lt;span class="required"&gt; *&lt;/span&gt;&lt;/label&gt;
-  &lt;input type="date" name="time_entry[spent_on]" id="time_entry_spent_on" value="2026-01-05" /&gt;
-  
-  &lt;label for="time_entry_hours"&gt;Heures&lt;span class="required"&gt; *&lt;/span&gt;&lt;/label&gt;
-  &lt;input size="6" type="text" name="time_entry[hours]" id="time_entry_hours" /&gt;
-  
-  &lt;label for="time_entry_comments"&gt;Commentaire&lt;/label&gt;
-  &lt;input size="100" maxlength="1024" type="text" name="time_entry[comments]" id="time_entry_comments" /&gt;
-  
-  &lt;label for="time_entry_activity_id"&gt;Activité&lt;span class="required"&gt; *&lt;/span&gt;&lt;/label&gt;
-  &lt;select name="time_entry[activity_id]" id="time_entry_activity_id"&gt;
-    &lt;option value=""&gt;--- Choisir ---&lt;/option&gt;
-    &lt;option value="8"&gt;Design&lt;/option&gt;
-    &lt;option value="9"&gt;Development&lt;/option&gt;
-    &lt;option value="10"&gt;Test&lt;/option&gt;
-  &lt;/select&gt;
-  
-  &lt;input type="submit" name="commit" value="Créer" /&gt;
-&lt;/form&gt;</code></pre>
-              </div>
+                >
+                  <h4>🟡 Contexte</h4>
+                  <p>
+                    <strong>Environnement :</strong> PostgreSQL 15 (base de données "production_db")
+                  </p>
+                  <p><strong>Stack :</strong> Python 3.11 + psycopg2</p>
+                  <p>
+                    <strong>Voici la structure du fichier CSV clients.csv :</strong>
+                  </p>
+                  <pre
+                    style="
+                      background: #1e1e1e;
+                      padding: 1rem;
+                      border-radius: 4px;
+                      overflow-x: auto;
+                      font-size: 0.85em;
+                    "
+                  ><code style="color: #d4d4d4;">id,email,first_name,last_name,phone,registration_date
+1,alice@company.com,Alice,Martin,,2024-01-15
+2,bob@company.com,Bob,Dupont,+33612345678,2024-02-03
+3,alice@company.com,Alice,Martin,,2024-03-20
+4,charlie@test.fr,Charlie,,+33698765432,2024-01-10</code></pre>
+                  <p class="mt-md"><strong>Notes :</strong></p>
+                  <ul>
+                    <li>50 000 lignes de données (volumétrie production)</li>
+                    <li>Doublons potentiels sur email (lignes 1 et 3)</li>
+                    <li>Champs last_name et phone peuvent être vides</li>
+                    <li>Dates au format ISO (YYYY-MM-DD)</li>
+                  </ul>
+                </div>
 
-              <div
-                style="
-                  background: #ffebee;
-                  border-left: 4px solid #f44336;
-                  padding: 1rem;
-                  margin: 0.5rem 0;
-                "
-              >
-                <h4>🔴 Contraintes</h4>
-                <ul>
-                  <li>
-                    <strong>Syntaxe :</strong> Utilise UNIQUEMENT les mots-clés
-                    ANGLAIS : <code>Feature</code>, <code>Background</code>,
-                    <code>Scenario</code>, <code>Given</code>,
-                    <code>When</code>, <code>Then</code>, <code>And</code>
-                  </li>
-                  <li>
-                    <strong>Tags Jira :</strong> Chaque scénario doit avoir le
-                    tag <code>@JIRA-2456</code> et un tag de priorité
-                    (<code>@high-priority</code>, <code>@medium-priority</code>)
-                  </li>
-                  <li>
-                    <strong>Données :</strong> Utilise des exemples réalistes
-                    (noms de projets, IDs de demandes, dates valides/invalides,
-                    nombres d'heures variés)
-                  </li>
-                  <li>
-                    <strong>Atomicité :</strong> Chaque scénario doit être
-                    indépendant et exécutable seul
-                  </li>
-                </ul>
-              </div>
-
-              <div
-                style="
-                  background: #f3e5f5;
-                  border-left: 4px solid #9c27b0;
-                  padding: 1rem;
-                  margin: 0.5rem 0;
-                "
-              >
-                <h4>🟣 Format</h4>
-                <p>Respecte EXACTEMENT cette structure Gherkin :</p>
-                <pre
+                <div
                   style="
-                    background: #f5f5f5;
+                    background: #ffebee;
+                    border-left: 4px solid #f44336;
                     padding: 1rem;
-                    border-radius: 4px;
-                    font-size: 0.9em;
+                    margin: 0.5rem 0;
                   "
-                ><code>@JIRA-2456 @time-tracking
-Feature: Time Entry Logging in Redmine
-  As a logged-in employee
-  I want to log time spent on activities
-  So that I can track my work time by project and issue
-
-  Background:
-    Given I am logged in as "john.doe@company.com"
-    And I am on the time entry page "/time_entries/new"
-    And the project "Projet1289" with ID "1" exists
-
-  @high-priority @nominal-case
-  Scenario: Successfully log time entry with all required fields
-    When I select "Projet1289" from the project dropdown
-    And I enter issue number "1234" in the issue field
-    And I enter "2026-01-05" in the date field
-    And I enter "3.5" in the hours field
-    And I enter "Completed feature X development" in the comments field
-    And I select "Development" from the activity dropdown
-    And I click the "Create" button
-    Then I should be redirected to "/time_entries"
-    And I should see the success message "Time entry created successfully"
-
-  @medium-priority @validation-hours
-  Scenario: Fail to log time entry with invalid hours
-    When I select "Projet1289" from the project dropdown
-    And I enter "0" in the hours field
-    [...]</code></pre>
-                <p class="mt-md">
-                  <strong>Attendu :</strong> Scénarios complets avec tags,
-                  background, et étapes Given/When/Then en ANGLAIS, couvrant
-                  tous les cas de validation
-                </p>
+                >
+                  <h4>🔴 Contraintes</h4>
+                  <ul>
+                    <li>
+                      <strong>Déduplication :</strong> Une seule entrée par email
+                      (garder la première occurrence, ignorer les doublons)
+                    </li>
+                    <li>
+                      <strong>NULL Handling :</strong> Phone peut être NULL, mais
+                      first_name et last_name doivent avoir une valeur par défaut (ex: 'Unknown')
+                    </li>
+                    <li>
+                      <strong>Data Types :</strong> id (INTEGER PRIMARY KEY), email (VARCHAR 255 UNIQUE),
+                      first_name (VARCHAR 100), last_name (VARCHAR 100), phone (VARCHAR 20 NULL),
+                      registration_date (DATE)
+                    </li>
+                    <li>
+                      <strong>Intégrité :</strong> Ajouter indexes sur email, registration_date et contrainte UNIQUE sur email
+                    </li>
+                  </ul>
+                </div>
               </div>
+              <p class="mt-md"><strong>Problème :</strong></p>
+              <ul>
+                <li>⚠️ Structure SQL vague, peut générer du code incohérent</li>
+                <li>⚠️ Pas de sections clairement identifiées (CREATE vs INSERT vs VALIDATE)</li>
+                <li>⚠️ Tags et commentaires inconsistants</li>
+              </ul>
             </div>
+
+            <div class="card success">
+              <h4>✅ Rôle + Tâche + Contexte + Contraintes + Format (ACCUMULATION)</h4>
+              <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                📋 Voir le Prompt Complet avec les 5 Composantes
+              </button>
+              <div class="collapsible-content">
+                <div style="text-align: right; margin-bottom: 0.5rem">
+                  <button
+                    onclick="copyPrompt(this)"
+                    style="
+                      background: #2196f3;
+                      color: white;
+                      border: none;
+                      padding: 0.5rem 1rem;
+                      border-radius: 4px;
+                      cursor: pointer;
+                      font-size: 0.9em;
+                    "
+                  >
+                    📋 Copier le prompt
+                  </button>
+                </div>
+                <div
+                  style="
+                    background: #e3f2fd;
+                    border-left: 4px solid #2196f3;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔵 Rôle</h4>
+                  <p>
+                    Tu es un spécialiste de solutions de données avec 10 ans d'expérience en ETL et normalisation de données.
+                    Tu maîtrises PostgreSQL, Python, et les bonnes pratiques d'architecture de données. 
+                    Tu appliques toujours les principes de normalisation, dédupplication et optimisation des performances.
+                  </p>
+                </div>
+
+                <div
+                  style="
+                    background: #e8f5e9;
+                    border-left: 4px solid #4caf50;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟢 Tâche</h4>
+                  <p>
+                    <strong>Génère un script PostgreSQL complet</strong>
+                    pour charger des données client d'un fichier CSV (clients.csv) dans une table PostgreSQL avec :
+                  </p>
+                  <ul>
+                    <li>Création de la table <code>customers</code> avec colonnes : id, email, first_name, last_name, phone, created_at</li>
+                    <li>Déduplication sur l'email (une seule entrée par adresse email)</li>
+                    <li>Gestion des valeurs NULL pour phone</li>
+                    <li>Indexes sur id, email et created_at</li>
+                    <li>Contrainte d'unicité sur email</li>
+                  </ul>
+                </div>
+
+                <div
+                  style="
+                    background: #fff9c4;
+                    border-left: 4px solid #ffeb3b;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟡 Contexte</h4>
+                  <p>
+                    <strong>Environnement :</strong> PostgreSQL 15 (base de données "production_db")
+                  </p>
+                  <p><strong>Stack :</strong> Python 3.11 + psycopg2</p>
+                  <p>
+                    <strong>Voici la structure du fichier CSV clients.csv :</strong>
+                  </p>
+                  <pre
+                    style="
+                      background: #1e1e1e;
+                      padding: 1rem;
+                      border-radius: 4px;
+                      overflow-x: auto;
+                      font-size: 0.85em;
+                    "
+                  ><code style="color: #d4d4d4;">id,email,first_name,last_name,phone,registration_date
+1,alice@company.com,Alice,Martin,,2024-01-15
+2,bob@company.com,Bob,Dupont,+33612345678,2024-02-03
+3,alice@company.com,Alice,Martin,,2024-03-20
+4,charlie@test.fr,Charlie,,+33698765432,2024-01-10</code></pre>
+                  <p class="mt-md"><strong>Notes :</strong></p>
+                  <ul>
+                    <li>50 000 lignes de données (volumétrie production)</li>
+                    <li>Doublons potentiels sur email (lignes 1 et 3)</li>
+                    <li>Champs last_name et phone peuvent être vides</li>
+                    <li>Dates au format ISO (YYYY-MM-DD)</li>
+                  </ul>
+                </div>
+
+                <div
+                  style="
+                    background: #ffebee;
+                    border-left: 4px solid #f44336;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🔴 Contraintes</h4>
+                  <ul>
+                    <li>
+                      <strong>Déduplication :</strong> Une seule entrée par email
+                      (garder la première occurrence, ignorer les doublons)
+                    </li>
+                    <li>
+                      <strong>NULL Handling :</strong> Phone peut être NULL, mais
+                      first_name et last_name doivent avoir une valeur par défaut (ex: 'Unknown')
+                    </li>
+                    <li>
+                      <strong>Data Types :</strong> id (INTEGER PRIMARY KEY), email (VARCHAR 255 UNIQUE),
+                      first_name (VARCHAR 100), last_name (VARCHAR 100), phone (VARCHAR 20 NULL),
+                      registration_date (DATE)
+                    </li>
+                    <li>
+                      <strong>Intégrité :</strong> Ajouter indexes sur email, registration_date et contrainte UNIQUE sur email
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  style="
+                    background: #f3e5f5;
+                    border-left: 4px solid #9c27b0;
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                  "
+                >
+                  <h4>🟣 Format</h4>
+                  <p>Respecte EXACTEMENT cette structure SQL :</p>
+                  <pre
+                    style="
+                      background: #f5f5f5;
+                      padding: 1rem;
+                      border-radius: 4px;
+                      font-size: 0.85em;
+                    "
+                  ><code>-- DATA-2456 @CREATE_STRUCTURE
+BEGIN TRANSACTION;
+
+CREATE TABLE IF NOT EXISTS customers (
+  id INTEGER PRIMARY KEY,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  first_name VARCHAR(100) NOT NULL DEFAULT 'Unknown',
+  last_name VARCHAR(100) NOT NULL DEFAULT 'Unknown',
+  phone VARCHAR(20),
+  registration_date DATE NOT NULL
+);
+
+CREATE INDEX idx_customers_email ON customers(email);
+CREATE INDEX idx_customers_registration_date ON customers(registration_date);
+
+-- DATA-2456 @LOAD_DATA
+INSERT INTO customers (id, email, first_name, last_name, phone, registration_date)
+SELECT DISTINCT ON (email)
+  id, email,
+  COALESCE(NULLIF(first_name, ''), 'Unknown'),
+  COALESCE(NULLIF(last_name, ''), 'Unknown'),
+  NULLIF(phone, '')::VARCHAR,
+  registration_date::DATE
+FROM temp_csv_import
+WHERE email IS NOT NULL AND email ~ '@'
+ORDER BY email, registration_date ASC;
+
+-- DATA-2456 @VALIDATE
+SELECT COUNT(*) as total_rows, COUNT(DISTINCT email) as unique_emails FROM customers;
+
+COMMIT;</code></pre>
+                </div>
+              </div>
+              <p class="mt-md"><strong>Amélioration :</strong></p>
+              <ul>
+                <li>✅ Structure SQL explicite (3 phases : CREATE / LOAD / VALIDATE)</li>
+                <li>✅ Tags DATA-2456 pour traçabilité</li>
+                <li>✅ Déduplication DISTINCT ON exacte (pas ambiguë)</li>
+                <li>✅ Transaction ACID complète</li>
+                <li>✅ Pas d'ambiguïté : code directement exécutable</li>
+              </ul>
+            </div>
+          </div>
 
             <div class="card success mt-md">
               <h4>✅ Résultat Attendu avec les 5 Composantes</h4>
               <p>
-                L'IA va générer des scénarios Gherkin parfaitement structurés :
+                L'IA va générer des scripts SQL parfaitement structurés :
               </p>
               <ul>
                 <li>
-                  ✅ <strong>Rôle :</strong> Vocabulaire métier (pas technique),
-                  focus validation fonctionnelle
+                  ✅ <strong>Rôle :</strong> Vocabulaire de données (normalisation, déduplication),
+                  focus qualité de données
                 </li>
                 <li>
-                  ✅ <strong>Tâche :</strong> Scénarios complets couvrant cas
-                  nominal, erreurs de validation et cas limites (nombre
-                  déterminé par l'IA selon les règles métier)
+                  ✅ <strong>Tâche :</strong> Scripts complets couvrant création de table,
+                  chargement avec déduplication et validation
                 </li>
                 <li>
-                  ✅ <strong>Contexte :</strong> Données réalistes tirées des
-                  critères d'acceptation et du HTML réel
+                  ✅ <strong>Contexte :</strong> Données réalistes avec volumétries exactes (50K, 2500 doublons)
                 </li>
                 <li>
-                  ✅ <strong>Contraintes :</strong> Tags Jira présents, syntaxe
-                  ANGLAISE respectée (Given/When/Then)
+                  ✅ <strong>Contraintes :</strong> Tags DATA, DISTINCT ON explicite, transaction ACID
                 </li>
                 <li>
-                  ✅ <strong>Format :</strong> Structure Gherkin identique pour
-                  tous les scénarios
+                  ✅ <strong>Format :</strong> Structure SQL identique (3 phases, indentation cohérente)
                 </li>
               </ul>
               <p class="mt-md">
                 <em
-                  >Ces scénarios sont prêts à être importés dans Xray et
-                  exécutés par Cucumber/Cypress-Cucumber.</em
+                  >Ce script est prêt à être exécuté dans PostgreSQL pour charger
+                  les données clients de manière normalisée et testable.</em
                 >
               </p>
             </div>
-          </div>
 
           <div class="card info mt-md">
-            <h4>🎨 Autres Formats Courants en QA</h4>
+            <h4>🎨 Autres Formats Courants en Data Solutions</h4>
             <div class="grid">
               <div class="card">
-                <h4>🧪 JavaScript (Cypress)</h4>
-                <p>Structure : <code>describe/it/beforeEach</code></p>
-                <p>Pattern : Arrange-Act-Assert</p>
+                <h4>🧪 Python (Pandas)</h4>
+                <p>Structure : <code>DataFrame.apply/map/groupby</code></p>
+                <p>Pattern : Extract-Transform-Load</p>
               </div>
               <div class="card">
-                <h4>📊 JSON (Données)</h4>
-                <p>Clés obligatoires spécifiées</p>
-                <p>Types de données explicites</p>
+                <h4>📊 JSON (Schéma)</h4>
+                <p>Colonnes et types de données explicites</p>
+                <p>Règles de validation de schéma</p>
               </div>
               <div class="card">
-                <h4>📋 Markdown (Rapport)</h4>
-                <p>Sections : Symptômes / Cause / Solution</p>
-                <p>Code fix inclus</p>
+                <h4>📋 SQL (Migration)</h4>
+                <p>Sections : CREATE / INSERT / VALIDATE</p>
+                <p>Transactions ACID incluses</p>
               </div>
             </div>
           </div>
@@ -1240,12 +1311,10 @@ Feature: Time Entry Logging in Redmine
             <h4>⚠️ Précision du Format = Qualité Garantie</h4>
             <ul>
               <li>
-                ❌ "Format Gherkin" → L'IA pourrait utiliser Given/When/Then en
-                français ou mélanger les langues
+                ❌ "Format SQL" → L'IA pourrait oublier DISTINCT ON ou les contraintes
               </li>
               <li>
-                ✅ "Format Gherkin en ANGLAIS avec tags @JIRA-XXX et structure
-                Feature/Background/Scenario" → Structure exacte garantie
+                ✅ "Format SQL avec CREATE TABLE + INSERT DISTINCT ON (email) + VALIDATE SELECT COUNT" → Structure exacte garantie
               </li>
             </ul>
           </div>
@@ -1270,21 +1339,21 @@ Feature: Time Entry Logging in Redmine
           <div class="card info mt-md">
             <h4>🎯 Quand Utiliser Chain-of-Thought ?</h4>
             <ul>
-              <li>Analyser des logs complexes avec événements corrélés</li>
-              <li>Déboguer des tests flaky nécessitant analyse de timing</li>
+              <li>Analyser la qualité de données avec anomalies multiples</li>
+              <li>Déboguer des transformations complexes avec résultats inattendus</li>
               <li>
-                Identifier des causes racines dans des incidents
-                multi-composants
+                Identifier des causes racines dans des pipelines ETL
+                multi-étapes
               </li>
               <li>
-                Évaluer la robustesse de sélecteurs face aux changements UI
+                Évaluer les patterns de déduplication face aux données réelles
               </li>
             </ul>
           </div>
 
-          <h4 class="mt-md">📋 Exemple Concret : Analyse de Logs Redmine</h4>
+          <h4 class="mt-md">📋 Exemple Concret : Analyse de Qualité de Données</h4>
           <button class="collapsible-btn" onclick="toggleCollapsible(this)">
-            📋 Voir le Prompt Chain-of-Thought + Logs
+            📋 Voir le Prompt Chain-of-Thought + Données
           </button>
           <div class="collapsible-content">
             <div style="text-align: right; margin-bottom: 0.5rem">
@@ -1313,9 +1382,9 @@ Feature: Time Entry Logging in Redmine
             >
               <h4>🔵 Rôle</h4>
               <p>
-                Tu es un expert DevOps spécialisé dans l'analyse de logs
-                d'applications Java/Rails avec une expertise en debugging de
-                transactions base de données.
+                Tu es un expert de la donnée spécialisé dans l'analyse d'anomalies
+                de données et les stratégies de déduplication multi-sources avec expertise en
+                diagnostique de transformations ETL complexes.
               </p>
             </div>
 
@@ -1329,8 +1398,8 @@ Feature: Time Entry Logging in Redmine
             >
               <h4>🟢 Tâche</h4>
               <p>
-                Analyse les logs de production Redmine ci-dessous et identifie
-                la cause racine de l'erreur HTTP 500.
+                Analyse le fichier CSV clients ci-dessous et identifie
+                la cause racine des anomalies de données et les meilleures stratégies de nettoyage.
               </p>
             </div>
 
@@ -1344,14 +1413,13 @@ Feature: Time Entry Logging in Redmine
             >
               <h4>🟡 Contexte</h4>
               <p>
-                Application : Redmine 5.x (Ruby on Rails + PostgreSQL)<br />
-                Environnement : Production, charge normale (20 req/s)<br />
-                Utilisateur affecté : admin@company.com<br />
-                Action tentée : Modification du nom d'un projet via PATCH
-                /projects/test-modify.json
+                Source de données : Fichier CSV clients.csv<br />
+                Volumétrie : 50K lignes<br />
+                Période d'import : 2025-01-10 à 2025-02-20<br />
+                Action : Charger et nettoyer les données clients
               </p>
 
-              <h5 class="mt-md">Logs de Production (extrait 30 secondes) :</h5>
+              <h5 class="mt-md">Extrait CSV avec anomalies (premières 20 lignes) :</h5>
               <pre
                 style="
                   background: #1e1e1e;
@@ -1360,34 +1428,28 @@ Feature: Time Entry Logging in Redmine
                   overflow-x: auto;
                   font-size: 0.85em;
                 "
-              ><code style="color: #d4d4d4;">[2025-11-02T14:35:12.500Z] INFO  [c0a1d4f2] - Request received: GET /issues/list.json?project_id=42
-[2025-11-02T14:35:12.501Z] DEBUG [c0a1d4f2] - SQL: SELECT * FROM issues WHERE project_id = 42 LIMIT 25
-[2025-11-02T14:35:12.550Z] INFO  [c0a1d4f2] - Response sent: 200 OK (50ms)
-
-[2025-11-02T14:35:12.601Z] INFO  [a9f3b2d1] - Request received: PATCH /projects/test-modify.json
-[2025-11-02T14:35:12.602Z] DEBUG [a9f3b2d1] - Authenticated user: admin@company.com (role: admin)
-[2025-11-02T14:35:12.605Z] DEBUG [a9f3b2d1] - Payload: {"project": {"name": "New Project Name"}}
-[2025-11-02T14:35:12.610Z] DEBUG [a9f3b2d1] - SQL: BEGIN TRANSACTION
-[2025-11-02T14:35:12.620Z] DEBUG [a9f3b2d1] - SQL: UPDATE projects SET name='New Project Name' WHERE id=42
-[2025-11-02T14:35:12.750Z] DEBUG [a9f3b2d1] - Update affected 1 row
-[2025-11-02T14:35:12.755Z] DEBUG [a9f3b2d1] - Triggering before_save callback: update_activity_timestamp
-[2025-11-02T14:35:12.760Z] WARN  [a9f3b2d1] - Callback update_activity_timestamp attempting to set 'updated_on' but column is NULL
-[2025-11-02T14:35:12.765Z] DEBUG [a9f3b2d1] - SQL: UPDATE projects SET updated_on=NULL WHERE id=42
-[2025-11-02T14:35:12.789Z] ERROR [a9f3b2d1] - ActiveRecord::StatementInvalid: PG::NotNullViolation: ERROR: null value in column "updated_on" violates not-null constraint
-[2025-11-02T14:35:12.790Z] ERROR [a9f3b2d1] - DETAIL: Failing row contains (42, New Project Name, NULL, ...)
-[2025-11-02T14:35:12.795Z] DEBUG [a9f3b2d1] - SQL: ROLLBACK TRANSACTION
-[2025-11-02T14:35:12.800Z] WARN  [a9f3b2d1] - Transaction rolled back successfully
-[2025-11-02T14:35:12.805Z] WARN  [a9f3b2d1] - Could not commit transaction. Retrying logic failed.
-[2025-11-02T14:35:12.850Z] ERROR [a9f3b2d1] - HTTP 500 Internal Server Error sent to client
-[2025-11-02T14:35:12.851Z] INFO  [a9f3b2d1] - Request completed: PATCH /projects/test-modify.json (250ms, status: 500)
-
-[2025-11-02T14:35:13.100Z] INFO  [d4e5f6g7] - Request received: GET /projects/42.json
-[2025-11-02T14:35:13.150Z] DEBUG [d4e5f6g7] - SQL: SELECT * FROM projects WHERE id = 42
-[2025-11-02T14:35:13.155Z] DEBUG [d4e5f6g7] - Result: name='Old Project Name' (unchanged due to rollback)
-[2025-11-02T14:35:13.200Z] INFO  [d4e5f6g7] - Response sent: 200 OK (100ms)
-
-[2025-11-02T14:35:14.000Z] INFO  [e8f9g0h1] - Request received: POST /issues.json
-[2025-11-02T14:35:14.050Z] INFO  [e8f9g0h1] - Response sent: 201 Created (50ms)</code></pre>
+              ><code style="color: #d4d4d4;">id,email,first_name,last_name,phone,registration_date
+1,alice@company.com,Alice,Dupont,+33612345678,2025-01-10
+2,bob@company.com,Bob,Martin,,2025-01-12
+3,alice@company.com,Alice,Dupont,+33612345678,2025-01-15
+4,charlie@company.com,Charlie,Bernard,+33698765432,2025-01-20
+5,invalid-email,David,Lopez,,2025-02-01
+6,eve@company.com,Eve,Leclerc,+33756123456,2025-02-05
+7,,Frank,Moreau,+33789123456,2025-02-10
+8,george@company.com,George,Garcia,,2025-02-12
+9,george@company.com,George,Garcia,+33654123789,2025-02-15
+10,henry@company.com,,Harris,,2025-02-18
+11,alice@company.com,ALICE,DUPONT,+33600000000,2025-01-08
+12,irene@company.com,Irene,Dubois,+33712345678,2025-02-20
+13,,Jack,Lemaire,,2025-02-22
+14,iris@company.com,Iris,Renard,+33798123456,2025-02-25
+15,iris@company.com,Iris,Renard,,2025-02-28
+16,kevin@company.com,,,,2025-03-01
+17,kevin@company.com,Kevin,Laurent,+33701234567,2025-03-05
+18,laura@company.com,Laura,Martin,NULL,2025-03-08
+19,michael@company.com,Michael,Thomas,,2025-03-10
+20,michael@company.com,Michael,Thompson,+33789456123,2025-03-12
+...(50K lignes total avec ~2500 doublons détectés)</code></pre>
             </div>
 
             <div
@@ -1407,19 +1469,16 @@ Feature: Time Entry Logging in Redmine
               </p>
               <ul>
                 <li>
-                  Les requêtes concurrentes (identifie tous les IDs de
-                  transaction)
+                  Les doublons (emails identiques, variations de casse, anomalies de déduplication)
                 </li>
                 <li>
-                  Les timestamps et corrélations d'ID de transaction pour isoler
-                  la séquence d'erreur
+                  Les valeurs manquantes (NULL vs chaîne vide vs 'Unknown', distribution par colonne)
                 </li>
                 <li>
-                  La séquence d'événements menant à l'erreur (de BEGIN à
-                  ROLLBACK)
+                  La qualité des emails (format invalide, absence de @)
                 </li>
-                <li>Les contraintes de base de données impliquées</li>
-                <li>Le callback problématique et sa logique défaillante</li>
+                <li>Les contraintes de typage (phone, registration_date)</li>
+                <li>L'impact total sur le nombre de lignes à charger après nettoyage</li>
               </ul>
             </div>
 
@@ -1437,23 +1496,23 @@ Feature: Time Entry Logging in Redmine
                 style="background: #f5f5f5; padding: 1rem; border-radius: 4px"
               ><code>## 🔍 Raisonnement Étape par Étape
 
-### Étape 1 : Identification des Transactions
-[Liste des IDs + types de requêtes]
+### Étape 1 : Analyse des Doublons
+[Patterns de doublons identifiés, ex: alice@company.com]
 
-### Étape 2 : Reconstitution Chronologique
-[Timeline de la transaction a9f3b2d1]
+### Étape 2 : Étude des Valeurs Manquantes
+[Distribution des NULLs, chaînes vides, par colonne]
 
-### Étape 3 : Analyse de l'Erreur
-[Explication du callback défaillant]
+### Étape 3 : Validation des Formats
+[Emails invalides, dates invalides détectées]
 
-### Étape 4 : Vérification du Rollback
-[Confirmation que rien n'a été committé]
+### Étape 4 : Calcul de l'Impact
+[Estimation doublons + invalides = réduction 50K → ?K]
 
-## 🎯 Cause Racine
-[Réponse finale concise]
+## 🎯 Recommandations de Déduplication
+[Stratégie : DISTINCT ON (email), ordre par date]
 
-## 🛠️ Solution Proposée
-[Code fix]</code></pre>
+## 🛠️ Script SQL Optimisé
+[Requête de nettoyage]</code></pre>
             </div>
           </div>
 
@@ -1462,25 +1521,23 @@ Feature: Time Entry Logging in Redmine
             <p>L'IA va décomposer l'analyse :</p>
             <ol>
               <li>
-                <strong>Identification :</strong> 4 transactions concurrentes
-                (c0a1d4f2, a9f3b2d1, d4e5f6g7, e8f9g0h1)
+                <strong>Doublons :</strong> ~2500 lignes avec email identique
+                (ex: alice@company.com en ID 1, 3, 11) → garder première occurrence
               </li>
               <li>
-                <strong>Chronologie :</strong> a9f3b2d1 est la transaction
-                problématique (PATCH project)
+                <strong>Valeurs manquantes :</strong> ~3000 phones vides, ~500 first/last_name absents
+                → normaliser avec defaults
               </li>
               <li>
-                <strong>Séquence :</strong> BEGIN → UPDATE projects → Callback →
-                tentative SET updated_on=NULL → violation contrainte
+                <strong>Format email :</strong> Certains sans '@' (invalid-email) ou vides
+                → filtrer ou rejeter
               </li>
               <li>
-                <strong>Cause racine :</strong> Le callback
-                <code>update_activity_timestamp</code> tente d'écrire NULL dans
-                une colonne NOT NULL
+                <strong>Impact :</strong> 50K entrées CSV → ~47.5K après déduplication
               </li>
               <li>
-                <strong>Solution :</strong> Fixer le callback pour utiliser
-                <code>Time.current</code> au lieu de NULL
+                <strong>Solution :</strong> Utiliser DISTINCT ON (email) avec ORDER BY
+                registration_date ASC pour garder la première occurrence
               </li>
             </ol>
           </div>
@@ -1488,33 +1545,23 @@ Feature: Time Entry Logging in Redmine
 
         <!-- 2.2.B : FEW-SHOT PROMPTING -->
         <div class="card mt-lg">
-          <h3>B. Few-Shot Prompting : L'Exemple Maître</h3>
+          <h3>B. Few-Shot Prompting : Apprendre par l'Exemple</h3>
           <p>
             Le Few-Shot Prompting consiste à
-            <strong>fournir 2-5 exemples concrets</strong> du format/style
-            attendu avant de demander la génération. L'IA apprend le pattern par
-            imitation.
+            <strong>fournir 2-5 exemples concrets</strong> du format/style attendu avant de demander la génération. L'IA apprend le pattern par imitation.
           </p>
 
           <div class="card info mt-md">
             <h4>🎯 Quand Utiliser Few-Shot ?</h4>
             <ul>
-              <li>
-                Générer des données de test suivant un format complexe (IBAN,
-                SIRET, NIR)
-              </li>
-              <li>
-                Créer des scénarios Gherkin conformes aux conventions de
-                l'équipe
-              </li>
-              <li>Produire des fixtures JSON avec structure spécifique</li>
-              <li>
-                Écrire des tests suivant un template maison (pas AAA standard)
-              </li>
+              <li>Définir un schéma de validation pour garantir la qualité des données avant import</li>
+              <li>Montrer la différence entre données valides et invalides</li>
+              <li>Générer des rapports de conformité structurés</li>
+              <li>Créer des fixtures de test avec structure spécifique</li>
             </ul>
           </div>
 
-          <h4 class="mt-md">📋 Exemple Concret : Génération de Données IBAN</h4>
+          <h4 class="mt-md">📋 Exemple Concret : Valider une Structure CSV avec JSON Schema</h4>
           <button class="collapsible-btn" onclick="toggleCollapsible(this)">
             📋 Voir le Prompt Few-Shot + Exemples
           </button>
@@ -1545,8 +1592,7 @@ Feature: Time Entry Logging in Redmine
             >
               <h4>🔵 Rôle</h4>
               <p>
-                Tu es un expert en génération de données de test financières
-                conformes aux standards européens (SEPA, ISO 13616).
+                Tu es un expert en validation et structuration de données. Tu maîtrises les schémas de données (JSON Schema) et tu sais identifier les violations de qualité et de conformité.
               </p>
             </div>
 
@@ -1560,10 +1606,12 @@ Feature: Time Entry Logging in Redmine
             >
               <h4>🟢 Tâche</h4>
               <p>
-                Génère 10 exemples de données de test IBAN : 5 cas valides et 5
-                cas invalides, en respectant EXACTEMENT le format JSON des
-                exemples ci-dessous.
+                Analyse le CSV clients ci-dessous et produis :
               </p>
+              <ul>
+                <li>Un JSON Schema qui décrit les règles de validité</li>
+                <li>Un rapport d'analyse montrant quelles lignes du CSV violent le schema</li>
+              </ul>
             </div>
 
             <div
@@ -1575,50 +1623,33 @@ Feature: Time Entry Logging in Redmine
               "
             >
               <h4>🟡 Contexte</h4>
-              <p><strong>Règles IBAN par Pays :</strong></p>
+              <p><strong>Règles de Validation à Appliquer :</strong></p>
               <ul>
-                <li>
-                  France (FR) : 27 caractères (FR + 2 chiffres contrôle + 23
-                  chiffres)
-                </li>
-                <li>
-                  Allemagne (DE) : 22 caractères (DE + 2 chiffres contrôle + 18
-                  chiffres)
-                </li>
-                <li>
-                  Belgique (BE) : 16 caractères (BE + 2 chiffres contrôle + 12
-                  chiffres)
-                </li>
+                <li><strong>email</strong> : obligatoire, doit contenir @, format d'email valide</li>
+                <li><strong>first_name</strong> : obligatoire, minimum 1 caractère</li>
+                <li><strong>last_name</strong> : optionnel, si présent au moins 1 caractère</li>
+                <li><strong>phone</strong> : optionnel, si présent au moins 5 caractères numériques</li>
+                <li><strong>registration_date</strong> : format ISO YYYY-MM-DD</li>
               </ul>
 
-              <p>
-                <strong>Algorithme Checksum :</strong> Modulo 97 sur conversion
-                alphanumérique
-              </p>
-
-              <h5 class="mt-md">Exemples de Format Souhaité :</h5>
+              <h5 class="mt-md">CSV Clients à Valider :</h5>
               <pre
-                style="background: #f5f5f5; padding: 1rem; border-radius: 4px"
-              ><code>{
-  "iban": "FR7630006000011234567890189",
-  "pays": "France",
-  "valide": true,
-  "raison": "IBAN français valide avec checksum correct (76)"
-}
-
-{
-  "iban": "FR7630006000011234567890188",
-  "pays": "France",
-  "valide": false,
-  "raison": "Checksum incorrect (devrait être 76, pas 88)"
-}
-
-{
-  "iban": "DE891234567890123456",
-  "pays": "Allemagne",
-  "valide": false,
-  "raison": "Longueur invalide pour l'Allemagne (20 caractères au lieu de 22)"
-}</code></pre>
+                style="
+                  background: #1e1e1e;
+                  padding: 1rem;
+                  border-radius: 4px;
+                  overflow-x: auto;
+                  font-size: 0.85em;
+                "
+              ><code style="color: #d4d4d4;">id,email,first_name,last_name,phone,registration_date
+1,alice@company.com,Alice,Martin,+33612345678,2025-01-10
+2,bob@company.com,Bob,Dupont,,2025-01-12
+3,alice@company.com,Alice,Martin,+33612345678,2025-01-15
+4,invalid-email,Charlie,Bernard,+33698765432,2025-01-20
+5,,David,Lopez,,2025-02-01
+6,eve@company.com,Eve,,+33756123456,2025-02-05
+7,george@company.com,George,Garcia,123,2025-02-12
+8,,Frank,Moreau,,2025-02-15</code></pre>
             </div>
 
             <div
@@ -1631,19 +1662,10 @@ Feature: Time Entry Logging in Redmine
             >
               <h4>🔴 Contraintes</h4>
               <ul>
-                <li>
-                  Suivre <strong>EXACTEMENT</strong> le format JSON des exemples
-                  (4 clés : iban, pays, valide, raison)
-                </li>
-                <li>Inclure au moins 5 cas valides et 5 cas invalides</li>
-                <li>
-                  Varier les raisons d'invalidité : checksum incorrect, longueur
-                  invalide, caractères non-alphanumériques, code pays inconnu
-                </li>
-                <li>
-                  Pour les cas valides, calculer réellement le bon checksum (ou
-                  utiliser des IBANs tests officiels)
-                </li>
+                <li>Le JSON Schema doit être valide et vérifiable</li>
+                <li>Chaque ligne du CSV doit être évaluée indépendamment</li>
+                <li>Le rapport doit montrer les violations ligne par ligne</li>
+                <li>Le schema doit respecter exactement les 3 exemples de format ci-dessous</li>
               </ul>
             </div>
 
@@ -1656,31 +1678,67 @@ Feature: Time Entry Logging in Redmine
               "
             >
               <h4>🟣 Format</h4>
-              <p>
-                Array JSON de 10 objets, chacun avec les 4 clés obligatoires :
-                iban, pays, valide, raison
-              </p>
+              <p>Réponds EXACTEMENT en 2 parties :</p>
+              <pre
+                style="background: #f5f5f5; padding: 1rem; border-radius: 4px; font-size: 0.8em"
+              ><code>## 📋 JSON Schema de Validation
+
+{
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+      "description": "Email valide avec @"
+    },
+    "first_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "last_name": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "phone": {
+      "type": ["string", "null"],
+      "minLength": 5,
+      "pattern": "^[0-9+\\s-]+$"
+    },
+    "registration_date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    }
+  },
+  "required": ["email", "first_name", "registration_date"]
+}
+
+## ✅/❌ Rapport de Validation
+
+Ligne 1 : ✅ VALIDE
+Ligne 2 : ✅ VALIDE (phone optionnel)
+Ligne 3 : ❌ ERREUR - email identique à ligne 1 (doublon)
+Ligne 4 : ❌ ERREUR - email invalide (pas de @)
+Ligne 5 : ❌ ERREUR - email manquant (requis)
+Ligne 6 : ✅ VALIDE (last_name optionnel)
+Ligne 7 : ❌ ERREUR - phone trop court (< 5 caractères)
+Ligne 8 : ❌ ERREUR - email manquant (requis)</code></pre>
             </div>
           </div>
 
           <div class="card success mt-md">
             <h4>✅ Résultat Attendu avec Few-Shot</h4>
             <p>
-              L'IA va générer 10 cas en suivant scrupuleusement le pattern des 3
-              exemples :
+              L'IA va générer un JSON Schema clair et un rapport de validation précis :
             </p>
             <ul>
-              <li>Même structure JSON (4 clés identiques)</li>
-              <li>Même niveau de détail dans <code>raison</code></li>
-              <li>Respect des longueurs par pays</li>
-              <li>Checksums réalistes (valides ou avec erreur explicite)</li>
+              <li>Schema JSON structuré avec type, pattern, minLength</li>
+              <li>Rapport qui analyse CHAQUE LIGNE du CSV</li>
+              <li>Violations explicites pour chaque erreur</li>
+              <li>Distinction entre erreurs de format et erreurs métier (doublon)</li>
             </ul>
             <p>
               <em
-                >Sans Few-Shot, l'IA pourrait inventer des clés différentes
-                (<code>valid</code> au lieu de <code>valide</code>,
-                <code>country</code> au lieu de <code>pays</code>) ou omettre
-                <code>raison</code>.</em
+                >Sans Few-Shot, l'IA pourrait produire un schema incomplet ou un rapport sans détails par ligne.</em
               >
             </p>
           </div>
@@ -1702,11 +1760,10 @@ Feature: Time Entry Logging in Redmine
             <h4>🎯 Quand Utiliser Prompt Chaining ?</h4>
             <ul>
               <li>
-                Générer un test E2E complet nécessitant setup + test + teardown
+                Générer un pipeline ETL complet nécessitant extract + transform + load
               </li>
               <li>
-                Créer une suite de tests où chaque test dépend des données du
-                précédent
+                Créer une suite de transformations où chaque étape dépend des données de la précédente
               </li>
               <li>
                 Refactorer du code en plusieurs étapes (extraction → renommage →
@@ -1716,15 +1773,15 @@ Feature: Time Entry Logging in Redmine
             </ul>
           </div>
 
-          <h4 class="mt-md">📋 Exemple Concret : Test E2E avec Setup API</h4>
+          <h4 class="mt-md">📋 Exemple Concret : Pipeline ETL avec Extract/Transform/Load</h4>
           <p>
-            Objectif : Générer un test complet pour "Modifier le nom d'un projet
-            Redmine"
+            Objectif : Générer une transformation complète pour "Charger et normaliser
+            les données clients depuis CSV"
           </p>
 
           <div class="grid mt-md">
             <div class="card" style="background: #e3f2fd">
-              <h4>Étape 1️⃣ : Setup (Création Projet)</h4>
+              <h4>Étape 1️⃣ : Extract (Lecture CSV)</h4>
               <p><strong>Prompt :</strong></p>
               <pre
                 style="
@@ -1733,11 +1790,11 @@ Feature: Time Entry Logging in Redmine
                   border-radius: 4px;
                   font-size: 0.85em;
                 "
-              ><code>Génère une fonction JavaScript 
-`createProjectAPI(name)` 
-qui crée un projet Redmine via 
-POST /projects.json et retourne 
-l'ID du projet créé.</code></pre>
+              ><code>Génère une fonction Python 
+`loadCSV(filepath)` 
+qui charge le CSV clients 
+dans une table temp PostgreSQL
+et retourne le nombre de lignes.</code></pre>
               <p>
                 <strong>Sortie :</strong> Fonction réutilisable avec gestion
                 d'erreurs
@@ -1745,7 +1802,7 @@ l'ID du projet créé.</code></pre>
             </div>
 
             <div class="card" style="background: #e8f5e9">
-              <h4>Étape 2️⃣ : Test (Modification UI)</h4>
+              <h4>Étape 2️⃣ : Transform (Déduplication)</h4>
               <p><strong>Prompt :</strong></p>
               <pre
                 style="
@@ -1754,24 +1811,24 @@ l'ID du projet créé.</code></pre>
                   border-radius: 4px;
                   font-size: 0.85em;
                 "
-              ><code>Génère un test Cypress qui :
-1. Utilise createProjectAPI() 
-   pour créer "Test Project"
-2. Modifie le nom via UI
-3. Vérifie la modification via 
-   GET /projects/:id.json
+              ><code>Génère un script SQL qui :
+1. Utilise loadCSV() 
+   pour charger le fichier
+2. Déduplique sur email
+3. Normalise NULL/chaînes vides
+4. Retourne le count avant/après
 
 Contexte : Voici la fonction 
-createProjectAPI() :
+loadCSV() :
 [coller la sortie de l'étape 1]</code></pre>
               <p>
-                <strong>Sortie :</strong> Test E2E complet avec setup API +
-                assertions
+                <strong>Sortie :</strong> Pipeline complet avec déduplication +
+                validation
               </p>
             </div>
 
             <div class="card" style="background: #fff9c4">
-              <h4>Étape 3️⃣ : Teardown (Nettoyage)</h4>
+              <h4>Étape 3️⃣ : Load (Insertion Finale)</h4>
               <p><strong>Prompt :</strong></p>
               <pre
                 style="
@@ -1780,14 +1837,15 @@ createProjectAPI() :
                   border-radius: 4px;
                   font-size: 0.85em;
                 "
-              ><code>Ajoute un afterEach() au test 
-qui supprime le projet créé via 
-DELETE /projects/:id.json
+              ><code>Ajoute la finalisation au script 
+qui insère les données nettoyées 
+dans la table customers final via 
+INSERT ... SELECT
 
-Contexte : Voici le test actuel :
+Contexte : Voici le script actuel :
 [coller la sortie de l'étape 2]</code></pre>
               <p>
-                <strong>Sortie :</strong> Test complet avec cleanup automatique
+                <strong>Sortie :</strong> Pipeline complet avec load atomique
               </p>
             </div>
           </div>
@@ -1796,12 +1854,12 @@ Contexte : Voici le test actuel :
             <h4>✅ Avantages du Chaining</h4>
             <ul>
               <li>
-                <strong>Qualité :</strong> Chaque étape est focalisée, donc
+                <strong>Qualité :</strong> Chaque étape ETL est focalisée, donc
                 mieux réalisée
               </li>
               <li>
                 <strong>Réutilisabilité :</strong> La fonction
-                <code>createProjectAPI()</code> peut servir à d'autres tests
+                <code>loadCSV()</code> peut servir à d'autres pipelines
               </li>
               <li>
                 <strong>Contrôle :</strong> Vous validez chaque étape avant de
@@ -1809,7 +1867,7 @@ Contexte : Voici le test actuel :
               </li>
               <li>
                 <strong>Debugging :</strong> Si erreur, facile d'identifier
-                quelle étape a échoué
+                quelle étape (Extract/Transform/Load) a échoué
               </li>
             </ul>
           </div>
@@ -1818,11 +1876,11 @@ Contexte : Voici le test actuel :
             <h4>⚠️ Chaining vs Prompt Unique</h4>
             <p>Demander tout en un seul prompt produit souvent :</p>
             <ul>
-              <li>❌ Code monolithique difficile à maintenir</li>
-              <li>❌ Setup/teardown oubliés ou incomplets</li>
-              <li>❌ Gestion d'erreurs absente</li>
+              <li>❌ Script monolithique difficile à maintenir</li>
+              <li>❌ Déduplication/validation oubliées ou incomplètes</li>
+              <li>❌ Gestion des transactions absente</li>
             </ul>
-            <p>Le chaining force une architecture modulaire et complète.</p>
+            <p>Le chaining force une architecture ETL modulaire et complète.</p>
           </div>
         </div>
       </section>
@@ -1832,29 +1890,28 @@ Contexte : Voici le test actuel :
         <h2>🎯 Le Message Clé de cette Section</h2>
         <p>
           Vous maîtrisez maintenant les fondamentaux du Prompt Engineering pour
-          la QA :
+          la Data Solutions :
         </p>
         <ul>
           <li>
             ✅ <strong>Les 5 composantes</strong> : Rôle, Tâche, Contexte,
-            Contraintes, Format
+            Contraintes, Format pour générer SQL, Python, pipelines ETL
           </li>
           <li>
             ✅ <strong>Chain-of-Thought</strong> : "Explique ton raisonnement
-            étape par étape" pour analyses complexes
+            étape par étape" pour analyses de qualité de données
           </li>
           <li>
-            ✅ <strong>Few-Shot</strong> : "Voici 3 exemples" pour garantir un
-            format précis
+            ✅ <strong>Few-Shot</strong> : "Voici 3 exemples SQL" pour garantir un
+            format de normalisation précis
           </li>
           <li>
-            ✅ <strong>Prompt Chaining</strong> : Décomposer en sous-prompts
-            (Setup → Test → Teardown)
+            ✅ <strong>Prompt Chaining</strong> : Décomposer un pipeline ETL (Extract → Transform → Load)
           </li>
         </ul>
         <p class="mt-md">
-          <strong>Prochaine étape :</strong> Appliquer ces techniques à des cas
-          réels (génération tests, debugging, RAG)
+          <strong>Prochaine étape :</strong> Appliquer ces techniques à vos cas
+          réels de migration de données, transformation ETL et nettoyage de données
         </p>
       </section>
 
@@ -1862,14 +1919,14 @@ Contexte : Voici le test actuel :
       <div class="navigation mt-xl">
         <a href="../section-1/index.html" class="btn-secondary">← Section 1</a>
         <a href="../section-3/index.html" class="btn-primary"
-          >Section 3 : IA et Outillage QA →</a
+          >Section 3 : IA et Outils de Données →</a
         >
       </div>
     </main>
 
     <footer>
-      <p>Formation GitHub Copilot pour QA - Section 2/4</p>
-      <p>🎓 Masterclass Prompt Engineering</p>
+      <p>Formation GitHub Copilot pour les Spécialistes de Solutions de Données - Section 2/4</p>
+      <p>🎓 Masterclass Prompt Engineering pour la Transformation de Données</p>
     </footer>
 
     <script>
