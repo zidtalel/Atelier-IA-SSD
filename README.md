@@ -1,4 +1,4 @@
-# 🎓 QA Prompt Masterclass - Formation GitHub Copilot pour QA
+# 🎓 Data Solutions & IA - Formation GitHub Copilot pour Data Solutions
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Formation](https://img.shields.io/badge/Type-Formation-blue.svg)](.)
@@ -6,102 +6,92 @@
 
 ## 📋 Description
 
-Formation complète et interactive sur l'utilisation de l'IA générative et du prompt engineering avancé pour les professionnels du Quality Assurance (QA). Cette masterclass explore comment GitHub Copilot et les Large Language Models (LLMs) peuvent transformer les pratiques de test, de l'automatisation à la génération de code, en passant par l'analyse de logs et la création de tests E2E avancés.
+Formation complète et interactive sur l'utilisation de l'IA générative et du prompt engineering avancé pour les professionnels des Data Solutions. Cette masterclass explore comment GitHub Copilot et les Large Language Models (LLMs) peuvent transformer les pratiques de pipelines ETL, de validation de données, de génération de scripts SQL et d'automation des transformations de données.
 
 ## 🎯 Objectifs de la Formation
 
 À l'issue de cette formation, vous serez capable de :
 
-- ✅ **Comprendre le potentiel de l'IA en QA** - Identifier les tâches optimisables et les limites critiques
+- ✅ **Comprendre le potentiel de l'IA en Data** - Identifier les tâches optimisables et les limites critiques
 - ✅ **Maîtriser le prompt engineering** - Utiliser les 5 composantes essentielles (Rôle, Tâche, Contexte, Contraintes, Format)
-- ✅ **Construire des applications avec l'IA** - Générer du code backend/frontend guidé par des spécifications
-- ✅ **Créer des tests avancés** - Automatiser les tests E2E avec Cypress et techniques de simulation
-- ✅ **Appliquer des techniques avancées** - Utiliser @workspace, #file, mutant testing et agents autonomes
+- ✅ **Générer des scripts SQL** - Créer des pipelines ETL guidés par des spécifications
+- ✅ **Valider et transformer les données** - Appliquer JSON Schema et règles de validation avancées
+- ✅ **Appliquer des techniques avancées** - Utiliser Few-Shot Learning, Chain-of-Thought et agents autonomes
 
 ## 📚 Structure du Projet
 
 ```
-qa-prompt-masterclass/
+Atelier-IA-SSD/
 ├── docs/
 │   ├── assets/
 │   │   ├── style.css              # Styles CSS communs
-│   │   ├── images/                # Images et captures d'écran
-│   │   ├── navdash.zip           # Projet de base NavDash (vide)
-│   │   └── navdashdev.zip        # Projet NavDash opérationnel (sans tests)
+│   │   └── images/                # Images et captures d'écran
 │   ├── section-1/
-│   │   ├── index.html            # Le Paysage de l'IA Générative en QA
-│   │   └── GUIDE-DEMO.md         # Guide pour la démonstration live
+│   │   └── index.html            # Le Paysage de l'IA Générative pour Data Solutions
 │   ├── section-2/
 │   │   └── index.html            # L'Art du Prompting
 │   ├── section-3/
-│   │   └── index.html            # IA et Outillage QA
+│   │   └── index.html            # Cas d'Usage Avancés (Sous Construction)
 │   └── section-4/
-│       └── index.html            # Cas d'Usage Avancés & Perspectives
+│       └── index.html            # Mise en Production et Automation (Sous Construction)
 ├── index.html                     # Page d'accueil de la formation
+├── Cours IA.md                    # Contenu du cours
 ├── LICENSE                        # Licence du projet
 └── README.md                      # Ce fichier
 ```
 
 ## 📖 Contenu des Sections
 
-### 🌐 Section 1 : Le Paysage de l'IA Générative en QA (20 min)
+### 🌐 Section 1 : Le Paysage de l'IA Générative pour Data Solutions (30 min)
 
 **Objectifs :**
-- Définir l'IA comme accélérateur de tests
-- Identifier les tâches QA optimisables (rédaction, codage, analyse)
+- Définir l'IA comme accélérateur de pipelines de données
+- Identifier les tâches Data Solutions optimisables (scripts SQL, transformations, validations)
 - Reconnaître le potentiel ET les limites de l'IA
-- Démonstration pratique : Génération de tests Gherkin pour Xray
+- Démonstration pratique : Génération de scripts SQL ETL pour données clients
 
 **Concepts clés :**
-- LLMs et reconnaissance de patterns
+- LLMs et reconnaissance de patterns dans les données
 - Paradigme du prompting : passer du "Comment" au "Quoi"
 - Règles "Garbage In, Garbage Out"
-- Hallucinations et validation humaine
+- Hallucinations de colonnes/tables PostgreSQL et validation humaine
 
-### 🎨 Section 2 : L'Art du Prompting (50 min)
+### 🎨 Section 2 : L'Art du Prompting (40 min)
 
 **Objectifs :**
 - Maîtriser les 5 composantes d'un prompt efficace
-- Appliquer les techniques avancées (Few-Shot Learning, Chain-of-Thought)
-- Pratiquer sur des cas réels de QA
+- Appliquer les techniques avancées (Few-Shot Learning avec JSON Schema, Chain-of-Thought)
+- Pratiquer sur des cas réels de Data Solutions
 - Éviter les anti-patterns courants
 
 **Techniques enseignées :**
-- 🔵 **Rôle** : Définir le persona de l'IA
-- 🟢 **Tâche** : Spécifier l'objectif clairement
-- 🟡 **Contexte** : Fournir le domaine métier
-- 🔴 **Contraintes** : Imposer des règles strictes
-- 🟣 **Format** : Définir le format de sortie
+- 🔵 **Rôle** : Expert en data engineering et SQL
+- 🟢 **Tâche** : Valider, transformer, générer des scripts ETL
+- 🟡 **Contexte** : Schémas PostgreSQL, règles métier
+- 🔴 **Contraintes** : Performance, qualité des données, compliance
+- 🟣 **Format** : JSON Schema, SQL scripts, validation reports
 
-### 💻 Section 3 : IA et Outillage QA (50 min)
+**Module 2.2 : Few-Shot Learning** - JSON Schema Validation
+- Démonstration de validation de CSV avant transformation
+- Règles métier appliquées via JSON Schema
+- Analyse ligne-par-ligne des violations
 
-**Projet pratique : NavDash**
-Application de tableau de bord diagnostic construite de A à Z avec 7 prompts successifs.
+### ⏳ Section 3 : Cas d'Usage Avancés (Sous Construction)
 
-**Workflow complet :**
-1. **Module 3.1** - Fondations (instructions.md, prd.md)
-2. **Module 3.2** - Développement Frontend (Backend Spring Boot, JavaScript, CSS)
-3. **Module 3.3** - Tests E2E Cypress avancés (cy.stub, simulations d'APIs natives)
+**À venir :**
+- Optimisation avancée des pipelines ETL
+- Déduplication et nettoyage de données
+- Gestion des cas limites et exceptions
+- Études de cas réels en production
 
-**Technologies :**
-- Java 17, Spring Boot 2.7.18
-- Thymeleaf, JavaScript Vanilla
-- Cypress 13, JavaScript
-- APIs natives du navigateur (Battery, Network, Performance)
+### ⏳ Section 4 : Mise en Production et Automation (Sous Construction)
 
-### ⚡ Section 4 : Cas d'Usage Avancés & Perspectives (40 min)
-
-**Objectifs :**
-- Maîtriser le contexte implicite (@workspace, #file, @terminal)
-- Appliquer le Mutant Testing pour renforcer les tests
-- Analyser l'impact des modifications avec l'IA
-- Anticiper l'avenir : agents autonomes et auto-healing tests
-
-**Techniques avancées :**
-- Injection de contexte intelligent
-- Génération de mutations de code
-- Prédiction des zones à risque
-- Perspectives : agents autonomes, test self-healing
+**À venir :**
+- CI/CD pour pipelines ETL
+- Versioning et suivi des modifications
+- Monitoring et alertes
+- Sécurité des données et compliance
+- Collaboration en équipe
 
 ## 🚀 Installation et Utilisation
 
@@ -109,15 +99,15 @@ Application de tableau de bord diagnostic construite de A à Z avec 7 prompts su
 
 - Un navigateur web moderne (Chrome, Firefox, Edge)
 - VS Code avec l'extension GitHub Copilot (pour les exercices pratiques)
-- Java 17+ et Maven (pour le projet NavDash)
-- Node.js 16+ (pour les tests Cypress)
+- PostgreSQL 15+ (pour les exemples et exercices)
+- Python 3.11+ (pour les scripts de transformation)
 
 ### Lancement de la Formation
 
 1. **Cloner ou télécharger le projet**
    ```bash
-   git clone <repository-url>
-   cd qa-prompt-masterclass
+   git clone https://github.com/zidtalel/Atelier-IA-SSD.git
+   cd Atelier-IA-SSD
    ```
 
 2. **Ouvrir la formation**
@@ -134,19 +124,9 @@ Application de tableau de bord diagnostic construite de A à Z avec 7 prompts su
 
 3. **Navigation**
    - Suivez les sections dans l'ordre (1 → 2 → 3 → 4)
-   - Chaque section contient des exercices pratiques et des pauses
+   - Sections 1 & 2 sont complètes (~70 minutes)
+   - Sections 3 & 4 sont en développement
    - Les prompts sont copiables d'un clic
-
-### Projet NavDash (Section 3)
-
-**Option 1 : Démarrage depuis zéro**
-- Téléchargez `docs/assets/navdash.zip`
-- Suivez les 7 prompts successifs pour construire l'application
-
-**Option 2 : Point de départ pour les tests (Prompts 6 & 7)**
-- Téléchargez `docs/assets/navdashdev.zip`
-- Application complète sans les tests Cypress
-- Idéal si vous voulez vous concentrer sur la partie tests E2E
 
 ## 🛠️ Technologies Utilisées
 
@@ -155,39 +135,38 @@ Application de tableau de bord diagnostic construite de A à Z avec 7 prompts su
 - CSS3 (variables CSS, grid, flexbox)
 - JavaScript Vanilla (interactions, copie de prompts)
 
-### Projet NavDash
-- **Backend** : Java 17, Spring Boot 2.7.18, Maven
-- **Frontend** : Thymeleaf, JavaScript ES6+, CSS3
-- **Tests** : Cypress 13.x, JavaScript
-- **APIs** : Battery Status API, Network Information API, Performance API
+### Data Solutions
+- **Base de données** : PostgreSQL 15+
+- **Scripts** : SQL, Python 3.11+
+- **Validation** : JSON Schema
+- **Outils** : VS Code, GitHub Copilot
 
 ## 📊 Durée et Format
 
-- **Durée totale** : ~3h00
-  - Section 1 : 20 minutes
-  - Section 2 : 50 minutes
-  - Section 3 : 50 minutes
-  - Section 4 : 40 minutes
+- **Durée totale actuelle** : ~70 minutes
+  - Section 1 : 30 minutes
+  - Section 2 : 40 minutes (NOYAU de la formation)
+  - Section 3 : À venir
+  - Section 4 : À venir
 
 - **Format** : Formation interactive avec :
   - Présentations théoriques
-  - Démonstrations live
-  - Pauses pratiques guidées
+  - Démonstrations pratiques
   - Exercices hands-on
+  - Prompts copiables et réutilisables
 
 ## 🎓 Public Cible
 
-- Testeurs QA et QA Automation Engineers
-- Développeurs impliqués dans les tests
+- Data Engineers et Data Analysts
+- Data Scientists
+- Développeurs impliqués dans ETL et data pipelines
+- Data Architects
 - Product Owners / Scrum Masters
-- Architectes logiciels
-- Toute personne intéressée par l'IA générative appliquée au testing
+- Toute personne intéressée par l'IA générative appliquée aux Data Solutions
 
 ## 📝 Évaluation
 
-À la fin de la formation, un formulaire d'évaluation est disponible via :
-- Code QR (Section 4)
-- Lien direct : https://forms.office.com/r/fChJrSZ9Mt
+À la fin de la formation, vos retours sont précieux pour améliorer ce cours.
 
 ## 🤝 Contribution
 
@@ -203,13 +182,13 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 ## 🙏 Remerciements
 
 - GitHub Copilot pour les capacités d'IA générative
-- La communauté QA pour les retours et suggestions
+- La communauté Data et Engineering pour les retours
 - Tous les participants qui contribuent à améliorer cette formation
 
 ## 📞 Contact
 
-Pour toute question ou suggestion concernant cette formation, n'hésitez pas à me contacter par courriel : talel.zid@bdeb.qc.ca
+Pour toute question ou suggestion concernant cette formation, n'hésitez pas à me contacter : talel.zid@bdeb.qc.ca
 
 ---
 
-**🚀 Bonne formation et bon apprentissage du prompt engineering pour le QA !**
+**🚀 Bonne formation et bon apprentissage du prompt engineering pour les Data Solutions !**
